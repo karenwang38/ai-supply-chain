@@ -1,0 +1,8 @@
+*.bak
+*.pyc
+__pycache__/
+metrics_output.json
+metrics_snippet.txt
+fetch_metrics.py
+patch_companies.py
+.DS_Store
