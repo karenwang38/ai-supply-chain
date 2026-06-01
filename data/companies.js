@@ -366,6 +366,116 @@ const COMPANIES = {
   },
 
   // ── Layer 1 ──────────────────────────────────────────────────
+  "NVDA": {
+    id: "NVDA", name: "輝達", ticker: "NVDA", flag: "🇺🇸",
+    layer: 1, category: "AI 算力平台制定者",
+    badge: "AI 產業鏈制高點",
+    tagline: "向下發射 Spec，吞噬整條供應鏈利潤",
+    overview: "NVIDIA 是整條 AI 算力產業鏈的絕對制高點。它不只設計晶片（Blackwell / Rubin），更透過 CUDA 生態系、NVLink 互聯、NVL 整機規格，由上往下「制定標準、分配利潤」：台積電照它訂的先進封裝規格代工、信驊（AST）照它定義的 BMC 介面設計監控晶片、雙鴻/奇鋐照它的熱設計規範造液冷 CDU、廣達/緯穎/鴻海照它的整機藍圖組裝出貨。NVIDIA 本身不碰金屬、不摸螺絲，卻拿走每台 GB200 機櫃最高的毛利。這種「平台制定者」的結構，是 AI 產業鏈中最接近贏家通吃的商業模式。",
+    technology: {
+      core: "GPU 微架構設計（Blackwell / Rubin）、CUDA 軟體生態系、NVLink 高速互聯、整機規格制定",
+      products: [
+        "Blackwell GPU（B100/B200/GB200）— 現役旗艦，AI 訓練與推論主力",
+        "Rubin GPU（2026-2027）— 下一代，HBM4 + 台積電 N2 製程",
+        "NVL72/NVL576 整機機櫃規格 — 強制供應鏈按規格供貨",
+        "CUDA 生態系 — 全球超過 400 萬開發者鎖定，切換成本極高",
+        "NVLink Switch — GB200 機櫃內 GPU 高速互聯，1.8Tbps 頻寬"
+      ],
+      advantages: [
+        "CUDA 護城河：17 年積累，模型、框架、人才全部鎖定，競爭者在生態上追趕需十年",
+        "Spec 制定權：每一代新架構都重新定義整個供應鏈的設計規格，台積電/ODM/散熱廠必須跟著跑",
+        "資料中心整機捆綁：NVL 整機規格讓客戶採購整套，避免零件被替代",
+        "軟體毛利飛輪：CUDA 授權、NeMo、Omniverse 等軟體業務毛利率 100%，正在拉高整體利潤結構"
+      ]
+    },
+    marketShare: {
+      global: "~80%（AI GPU 市場）",
+      desc: "AI 訓練 GPU 市佔超過 80%，推論端因 AMD/自研 ASIC 競爭略降但仍超過 70%。在 AI 伺服器出貨量最快的 2024-2026 年窗口，幾乎是壟斷",
+      competitors: [
+        { name: "AMD", share: "~10%", threat: "medium", note: "MI300X/MI350 追趕中，生態差距仍大" },
+        { name: "Google TPU", share: "~5%", threat: "medium", note: "自用為主，不對外銷售" },
+        { name: "AWS Trainium/Inf", share: "~3%", threat: "low", note: "雲端自研，供應鏈影響有限" },
+        { name: "Intel Gaudi", share: "~2%", threat: "low", note: "市佔極低，生態弱" }
+      ]
+    },
+    customers: {
+      major: [
+        { name: "Microsoft (Azure)", pct: "~20%", note: "OpenAI 訓練主力算力客戶" },
+        { name: "Google (GCP)", pct: "~15%", note: "同時採購 NVDA + 自研 TPU" },
+        { name: "Amazon (AWS)", pct: "~15%", note: "UltraCluster 大規模採購 GB200" },
+        { name: "Meta", pct: "~12%", note: "LLaMA 訓練主力，已採購 35 萬張 H100+" },
+        { name: "各國主權 AI 與企業", pct: "~38%", note: "中東、日本、台灣主權 AI 加速器與企業 AI 轉型" }
+      ],
+      breakdown: "五大雲端 CSP 合計約 60%，其餘 40% 為各國主權 AI 投資與企業端推論算力部署"
+    },
+    outlook: {
+      positive: [
+        "Rubin 架構 2026 H2 出貨：台積電 N2 + HBM4，算力再翻 3-5 倍，換機潮觸發新一輪採購",
+        "推論端爆發：ChatGPT 類應用日均 Token 生成量每年倍增，推論 GPU 需求結構性成長",
+        "主權 AI 採購潮：中東（沙特 500 億美元）、日本（Preferred Networks）等國家隊大規模採購",
+        "NIM 微服務平台：NVIDIA 正在把 CUDA 從 GPU 工具升級為企業 AI 開發的「作業系統」"
+      ],
+      catalysts: [
+        "Rubin / Rubin Ultra 出貨時程（2026 H2 / 2027）",
+        "中國出口管制是否鬆綁（H20 替代方案）",
+        "AMD MI350 是否搶走顯著市佔（觀察指標）",
+        "季度 Data Center 營收成長斜率是否維持 YoY 100%+"
+      ]
+    },
+    stockMetrics: {
+      pe: "~35x (Forward)",
+      eps: "~$2.70/季（FY2026）",
+      epg: "+~120% YoY",
+      peg: "~0.29",
+      marketCap: "~$3.3T",
+      week52High: "~$165",
+      week52Low: "~$86",
+      divYield: "~0.03%"
+    },
+    notes: `【NVIDIA 產業鏈制高點結構圖】
+─────────────────────────────
+■ 三層制霸邏輯
+
+  L1【NVIDIA 本人】— 設計 Blackwell/Rubin 晶片大腦
+     ├─ 深度綁定 台積電 (CoWoS 先進封裝代工)
+     └─ 深度綁定 信驊 (BMC 監控晶片，按 NVIDIA 定義介面)
+
+     ↓ 向下發射 Spec，下游照單全收
+
+  L2【中游】— 雙鴻/奇鋐
+     → 必須照 NVIDIA NVL 規格客製化液冷 CDU 系統
+     → 無法自主定義產品形態，毛利率受限
+
+     ↓
+
+  L3【下游】— 廣達/緯穎/鴻海
+     → 按照 NVIDIA 整機藍圖提供黑手組裝勞動力
+     → 毛利率 3-5%，利潤幾乎全被 NVIDIA 截走
+
+■ 護城河關鍵數字
+  • CUDA 生態：400萬+ 開發者、鎖定 17 年
+  • Data Center 收入：~$35B+/季（FY2026 Q4）
+  • AI GPU 市佔：訓練端 ~80%，推論端 ~70%
+  • Blackwell → Rubin：2026 H2 台積電 N2 製程
+
+■ 觀察指標
+  • 每季 DC 營收成長率是否維持 100%+ YoY
+  • Rubin 出貨節奏（2026 H2）
+  • 中國 H20 替代方案（出口管制影響）`,
+    challenges: [
+      "出口管制：中國市場（原佔營收 ~25%）受 H20 限制，每季損失 40-50 億美元潛在收入",
+      "供應鏈集中：台積電 CoWoS 先進封裝產能是唯一瓶頸，Blackwell 出貨量受制於台積電產能",
+      "AMD 追趕：MI300X/MI350 在推論端性價比接近，大型雲廠開始多元採購降低對 NVDA 依賴",
+      "自研 ASIC 威脅：Google TPU、AWS Trainium、Meta MTIA 長期侵蝕訓練端份額"
+    ],
+    risks: [
+      "台海衝突：台積電若受波及，Blackwell/Rubin 產能中斷，無替代來源",
+      "中國客戶轉向國產（華為昇騰）：H20 替代品若性能追上，中國市場永久流失",
+      "估值過高：P/E ~35x 已 Price in 完美成長，若任一季營收不如預期將劇烈修正",
+      "反壟斷調查：美國、歐盟持續關注 CUDA 生態壟斷性，潛在拆分或授權要求"
+    ]
+  },
+
   "2454.TW": {
     id: "2454.TW", name: "聯發科", ticker: "2454.TW", flag: "🇹🇼",
     layer: 1, category: "晶片設計服務與高速 IP",
@@ -2040,6 +2150,9 @@ const CHAIN_DEFINITION = [
   ]},
 
   { layer: 1, categories: [
+    { name: "AI 算力平台制定者", entries: [
+      { id: "NVDA", note: "制高點・向下發射 Spec・吞噬供應鏈利潤" },
+    ]},
     { name: "晶片設計/高速 IP", entries: [
       { id: "2454.TW", note: "主攻推論 ASIC" },
       { id: "3661.TW" },
