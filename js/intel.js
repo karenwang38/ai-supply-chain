@@ -2,7 +2,7 @@
 (function () {
   const container = document.getElementById('intel-app');
   let activeTag = 'all';
-  let expandedId = null;
+  let expandedId = window.location.hash ? window.location.hash.slice(1) : null;
 
   // ── 收集所有 tags ──
   const allTags = ['全部'];
@@ -46,6 +46,7 @@
       const card = document.createElement('div');
       card.className = 'intel-card' + (isOpen ? ' open' : '');
       card.dataset.id = entry.id;
+      card.id = entry.id;
 
       const dateParts = entry.date.split('-');
       const dateStr = `${dateParts[0]}/${dateParts[1]}/${dateParts[2]}`;
@@ -108,4 +109,12 @@
   }
 
   renderCards();
+
+  // 若有 hash，滾動到對應卡片
+  if (expandedId) {
+    setTimeout(() => {
+      const target = document.getElementById(expandedId);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
 })();

@@ -102,6 +102,9 @@
   // ── 2. Stock ──
   const tabStock = makeTab('stock');
   tabStock.appendChild(block('關鍵財務指標', renderStockMetrics(co.stockMetrics, co.ticker)));
+  if (co.relatedIntel?.length) {
+    tabStock.appendChild(block('相關市場情報', renderRelatedIntel(co.relatedIntel)));
+  }
   tabStock.appendChild(block('個人分析筆記', renderNotesEditor(co.id, co.notes)));
   app.appendChild(tabStock);
 
@@ -256,6 +259,24 @@
     }, 0);
 
     return html;
+  }
+
+  function renderRelatedIntel(ids) {
+    if (!ids?.length || typeof INTEL_DATA === 'undefined') return '';
+    const items = ids.map(id => INTEL_DATA.find(d => d.id === id)).filter(Boolean);
+    if (!items.length) return '';
+    const rows = items.map(d => {
+      const dateParts = d.date.split('-');
+      const dateStr = `${dateParts[0]}/${dateParts[1]}/${dateParts[2]}`;
+      return `
+        <a class="related-intel-link" href="intel.html#${d.id}">
+          <span class="related-intel-date">${dateStr}</span>
+          <span class="related-intel-source">${d.source}</span>
+          <span class="related-intel-title">${d.title}</span>
+          <span class="related-intel-arrow">→</span>
+        </a>`;
+    }).join('');
+    return `<div class="related-intel-list">${rows}</div>`;
   }
 
   function renderStockMetrics(m, ticker) {

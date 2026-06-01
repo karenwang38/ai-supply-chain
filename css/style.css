@@ -452,6 +452,48 @@ a { color: inherit; text-decoration: none; }
 .stock-placeholder .note { font-size: 12px; margin-top: 6px; color: var(--text-dim); }
 
 /* Notes tab */
+/* ── Related Intel Links ── */
+.related-intel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.related-intel-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.15s, border-color 0.15s;
+}
+.related-intel-link:hover {
+  background: var(--bg3);
+  border-color: var(--accent);
+}
+.related-intel-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.related-intel-source {
+  font-size: 12px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.related-intel-title {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+.related-intel-arrow {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
 .notes-wrap {
   display: flex;
   flex-direction: column;
