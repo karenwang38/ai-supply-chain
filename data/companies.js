@@ -369,6 +369,7 @@ const COMPANIES = {
   "NVDA": {
     id: "NVDA", name: "輝達", ticker: "NVDA", flag: "🇺🇸",
     layer: 1, category: "AI 算力平台制定者",
+    spanLayers: [1, 2, 3],
     badge: "AI 產業鏈制高點",
     tagline: "向下發射 Spec，吞噬整條供應鏈利潤",
     overview: "NVIDIA 是整條 AI 算力產業鏈的絕對制高點。它不只設計晶片（Blackwell / Rubin），更透過 CUDA 生態系、NVLink 互聯、NVL 整機規格，由上往下「制定標準、分配利潤」：台積電照它訂的先進封裝規格代工、信驊（AST）照它定義的 BMC 介面設計監控晶片、雙鴻/奇鋐照它的熱設計規範造液冷 CDU、廣達/緯穎/鴻海照它的整機藍圖組裝出貨。NVIDIA 本身不碰金屬、不摸螺絲，卻拿走每台 GB200 機櫃最高的毛利。這種「平台制定者」的結構，是 AI 產業鏈中最接近贏家通吃的商業模式。",

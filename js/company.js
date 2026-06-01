@@ -88,15 +88,20 @@
   // ── 1. Overview ──
   const tabOverview = makeTab('overview', true);
   tabOverview.appendChild(block('公司概覽', `<p>${co.overview}</p>`));
+  const activeLayers = co.spanLayers || [co.layer];
+  const layerDesc = co.spanLayers
+    ? `橫跨 ${co.spanLayers.map(id => `第 ${id} 層`).join('、')}，制定整段供應鏈規格`
+    : `所在層級：第 ${co.layer} 層 — ${layer.name}`;
   tabOverview.appendChild(block('產業鏈定位', `
-    <p>所在層級：<strong>第 ${co.layer} 層 — ${layer.name}</strong></p>
+    <p><strong>${layerDesc}</strong></p>
     <p style="margin-top:8px;color:var(--text-muted);font-size:13px">${layer.desc}</p>
     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:14px">
-      ${LAYERS.map(l =>
-        `<span style="font-size:12px;padding:4px 10px;border-radius:6px;background:${l.id===co.layer?`var(--l${l.id})`:'var(--bg3)'};color:${l.id===co.layer?'white':'var(--text-dim)'}">
+      ${LAYERS.map(l => {
+        const isActive = activeLayers.includes(l.id);
+        return `<span style="font-size:12px;padding:4px 10px;border-radius:6px;background:${isActive?`var(--l${l.id})`:'var(--bg3)'};color:${isActive?'white':'var(--text-dim)'};${isActive&&co.spanLayers?'font-weight:600;':''}">
           L${l.id} ${l.name.split('—')[0].trim()}
-        </span>`
-      ).join('')}
+        </span>`;
+      }).join('')}
     </div>
   `));
   app.appendChild(tabOverview);
