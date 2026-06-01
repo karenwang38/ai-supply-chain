@@ -36,6 +36,8 @@
         第 ${co.layer} 層：${layer.name}
       </span>
       <span class="company-category-tag">${co.category}</span>
+      ${co.platform === 'NVDA' ? `<a class="company-platform-tag" href="company.html?id=NVDA" title="本公司為 NVIDIA 生態系供應鏈">⬡ NVIDIA 生態系</a>` : ''}
+      ${co.id === 'NVDA' ? `<span class="company-platform-tag platform-anchor">制高點 · L1→L3</span>` : ''}
     </div>
     <div class="company-tagline">${co.tagline}</div>
   `;

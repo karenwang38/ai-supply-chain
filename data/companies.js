@@ -570,6 +570,7 @@ const COMPANIES = {
   "2330.TW": {
     id: "2330.TW", name: "台積電", ticker: "2330.TW / TSM", flag: "🇹🇼",
     layer: 1, category: "晶圓代工製造",
+    platform: "NVDA",
     badge: "全球半導體心臟",
     tagline: "全球最先進晶圓代工壟斷者",
     overview: "台積電是全球先進製程晶圓代工的絕對霸主，掌握 COUPE/CoWoS 先進封裝整合平台，是【輝達＋台積電】國家隊的核心。全球超過 90% 最先進晶片（<5nm）由台積電製造。NVIDIA H100/H200/B100 全系列、蘋果 A 系列晶片、AMD MI300X 均由台積電生產。",
@@ -789,6 +790,7 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
   "3324.TW": {
     id: "3324.TW", name: "雙鴻", ticker: "3324.TW", flag: "🇹🇼",
     layer: 1, category: "重電與散熱基礎元件",
+    platform: "NVDA",
     badge: "液冷散熱雙架構",
     tagline: "冷板式+浸沒式液冷解決方案",
     overview: "雙鴻從傳統散熱片廠商升級為能夠提供「冷板式」與「浸沒式」雙架構的 CDU（冷卻液分配裝置）整機機櫃方案商。AI 伺服器的散熱需求從傳統風冷轉向液冷，雙鴻是台灣液冷散熱的核心廠商之一，出現在產業鏈第 1 層（元件）與第 2 層（系統整合）。",
@@ -806,6 +808,7 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
   "3017.TW": {
     id: "3017.TW", name: "奇鋐科技", ticker: "3017.TW", flag: "🇹🇼",
     layer: 1, category: "重電與散熱基礎元件",
+    platform: "NVDA",
     badge: "散熱龍頭",
     tagline: "AI 伺服器散熱模組龍頭",
     overview: "奇鋐是台灣散熱模組龍頭，從傳統風冷散熱模組切入液冷解決方案，為 AI 伺服器（尤其是 NVIDIA GPU 伺服器）提供核心散熱元件。客戶涵蓋廣達、緯穎等主要 AI 伺服器 ODM 廠。",
@@ -1070,6 +1073,7 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
   "2382.TW": {
     id: "2382.TW", name: "廣達電腦", ticker: "2382.TW", flag: "🇹🇼",
     layer: 3, category: "網絡交換機與 AI 伺服器整機",
+    platform: "NVDA",
     badge: "AI 伺服器 ODM 龍頭",
     tagline: "NVIDIA AI 伺服器最大 ODM",
     overview: "廣達是全球最大的筆電與伺服器 ODM，在 AI 伺服器市場已成為 NVIDIA GB200/NVL72 的主要組裝夥伴。廣達雲達（QCT）部門承接的 AI 伺服器訂單，是台灣 AI 供應鏈最大的訂單流量集散地，上游散熱（雙鴻/奇鋐）、電源、連接線等全部匯集於此。",
@@ -1107,6 +1111,7 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
   "6669.TW": {
     id: "6669.TW", name: "緯穎科技", ticker: "6669.TW", flag: "🇹🇼",
     layer: 3, category: "網絡交換機與 AI 伺服器整機",
+    platform: "NVDA",
     badge: "Meta AI 伺服器首選",
     tagline: "高效率 AI 伺服器 ODM",
     overview: "緯穎科技（緯創旗下獨立公司）是以超高效率著稱的 AI 伺服器 ODM，Meta 是其最重要的策略客戶。緯穎的設計哲學強調能源效率（PUE）最佳化，符合 Meta 對綠色資料中心的要求，也是台灣 AI 伺服器 ODM 中毛利率相對較高的廠商。",
@@ -1130,6 +1135,7 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
   "2317.TW": {
     id: "2317.TW", name: "鴻海精密", ticker: "2317.TW", flag: "🇹🇼",
     layer: 3, category: "網絡交換機與 AI 伺服器整機",
+    platform: "NVDA",
     badge: "AI+機器人雙線",
     tagline: "全球最大代工廠轉型 AI 平台",
     overview: "鴻海（富士康母公司）是全球最大電子代工廠，AI 伺服器業務（GB200 組裝）、電動車平台（MIH）與人形機器人是三大轉型主軸。廣宇（2328.TW）是鴻海集團旗下負責高階連接線束的子公司，AIoT 業務正在成為鴻海第二成長曲線。",
@@ -1560,6 +1566,7 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
   "4919.TW": {
     id: "4919.TW", name: "新唐科技", ticker: "4919.TW", flag: "🇹🇼",
     layer: 1, category: "控制與電源安全晶片",
+    platform: "NVDA",
     badge: "AI 伺服器千手觀音",
     tagline: "BMC 全球第二 + 日本松下 BMS 技術傳人",
     overview: "新唐科技（Nuvoton Technology，瑞昱子公司）從傳統鍵盤控制器、家電 MCU 廠徹底質變為 AI 資料中心的隱形中樞。核心武器一：AI 伺服器 BMC（底板管理晶片）——傳統伺服器每機架需 10-20 顆，AI 伺服器因架構複雜暴增至 80-120 顆，新唐市佔全球第二（20-25%）。核心武器二：BMS 電池管理晶片——源自收購日本松下半導體的高壓 BMS 技術，直打 AI 資料中心強制導入的 BBU 不斷電電池模組。2026 年 4 月起漲價 20%，宣告 MCU 殺價戰終結、毛利率止跌反彈，Q1 正式扭虧為盈（EPS 0.02 元），毛利率單季從 34.3% 暴衝至 39.3%。",
@@ -2151,7 +2158,7 @@ const CHAIN_DEFINITION = [
 
   { layer: 1, categories: [
     { name: "AI 算力平台制定者", entries: [
-      { id: "NVDA", note: "制高點・向下發射 Spec・吞噬供應鏈利潤" },
+      { id: "NVDA", note: "制高點・向下發射 Spec・吞噬供應鏈利潤", spanLayers: [1,2,3] },
     ]},
     { name: "晶片設計/高速 IP", entries: [
       { id: "2454.TW", note: "主攻推論 ASIC" },

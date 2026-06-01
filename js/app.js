@@ -55,15 +55,25 @@
 
         const note = entry.note || co.badge;
         const ticker = formatTicker(co.ticker);
+        const isSpanning = entry.spanLayers?.length > 1;
         const chip = document.createElement('a');
-        chip.className = 'co-chip';
+        chip.className = 'co-chip' + (isSpanning ? ' co-chip-platform' : '') + (co.platform ? ' co-chip-eco' : '');
         chip.href = `company.html?id=${co.id}`;
         chip.title = co.tagline || co.description || '';
+
+        const spanTag = isSpanning
+          ? `<span class="chip-span-badge">橫跨 L${entry.spanLayers[0]}→L${entry.spanLayers[entry.spanLayers.length-1]}</span>`
+          : '';
+        const ecoTag = co.platform
+          ? `<span class="chip-eco-badge">${co.platform}</span>`
+          : '';
+
         chip.innerHTML = `
           <span class="chip-flag">${co.flag}</span>
           <span class="chip-name">${co.name}</span>
           <span class="chip-ticker">${ticker}</span>
           ${note ? `<span class="chip-note">${note}</span>` : ''}
+          ${spanTag}${ecoTag}
         `;
         chips.appendChild(chip);
       });
