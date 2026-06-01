@@ -194,49 +194,63 @@
   // ── Rendering helpers ──
 
   function renderNotesEditor(companyId, defaultNotes) {
-    const KEY = `notes_${companyId}`;
     const uid = `notes-ta-${companyId}`;
     const sid = `notes-st-${companyId}`;
-
-    // Use saved value; fall back to defaultNotes from companies.js on first visit
-    const saved = localStorage.getItem(KEY) !== null
-      ? localStorage.getItem(KEY)
-      : (defaultNotes || '');
-    const ts    = localStorage.getItem(KEY + '_ts') || '';
+    const syncBadge = NoteSync.isConfigured()
+      ? `<span class="notes-sync-badge synced">☁️ 雲端同步</span>`
+      : `<span class="notes-sync-badge local" id="notes-sync-hint-${companyId}" style="cursor:pointer" title="點此設定跨裝置同步">💾 本地儲存</span>`;
 
     const html = `
       <div class="notes-wrap">
         <div class="notes-header">
-          <span class="notes-status" id="${sid}">${ts ? '上次儲存：' + ts : ''}</span>
+          ${syncBadge}
+          <span class="notes-status" id="${sid}"></span>
           <button class="notes-clear-btn" id="notes-clear-${companyId}">清除</button>
         </div>
         <textarea class="notes-textarea" id="${uid}"
-          placeholder="記錄分析想法、觀察重點、買賣邏輯……（自動儲存在瀏覽器本地）"
-        >${saved}</textarea>
+          placeholder="記錄分析想法、觀察重點、買賣邏輯……" disabled></textarea>
       </div>`;
 
-    // Attach listeners after DOM is ready
-    setTimeout(() => {
-      const ta  = document.getElementById(uid);
-      const st  = document.getElementById(sid);
+    setTimeout(async () => {
+      const ta = document.getElementById(uid);
+      const st = document.getElementById(sid);
       if (!ta) return;
+
+      // 點擊本地儲存 badge → 跳到同步設定
+      const hint = document.getElementById(`notes-sync-hint-${companyId}`);
+      if (hint) hint.addEventListener('click', () => showSyncModal());
+
+      // 非同步載入筆記
+      st.textContent = '載入中…';
+      try {
+        ta.value = await NoteSync.loadNote(companyId, defaultNotes || '');
+        st.textContent = NoteSync.isConfigured() ? '已從雲端載入' : '';
+      } catch (e) {
+        ta.value = defaultNotes || '';
+        st.textContent = '載入失敗，使用本地';
+      }
+      ta.disabled = false;
+
+      // 自動儲存（debounce 800ms）
       let timer;
       ta.addEventListener('input', () => {
         clearTimeout(timer);
         st.textContent = '正在輸入…';
-        timer = setTimeout(() => {
-          localStorage.setItem(KEY, ta.value);
-          const now = new Date();
-          const t = now.toLocaleString('zh-TW', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' });
-          localStorage.setItem(KEY + '_ts', t);
-          st.textContent = '已儲存 ' + t;
+        timer = setTimeout(async () => {
+          const now = new Date().toLocaleString('zh-TW', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' });
+          try {
+            await NoteSync.saveNote(companyId, ta.value);
+            st.textContent = (NoteSync.isConfigured() ? '☁️ 已同步 ' : '已儲存 ') + now;
+          } catch (e) {
+            st.textContent = '⚠️ 同步失敗，已存本地';
+          }
         }, 800);
       });
+
       document.getElementById(`notes-clear-${companyId}`).addEventListener('click', () => {
         if (!confirm('確定要清除筆記嗎？')) return;
         ta.value = '';
-        localStorage.removeItem(KEY);
-        localStorage.removeItem(KEY + '_ts');
+        NoteSync.saveNote(companyId, '').catch(() => {});
         st.textContent = '已清除';
       });
     }, 0);
@@ -420,4 +434,72 @@
     div.innerHTML = `<h3>${title}</h3>${html}`;
     return div;
   }
+
+  function showSyncModal() {
+    const existing = document.getElementById('sync-modal');
+    if (existing) { existing.style.display = 'flex'; return; }
+
+    const configured = NoteSync.isConfigured();
+    const modal = document.createElement('div');
+    modal.id = 'sync-modal';
+    modal.className = 'sync-modal-overlay';
+    modal.innerHTML = `
+      <div class="sync-modal">
+        <h3>☁️ 跨裝置筆記同步</h3>
+        <p class="sync-modal-desc">筆記會存到你的 <strong>GitHub 私有 Gist</strong>，任何裝置輸入同一個 Token 即可讀取。</p>
+        ${configured ? `
+          <div class="sync-modal-status ok">✅ 已連線：Gist ID <code>${NoteSync.getGistId().slice(0,8)}…</code></div>
+          <button class="sync-btn-disconnect" id="sync-disconnect">斷開同步（改用本地儲存）</button>
+        ` : `
+          <ol class="sync-steps">
+            <li>前往 <a href="https://github.com/settings/tokens/new?scopes=gist&description=ai-supply-chain-notes" target="_blank">GitHub → Settings → Tokens</a></li>
+            <li>勾選 <strong>gist</strong> 權限，其他不用勾</li>
+            <li>複製 Token 貼到下方</li>
+          </ol>
+          <input class="sync-token-input" id="sync-token-input" type="password" placeholder="ghp_xxxxxxxxxxxxxxxx" autocomplete="off" />
+          <button class="sync-btn-connect" id="sync-connect">連線並同步</button>
+          <div class="sync-modal-status" id="sync-status"></div>
+        `}
+        <button class="sync-btn-close" id="sync-close">關閉</button>
+      </div>`;
+
+    document.body.appendChild(modal);
+
+    document.getElementById('sync-close').addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    modal.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
+
+    if (!configured) {
+      document.getElementById('sync-connect').addEventListener('click', async () => {
+        const token = document.getElementById('sync-token-input').value.trim();
+        const st = document.getElementById('sync-status');
+        if (!token) { st.textContent = '請輸入 Token'; return; }
+        st.textContent = '連線中…';
+        try {
+          const { login, gistId } = await NoteSync.setup(token);
+          st.innerHTML = `✅ 連線成功（${login}）！重新載入頁面後生效。`;
+          st.className = 'sync-modal-status ok';
+          setTimeout(() => location.reload(), 1500);
+        } catch (e) {
+          st.textContent = '❌ ' + e.message;
+          st.className = 'sync-modal-status err';
+        }
+      });
+    } else {
+      document.getElementById('sync-disconnect').addEventListener('click', () => {
+        if (!confirm('確定要斷開同步嗎？本地筆記不受影響。')) return;
+        NoteSync.disconnect();
+        location.reload();
+      });
+    }
+  }
+
+  // 在 header 加入同步按鈕
+  const syncBtn = document.createElement('button');
+  syncBtn.className = 'header-sync-btn';
+  syncBtn.textContent = NoteSync.isConfigured() ? '☁️ 同步中' : '💾 設定同步';
+  syncBtn.title = '跨裝置筆記同步設定';
+  syncBtn.addEventListener('click', showSyncModal);
+  document.querySelector('.site-header')?.appendChild(syncBtn);
 })();
