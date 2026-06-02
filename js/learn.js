@@ -546,6 +546,105 @@
     },
 
     {
+      id: 'burn-in',
+      icon: '🔥',
+      title: 'AI 老化測試（Burn-in）生態解析',
+      html: `
+        <p class="learn-lead">在 AI 算力時代，一顆晶片出廠前必須通過「高溫高壓長時間老化測試」才能出貨。這道工序原本只是傳統半導體的常規品管，但因為 AI 晶片的高整合度與高叢集依賴性，它正在經歷一場前所未有的技術與商業革命。</p>
+
+        <h3 class="learn-h3">一、為什麼 Burn-in 在 AI 時代變成關鍵瓶頸？</h3>
+
+        <div class="learn-compare-grid">
+          <div class="learn-compare-card">
+            <div class="learn-compare-head">${T('傳統伺服器','spec')} 的容錯邏輯</div>
+            <p>一台伺服器壞了，換掉那台就好。整個機房的其他伺服器<strong>照常運作</strong>，對整體業務衝擊有限。</p>
+            <div class="learn-tag-row">${T('單點故障','con')} ${T('影響有限','pro')}</div>
+          </div>
+          <div class="learn-compare-card">
+            <div class="learn-compare-head">${T('AI 算力叢集','spec')} 的零容錯邏輯</div>
+            <p>一台 ${T('NVL72 機櫃','spec')} 內 72 顆 GPU 透過 ${T('NVLink','spec')} 高速互連，任何一顆 GPU 故障，<strong>整個叢集停機</strong>——需停止訓練、重啟任務，從上一個 ${T('Checkpoint','spec')} 恢復，損失從數小時到數天的算力。</p>
+            <div class="learn-tag-row">${T('全群故障','con')} ${T('DPPM 要求 &lt;10','spec')}</div>
+          </div>
+        </div>
+
+        <div class="learn-insight">
+          <div class="learn-insight-icon">📊</div>
+          <div>
+            <strong>${T('DPPM','spec')}（Defects Per Million，每百萬顆缺陷數）</strong> 是衡量出廠品質的核心指標。<br>
+            傳統消費電子可接受 500-1,000 ${T('DPPM','spec')}；${T('NVIDIA H100','spec')} 等 AI 訓練晶片要求嚴苛至 <strong>&lt;10 ${T('DPPM','spec')}</strong>。<br>
+            Burn-in 正是清除「早夭型缺陷（Infant Mortality）」的關鍵工序——讓脆弱晶片在出廠前就死在測試台上，不要死在客戶的算力叢集裡。
+          </div>
+        </div>
+
+        <h3 class="learn-h3">二、四大技術挑戰</h3>
+        <div class="learn-impact-list">
+          <div class="learn-impact-item">
+            <span class="learn-impact-who">${T('①精密溫控','spec')}</span>
+            <span class="learn-impact-arrow">→</span>
+            <div>一台 Handler 同時承載 ${T('77 顆以上','spec')} AI 晶片，每顆功耗達 <strong>200W+</strong>，需在高達 ${T('125°C','spec')} 的測試環境下維持每顆晶片溫差 <strong>±1°C</strong> 以內，否則測試資料無效，良率分析崩潰。${co('6268.TW','鴻勁')} 是核心解決方案提供者。</div>
+          </div>
+          <div class="learn-impact-item">
+            <span class="learn-impact-who">${T('②高壓接觸座','spec')}</span>
+            <span class="learn-impact-arrow">→</span>
+            <div>Burn-in Socket（老化測試座）必須在高溫下保持精準電氣接觸，同時承受每次插拔的機械疲勞。AI 晶片接腳密度暴增，${T('ASP','spec')} 從傳統 Socket 的 3-5 美元跳升至 AI 高階 Socket 的 <strong>20-50 美元以上</strong>。${co('6515.TW','穎崴')} 的同軸測試座正是這個轉型的直接受益者。</div>
+          </div>
+          <div class="learn-impact-item">
+            <span class="learn-impact-who">${T('③CPO 光電共測','spec')}</span>
+            <span class="learn-impact-arrow">→</span>
+            <div>進入 ${T('CPO','spec')} 時代，晶圓老化測試需要在熱循環（${T('Thermal Cycling','spec')}）過程中同時做光電對準，精度要求在 <strong>&lt;1μm（微米）</strong> 以內。一顆晶圓熱膨脹不均就可能讓探針與接墊錯位，測試結果完全失效。${co('6223.TW','旺矽')} 正在攻關這個全球最高難度的晶圓探針台技術。</div>
+          </div>
+          <div class="learn-impact-item">
+            <span class="learn-impact-who">${T('④晶圓級 Burn-in','spec')}</span>
+            <span class="learn-impact-arrow">→</span>
+            <div>傳統 Burn-in 在封裝後進行。但 ${T('CoWoS','spec')} 先進封裝成本高昂（每顆 AI 晶片封裝成本數萬美元），業界正快速推進「在晶圓切割前就做 Burn-in」，把壞品淘汰在封裝之前，大幅降低廢品損失。這是 ${co('6223.TW','旺矽')} 晶圓探針台業務的長期成長邏輯。</div>
+          </div>
+        </div>
+
+        <h3 class="learn-h3">三、台灣 Burn-in 生態供應鏈</h3>
+        <div class="learn-table-wrap">
+          <table class="learn-table">
+            <thead>
+              <tr>
+                <th>角色</th><th>公司</th><th>核心產品</th><th>AI 時代升級點</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>${T('測試介面/Socket','spec')}</td>
+                <td>${co('6515.TW','穎崴（6515）')}</td>
+                <td>Cobra Socket、SLT 同軸測試座、光電共測探針卡</td>
+                <td>AI 晶片高頻高壓需求驅動 Socket ${T('ASP','spec')} 翻倍，Burn-in Socket 升級浪潮直接受益</td>
+              </tr>
+              <tr>
+                <td>${T('Handler 分類機','spec')}</td>
+                <td>${co('6268.TW','鴻勁（6268）')}</td>
+                <td>Burn-in Handler、FT Handler、SLT 整合平台</td>
+                <td>全球 <strong>70%+</strong> 市佔；Handler 從「搬運機器手」升格「精密溫控平台」，單機 ${T('ASP','spec')} 大幅提升</td>
+              </tr>
+              <tr>
+                <td>${T('晶圓探針台','spec')}</td>
+                <td>${co('6223.TW','旺矽（6223）')}</td>
+                <td>Prober 晶圓探針台、CPO 光電共測探針台</td>
+                <td>晶圓級 Burn-in 趨勢 + CPO &lt;1μm 光電對準攻關；全球前段晶圓 Prober 市佔前三</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="learn-insight">
+          <div class="learn-insight-icon">💡</div>
+          <div><strong>投資邏輯總結：</strong>
+            Burn-in 供應鏈在 AI 時代享有三重紅利：
+            <br>① <strong>量的增加</strong>：AI 晶片出貨量非線性成長，老化測試需求同步跳升
+            <br>② <strong>ASP 的提升</strong>：每顆 AI 晶片的測試複雜度遠高於傳統晶片，單件測試費用大幅提高
+            <br>③ <strong>功能的升維</strong>：Handler/Prober 整合更多測試功能（Burn-in + FT + SLT + 光電共測），單機 ${T('ASP','spec')} 向上遷移
+            <br>核心觀察指標：${T('DPPM','spec')} 良率目標 → ${T('ASP','spec')} 趨勢 → ${co('6268.TW','鴻勁')} / ${co('6515.TW','穎崴')} 毛利率是否持續上行。
+          </div>
+        </div>
+      `
+    },
+
+    {
       id: 'key-terms',
       icon: '📖',
       title: '術語速查表',
@@ -568,6 +667,10 @@
             ['ASP', 'Average Selling Price 平均銷售單價', '分析散熱、模組廠毛利結構的關鍵指標'],
             ['P/E Re-rating', '本益比上修', '股價創新高時，市場重新給予更高的本益比倍數，原因是公司基因突變進入新賽道'],
             ['本夢比', 'Price-to-Dream Ratio', '連預估 EPS 都解釋不了股價時的估值邏輯；買的是「無法被證偽的宏大夢想」'],
+            ['Burn-in', '老化測試（高溫高壓加速壽命測試）', '將晶片置於高溫高壓環境長時間運作，篩除「早夭型缺陷（Infant Mortality）」，AI 晶片要求 DPPM <10'],
+            ['DPPM', 'Defects Per Million 每百萬顆缺陷數', '出廠品質核心指標；傳統消費電子 500-1,000 DPPM；AI 訓練晶片要求 <10 DPPM，因整個算力叢集零容錯'],
+            ['Handler', 'Burn-in Handler 老化測試分類機', '執行 Burn-in 的自動化機械平台，鴻勁（6268）全球市佔 70%+；AI 時代升格為精密溫控測試整合平台'],
+            ['Prober', '晶圓探針台', '在晶圓切割前接觸探針進行電性測試的機台；旺矽（6223）為全球前三，CPO 光電共測是下一個技術制高點'],
             ['PEG', 'Price/Earnings to Growth 市盈增長比', 'P/E 除以 EPS 成長率，<1.0 表示成長被低估，>1.14 開始過熱'],
             ['PCIe', 'Peripheral Component Interconnect Express', 'CPU 與 GPU 之間的標準高速介面，Gen 6 是下一代'],
             ['CXL', 'Compute Express Link', '新一代 CPU-GPU-記憶體互連協議，解決傳統 PCIe 延遲瓶頸'],

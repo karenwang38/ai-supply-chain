@@ -2201,6 +2201,194 @@ Q1 扭虧含業外收入成分（員工留任條件達成）
     risks: ["半導體/通訊設備投資景氣下行", "中國競爭者（鼎陽科技等）切入中低端市場"]
   },
 
+  // ── Burn-in 老化測試生態 ─────────────────────────────────────
+  "6268.TW": {
+    id: "6268.TW", name: "鴻勁科技", ticker: "6268.TW", flag: "🇹🇼",
+    layer: 1, category: "老化測試與分類系統",
+    badge: "Handler 全球七成霸主",
+    tagline: "Burn-in Handler 分類機龍頭，AI 時代升格精密溫控平台",
+    overview: "鴻勁科技是全球 Burn-in Handler（老化測試分類機）的絕對霸主，市佔率高達 70% 以上。Handler 原本只是搬運晶片的機械手臂，但在 AI 時代，它已升格為「精密溫控測試平台」：必須同時精確控制 77 顆以上、單顆 200W+ 的 AI 晶片進行長達 1,000 小時的高溫老化測試，同時確保各晶片的溫度均勻性在 ±1℃ 以內。Burn-in 後的 Handler 功能正加速與 FT（最終測試）、SLT（系統級測試）融合為多功能一體化測試平台，單機 ASP（平均售價）大幅提升。",
+    technology: {
+      core: "Burn-in Handler 老化測試分類機、FT Handler 最終測試分類機、SLT 系統級測試整合平台",
+      products: [
+        "Burn-in Handler（AI 晶片老化測試主力，市佔 70%+）",
+        "FT Handler（最終測試分類，自動分级）",
+        "Burn-in Board（老化測試板配套生態）",
+        "SLT 系統級測試整合平台（新業務，Burn-in+FT+SLT 融合趨勢）"
+      ],
+      advantages: [
+        "Handler 市佔 70%+ 形成事實壟斷，客戶更換供應商成本極高",
+        "AI 晶片功耗倍增驅動 Handler ASP 大幅提升（熱管理升級→整機售價跳升）",
+        "Burn-in + FT + SLT 融合趨勢：單台設備整合多種測試功能，市場規模擴大",
+        "台廠生態系優勢：與台積電 / 聯發科 / 日月光測試流程深度整合"
+      ]
+    },
+    marketShare: {
+      global: "Burn-in Handler 全球 70%+",
+      desc: "Burn-in Handler 市場幾乎由鴻勁寡占，競爭者難以在短期追上其高度整合的熱管理技術與客戶關係壁壘。",
+      competitors: [
+        { name: "Cohu（美）", share: "~10%", note: "小型 Handler 廠，AI 時代技術能力有限", threat: "low" },
+        { name: "Aehr Test Systems（美）", share: "~5%（Wafer-level）", note: "主打晶圓級 Burn-in，利基市場", threat: "low" },
+      ]
+    },
+    customers: {
+      major: [
+        { name: "台積電生態系 ODM", note: "NVIDIA GB200 機架最終老化測試通過鴻勁設備執行", pct: "~35%" },
+        { name: "日月光（ASX）", note: "後段封測大廠，Burn-in 環節使用鴻勁 Handler", pct: "~25%" },
+        { name: "聯發科測試廠商", note: "ASIC/SoC 晶片老化測試", pct: "~20%" },
+        { name: "其他 OSAT / IDM", note: "全球晶片測試生態系", pct: "~20%" },
+      ],
+      breakdown: "AI 算力晶片（GPU、HBM、AI ASIC）每顆必須通過 Burn-in 篩選早期失效，鴻勁 Handler 是這道「出廠前最後保險關卡」的主要設備提供者"
+    },
+    outlook: {
+      positive: [
+        "AI 晶片功耗從 200W 往 400W+ 增加，每台 Handler 的技術壁壘與售價同步拉高",
+        "DPPM 要求嚴苛（系統一顆壞全機停），測試不可省略，具剛性需求",
+        "Burn-in + FT + SLT 三功能融合趨勢，單機 ASP 翻倍空間大",
+        "Rubin GPU（2026 H2）功耗更高，進一步逼升熱管理技術要求與設備單價"
+      ],
+      catalysts: [
+        "NVIDIA Rubin 架構出貨：單顆 GPU 功耗突破 1,200W，Handler 熱管理升級迫切",
+        "SLT 與 Burn-in 融合型新機台推出時程",
+        "CoWoS 先進封裝後老化測試需求增長"
+      ]
+    },
+    stockMetrics: {
+      pe: "N/A",
+      eps: "NT$12~15（2026 預估）",
+      epg: "+35~50%",
+      marketCap: "NT$約 400億",
+      week52High: "NT$—",
+      week52Low: "NT$—",
+      divYield: "—",
+      sharesOut: "NT$約 6億"
+    },
+    notes: `【鴻勁（6268）Burn-in Handler 分析備忘】
+
+▌ 核心定位
+Handler 從「搬運機械手臂」升格為「精密溫控測試平台」
+→ AI 晶片功耗爆增（77顆×200W = 15,400W），鴻勁必須整合主動液冷
+→ 市佔 70%+ 壟斷：客戶換供應商等於重新訓練工程師 + 重建製程，成本極高
+
+▌ AI 時代的結構性需求
+• DPPM 要求：AI 系統一顆壞掉整機停，品質要求比消費電子嚴格 10 倍+
+• Infant Mortality 篩除：出貨前高溫老化剔除早期失效，不可省略的流程
+• 功耗增加路線圖：Blackwell 200W → Rubin 400W+ → 每次升代逼升 Handler 設備單價
+
+▌ 三功能融合趨勢（最大想像空間）
+Burn-in → FT（最終測試）→ SLT（系統級測試）三合一
+→ 單台設備 ASP 從 X 翻到 3X，市場規模直接擴大 3 倍
+
+▌ 關鍵觀察時間點
+• Rubin GPU 出貨（2026 H2）→ 新一代 Handler 訂單爆發期
+• SLT 融合型機台正式上市時程（詢問法說會）
+• 毛利率走勢：ASP 上升 + 固定成本分攤 → 毛利率目標 40%+`,
+    challenges: [
+      "Handler 市場技術成熟，低端機型面臨中國廠商（精測電子等）殺價",
+      "SLT 融合型設備開發需要龐大 R&D 資本，現金流壓力",
+      "AI 晶片出貨若再次延遲（如 Rubin），新型 Handler 拉貨時程推遲"
+    ],
+    risks: [
+      "AI 算力景氣若反轉，晶片廠削減測試設備資本支出",
+      "Aehr Test Systems 等晶圓級 Burn-in 替代方案蠶食市場",
+      "中國自製 Handler 設備崛起，中國市場份額流失"
+    ]
+  },
+
+  "6223.TW": {
+    id: "6223.TW", name: "旺矽科技", ticker: "6223.TW", flag: "🇹🇼",
+    layer: 1, category: "老化測試與分類系統",
+    badge: "前段晶圓探針台一哥",
+    tagline: "晶圓探針台（Prober）龍頭，CPO 晶圓級光電共測解決方案",
+    overview: "旺矽科技（MPI Corporation）是台灣前段晶圓探針台（Wafer Prober）龍頭，深度聚焦於晶圓良率測試（Wafer Sort）與系統級測試。在 AI/CPO 時代面對的最嚴苛挑戰：矽光子（PIC）晶圓要求在高溫高壓老化環境下，維持光學探針與晶圓之間的微米級光學對準精度（<1μm），同時避免因熱膨脹造成位移失準——這是現有探針台物理能力的最大邊界，旺矽正在這個技術難題上投入大量研發。",
+    technology: {
+      core: "自動晶圓探針台（Automatic Wafer Prober）、晶圓級 Burn-in 探測系統、光電共測（Opto-electric Prober）",
+      products: [
+        "200mm/300mm 自動晶圓探針台",
+        "晶圓級老化測試（Wafer-level Burn-in）探測平台",
+        "矽光子 CPO 光電共測解決方案",
+        "MEMS 微感測器晶圓測試"
+      ],
+      advantages: [
+        "台灣前段晶圓探針台龍頭，深度嵌入台積電 / 聯電供應鏈",
+        "CPO 光電共測是目前全球最稀缺的技術能力：維持微米級光學對準是物理極限攻堅",
+        "晶圓級 Burn-in 趨勢：封裝成本越高越需要在晶圓階段就篩選，旺矽直接受益"
+      ]
+    },
+    marketShare: {
+      global: "台灣晶圓探針台前一二名",
+      desc: "旺矽與 Tokyo Electron（TEL）及 FormFactor 並列為主要晶圓探針台廠，在台灣本土市場具有顯著優勢",
+      competitors: [
+        { name: "Tokyo Electron（TEL）", share: "全球最大（日）", note: "主打日韓市場", threat: "medium" },
+        { name: "FormFactor（美）", share: "MEMS 探針卡強", note: "後段探針卡為主，Prober 較弱", threat: "low" },
+      ]
+    },
+    customers: {
+      major: [
+        { name: "台積電 / 晶圓代工廠", note: "晶圓良率測試（Wafer Sort）主要客戶", pct: "~40%" },
+        { name: "矽光子 / CPO 廠商", note: "光電晶圓測試，需求成長最快", pct: "~20%" },
+        { name: "聯電 / 力積電", note: "成熟製程晶圓測試", pct: "~20%" },
+        { name: "其他 IDM / 委外測試廠", note: "多元客群", pct: "~20%" },
+      ],
+      breakdown: "台積電是最大客戶，CPO/矽光子晶圓光電共測是最具差異化的成長引擎"
+    },
+    outlook: {
+      positive: [
+        "晶圓級 Burn-in（Wafer-level Burn-in）趨勢加速：封裝成本愈高，愈需要在晶圓階段就剔除缺陷",
+        "CPO 商轉啟動：矽光子晶圓測試需求從 0 開始高速成長",
+        "AI 晶片複雜度提升：需要更多晶圓測試關卡（EWS → Wafer Sort → KGD）",
+        "台積電 2nm 量產：每片晶圓造價更高，良率測試不可省"
+      ],
+      catalysts: [
+        "CPO Prober 第一個大客戶量產訂單",
+        "台積電 N2 量產拉動晶圓探針台採購（Q4 2025-2026）",
+        "旺矽光電共測 Prober 技術突破（微米級熱膨脹補償方案）"
+      ]
+    },
+    stockMetrics: {
+      pe: "N/A",
+      eps: "NT$—",
+      epg: "—",
+      marketCap: "NT$約 150億",
+      week52High: "NT$—",
+      week52Low: "NT$—",
+      divYield: "—",
+      sharesOut: "NT$約 5億"
+    },
+    notes: `【旺矽（6223）晶圓探針台分析備忘】
+
+▌ 核心定位：前段晶圓「最後關卡」
+晶圓出廠前最後一道電性測試（EWS/Wafer Sort）
+→ 晶圓越貴（台積電 N2 一片數萬美元），這道關卡越不可省
+→ CPO/矽光子晶圓需要光電共測：電性 + 光性同時驗證
+
+▌ 最難的技術挑戰：CPO 微米級對準
+矽光子晶片（PIC）在高溫 Burn-in 時：
+• 熱膨脹造成晶圓位移 → 光探針需即時補償 <1μm 精度
+• 溫度均勻性要求：±0.5℃ 以內（不均勻則光耦合效率崩潰）
+• 目前是業界最高難度前沿問題，解決者即獲壟斷地位
+
+▌ 晶圓級 Burn-in（Wafer-level Burn-in）趨勢
+傳統：封裝完成後才 Burn-in（發現缺陷 = 整顆昂貴模組報廢）
+新趨勢：在晶圓階段就 Burn-in（發現缺陷只損失一個 die，省成本）
+→ CoWoS/Chiplet/HBM 封裝成本倍增，前段測試需求爆炸
+
+▌ 關鍵觀察時間點
+• CPO 光電共測 Prober 正式量產（業界第一個商用訂單）
+• 台積電 N2 量產後晶圓探針台訂單動態
+• 旺矽在晶圓級 Burn-in 市場的份額佈局進度`,
+    challenges: [
+      "CPO 光電共測 Prober 開發週期長，技術未商轉前無法變現",
+      "Tokyo Electron 日本探針台廠財力雄厚，可大幅投資 CPO 研發競爭",
+      "晶圓製造景氣若下滑，晶圓廠削減資本支出影響 Prober 採購"
+    ],
+    risks: [
+      "CPO 商轉延遲（晶圓級光電測試市場比預期晚啟動）",
+      "台積電若自研或指定特定探針台供應商，形成排他性生態",
+      "中國自製探針台崛起，大陸市場份額流失"
+    ]
+  },
+
   // ── 新增 Layer 2 公司（中資光模組）──────────────────────────
   "XINYI": {
     id: "XINYI", name: "新易盛", ticker: "新易盛（中資 A股）", flag: "🇨🇳",
@@ -2487,6 +2675,10 @@ const CHAIN_DEFINITION = [
       { id: "6515.TW", note: "1.6T 高速同軸測試座/探針卡" },
       { id: "ATEYY" },
       { id: "KEYS" },
+    ]},
+    { name: "老化測試與分類系統", entries: [
+      { id: "6268.TW", note: "Burn-in Handler 全球七成霸主" },
+      { id: "6223.TW", note: "晶圓探針台 + CPO 晶圓級光電共測" },
     ]},
   ]},
 
