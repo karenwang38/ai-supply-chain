@@ -459,6 +459,12 @@ const COMPANIES = {
   • AI GPU 市佔：訓練端 ~80%，推論端 ~70%
   • Blackwell → Rubin：2026 H2 台積電 N2 製程
 
+■ 關鍵生態系綁定
+  • 台積電（2330）：CoWoS 先進封裝唯一代工
+  • 信驊（5274）：BMC 晶片 70% 壟斷，NVL72 每台 72 顆
+  • 新唐（4919）：BMC 二供 + BBU 電池管理
+  • 雙鴻（3324）/奇鋐（3017）：液冷 CDU 照 NVDA Spec 客製
+
 ■ 觀察指標
   • 每季 DC 營收成長率是否維持 100%+ YoY
   • Rubin 出貨節奏（2026 H2）
@@ -1564,6 +1570,109 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
     risks: ["Metalens 商業化若慢於預期", "傳統光學廠轉型切入競爭"]
   },
 
+  "5274.TW": {
+    id: "5274.TW", name: "信驊科技", ticker: "5274.TW", flag: "🇹🇼",
+    layer: 1, category: "控制與電源安全晶片",
+    platform: "NVDA",
+    badge: "BMC 全球七成壟斷",
+    tagline: "全球每台 AI 伺服器的遠端眼睛與守門人",
+    overview: "信驊科技（Aspeed Technology）是全球 BMC（底板管理控制器）晶片的絕對霸主，市佔約 70%。BMC 是伺服器的「遠端眼睛與守門人」——負責在 CPU/GPU 主系統外獨立監控溫度、電壓、風扇、遠端開關機，即使主系統當機仍能持續運作。NVIDIA GB200 NVL72 整機機櫃規格直接指定搭載大量 Aspeed BMC：每台 NVL72 機架需要高達 72 顆信驊 BMC 晶片（比傳統伺服器的 10-20 顆多出 3-7 倍）。這種幾乎壟斷的市場地位，加上 AI 伺服器 BMC 用量的倍增效應，讓信驊成為整條 NVIDIA 生態系中「確定性最高、最難被替代」的隱形大受益者。",
+    technology: {
+      core: "BMC（Baseboard Management Controller）晶片設計，KVM-over-IP 遠端管理，OpenBMC 開源生態系主導",
+      products: [
+        "ASPEED AST2600 系列 BMC — 現役主力，支援 DDR5、PCIe Gen5，AI 伺服器標配",
+        "ASPEED AST2700 系列 BMC — 下一代，支援 GB200 NVL 架構複雜管理節點",
+        "KVM-over-IP 模組 — 允許遠端操作伺服器畫面，資料中心維運必需",
+        "OCP（Open Compute Project）BMC — 超大規模資料中心定制版，Meta/Microsoft 大量採用"
+      ],
+      advantages: [
+        "OpenBMC 生態系主導者：NVIDIA/Meta/Amazon 的 BMC 韌體都基於 Aspeed 平台開發，切換成本極高",
+        "NVL72 機架需 72 顆：AI 伺服器 BMC 用量倍增效應，傳統 10-20 顆 → AI 機架 72-120 顆",
+        "設計門檻高：BMC 需同時管理複雜的電源序列、感測器矩陣與安全啟動，競爭者難以在短期追上",
+        "客戶黏著度極強：BMC 韌體與平台深度整合，換晶片等於整個管理系統重寫"
+      ]
+    },
+    marketShare: {
+      global: "~70%（全球 BMC 市場）",
+      desc: "BMC 市場幾乎是壟斷局面。新唐（4919）以 20-25% 居二，其他幾乎可忽略。AI 伺服器浪潮讓信驊的定價權進一步強化",
+      competitors: [
+        { name: "新唐科技（4919.TW）", share: "~22%", threat: "low", note: "BMC 二哥，靠客製化與性價比差異化，Microsoft 二供" },
+        { name: "其他", share: "~8%", threat: "low", note: "市場分散，無法在技術與生態上挑戰 Aspeed" }
+      ]
+    },
+    customers: {
+      major: [
+        { name: "廣達（NVIDIA GB200 首席代工）", pct: "~25%", note: "最大直接客戶，每台 NVL72 機架 72 顆 BMC 主供" },
+        { name: "緯穎", pct: "~18%", note: "超大規模 AI 伺服器代工，Aspeed BMC 主採" },
+        { name: "SuperMicro（美超微）", pct: "~15%", note: "美系 AI 伺服器品牌，Aspeed 核心供應商" },
+        { name: "鴻海精密", pct: "~12%", note: "NVIDIA GB200 / 一般伺服器代工" },
+        { name: "Meta（OCP 直採）", pct: "~12%", note: "Open Compute Project 客制 BMC，直接採購" },
+        { name: "其他 ODM/品牌商", pct: "~18%", note: "Dell、HP、Lenovo 等全球伺服器品牌" }
+      ],
+      breakdown: "超過 80% 收入來自 AI 伺服器生態系（NVIDIA GB200 / 一般 AI 伺服器）。GB200 NVL72 機架每台需 72 顆，相比傳統伺服器 10-20 顆，單機需求量倍增 3-7 倍。Meta 等超大規模 CSP 透過 OCP 開放計算計畫直接採購定制版 BMC，跳過 ODM 中間層。"
+    },
+    outlook: {
+      positive: [
+        "GB200 NVL72 全速量產：每台機架 72 顆 BMC，需求量倍增 3-7 倍，每個 Blackwell 出貨季都是信驊的超級加速器",
+        "AST2700 新世代 BMC 2026 量產：支援更複雜的 NVL 架構管理節點，單顆 ASP（售價）大幅提升",
+        "Rubin 架構（2026 H2）：更大機架、更多管理節點，BMC 用量再次跳升",
+        "OpenBMC 生態壟斷加深：越多廠商基於 Aspeed 平台開發韌體，切換成本越高、護城河越深"
+      ],
+      catalysts: [
+        "GB200 NVL72 / NVL576 季度出貨量（直接換算 BMC 需求）",
+        "AST2700 量產進度與 ASP 提升幅度",
+        "Rubin 架構機架 BMC 規格書正式公布（觸發新一輪設計導入）"
+      ]
+    },
+    stockMetrics: {
+      pe: "~65x (TTM)",
+      eps: "~NT$75-85（2026 預估）",
+      epg: "+50%+ YoY",
+      peg: "~1.1",
+      marketCap: "~NT$700-800億",
+      week52High: "NT$7,000+",
+      week52Low: "NT$3,500",
+      divYield: "~0.5%"
+    },
+    notes: `【信驊（5274）分析備忘】
+─────────────────────────────
+■ 核心定位
+全球 BMC 晶片 ~70% 壟斷
+每台 GB200 NVL72 機架需 72 顆（vs 傳統伺服器 10-20 顆）
+= 同一客戶採購量倍增 3-7 倍，不需要搶新客戶就有爆發性成長
+
+■ 護城河本質
+OpenBMC 生態：全球 BMC 韌體都基於 Aspeed 平台開發
+→ 客戶換晶片 = 整個管理系統韌體重寫（切換成本極高）
+→ NVIDIA、Meta、Amazon 的工程師都在 Aspeed 平台上工作
+
+■ 與新唐（4919）的差異
+  信驊：BMC 霸主（主供，70%），護城河深，估值高
+  新唐：BMC 二哥（二供，22%）+ BMS 電池管理，轉機股邏輯
+
+■ 關鍵觀察指標
+• 每季 Blackwell 機架出貨量（1台 NVL72 = 72顆 BMC）
+• AST2700 新一代 BMC 量產進度（ASP 提升）
+• Rubin 架構機架 BMC 規格（下一輪需求倍增節點）
+
+■ 風險
+• 估值已高（P/E ~65x）：已充分 Price in GB200 需求
+• 唯一真實威脅：NVIDIA 若自研 BMC（機率極低，但存在）
+• 新唐持續搶 Second Source 份額（侵蝕 70% 壟斷）`,
+    challenges: [
+      "估值極高（P/E ~65x），GB200 出貨節奏若有任何延遲，市場立即修正",
+      "新唐（4919）持續以 Second Source 策略侵蝕份額，Microsoft Azure 等大廠強制雙供應商",
+      "NVIDIA 若未來自研 BMC 晶片（極低機率，但等同護城河崩解的黑天鵝）",
+      "AI 伺服器架構若大幅簡化管理節點，減少 BMC 用量（長期技術演進風險）"
+    ],
+    risks: [
+      "GB200 / Rubin 出貨若再度延遲，72顆/台的乘數效應反向放大業績落空衝擊",
+      "估值泡沫：P/E 65x 已超前部署多年成長預期，任何一季不如預期即面臨 30%+ 修正風險",
+      "OpenBMC 開源生態若出現強力替代平台，切換成本壁壘下降",
+      "台積電產能限制（BMC 使用成熟製程，相對可控，但整體 AI 熱度降溫會傳導）"
+    ]
+  },
+
   "4919.TW": {
     id: "4919.TW", name: "新唐科技", ticker: "4919.TW", flag: "🇹🇼",
     layer: 1, category: "控制與電源安全晶片",
@@ -2190,7 +2299,8 @@ const CHAIN_DEFINITION = [
       { id: "SRCP",  note: "EML 年產 6,000 萬顆" },
     ]},
     { name: "控制與電源安全晶片", entries: [
-      { id: "4919.TW", note: "AI 伺服器 BMC 管理晶片 / 儲能 BMS 電池管理晶片" },
+      { id: "5274.TW", note: "BMC 全球 70% 壟斷・NVL72 每台需 72 顆" },
+      { id: "4919.TW", note: "BMC 全球二哥 + BBU 電池管理 BMS" },
     ]},
     { name: "底層散熱與重電元件", entries: [
       { id: "3324.TW", note: "Cold Plate" },
