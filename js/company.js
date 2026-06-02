@@ -296,6 +296,7 @@
       { key: 'week52High',   label: '52週高',        hint: '52-Week High' },
       { key: 'week52Low',    label: '52週低',        hint: '52-Week Low' },
       { key: 'divYield',     label: '殖利率',        hint: 'Dividend Yield' },
+      { key: 'sharesOut',    label: '股本 / 股數',   hint: 'Shares Outstanding' },
     ];
 
     const cards = DEFS.map(d => {

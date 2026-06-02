@@ -81,6 +81,8 @@ const COMPANIES = {
       week52High: "1,600元+",
       week52Low: "創新板，流動性有限",
       divYield: "0%"
+    ,
+      sharesOut: "NT$3.9億"
     },
     relatedIntel: ["2026-06-01-7610-kanghe", "2026-06-02-7610-demand"],
     notes: `【聯友金屬 (7610) 完整分析備忘】
@@ -195,6 +197,8 @@ const COMPANIES = {
       week52High: "€200.50",
       week52Low: "€22.62",
       divYield: "0%"
+    ,
+      sharesOut: "29.5M"
     },
     challenges: ["資本支出龐大，擴產周期長", "法國地緣政治風險（歐洲半導體自主化政策可能影響出口）", "客戶集中度偏高（GF/三星佔比重）"],
     risks: ["SOI 晶圓需求若被其他技術路線替代（如 GaN-on-Si）", "匯率風險（歐元計價，受美元波動影響獲利）", "擴產速度若跟不上 CPO 放量需求"]
@@ -295,6 +299,8 @@ const COMPANIES = {
       week52High: "N/A",
       week52Low: "N/A",
       divYield: "~1.5%"
+    ,
+      sharesOut: "NT$38.2億"
     },
     notes: `【環球晶關鍵數字備忘】
 ─────────────────────────────
@@ -357,6 +363,8 @@ const COMPANIES = {
       week52High: "$651.73",
       week52Low: "$376.18",
       divYield: "0%"
+    ,
+      sharesOut: "148M"
     },
     challenges: ["美國對中國出口限制（部分中資晶片廠無法使用）", "Ansys 收購整合的執行風險"],
     risks: ["AI 驅動的開源 EDA 工具崛起威脅（長期）", "地緣政治導致中國市場萎縮"]
@@ -385,6 +393,8 @@ const COMPANIES = {
       week52High: "$383.80",
       week52Low: "$262.75",
       divYield: "0%"
+    ,
+      sharesOut: "270M"
     },
     challenges: ["與 Synopsys 競爭激烈，部分客戶傾向單一供應商", "中國市場受出口管制影響"],
     risks: ["AI 驅動設計工具若降低對傳統 EDA 依賴", "地緣政治加劇"]
@@ -457,6 +467,8 @@ const COMPANIES = {
       week52High: "~$165",
       week52Low: "~$86",
       divYield: "~0.03%"
+    ,
+      sharesOut: "24.4B"
     },
     notes: `【NVIDIA 產業鏈制高點結構圖】
 ─────────────────────────────
@@ -549,6 +561,8 @@ const COMPANIES = {
       week52High: "NT$4710",
       week52Low: "NT$1130",
       divYield: "1.24%"
+    ,
+      sharesOut: "NT$159億"
     },
   },
 
@@ -570,6 +584,8 @@ const COMPANIES = {
       week52High: "NT$5640",
       week52Low: "NT$2480",
       divYield: "0.83%"
+    ,
+      sharesOut: "NT$34.3億"
     },
     challenges: ["客戶集中度高", "地緣政治影響中國客戶訂單"],
     risks: ["大型 CSP 若轉向自建設計團隊", "台積電先進製程取得風險"]
@@ -594,6 +610,8 @@ const COMPANIES = {
       week52High: "NT$5950",
       week52Low: "NT$1030",
       divYield: "0.43%"
+    ,
+      sharesOut: "NT$22.5億"
     },
     challenges: ["台積電若改變投資策略可能影響關係", "ASIC 設計人才招募競爭激烈"],
     risks: ["過度依賴台積電單一代工廠", "台積電地緣政治風險連帶影響"]
@@ -636,7 +654,31 @@ const COMPANIES = {
       week52High: "$430.55",
       week52Low: "$192.20",
       divYield: "0.91%"
+    ,
+      sharesOut: "NT$2,593億"
     },
+    notes: `【台積電 (2330 / TSM) 分析備忘】
+
+■ 核心戰略地位
+• 全球先進製程（<5nm）市佔 >90%，形成事實性壟斷
+• AI 算力時代的「唯一咽喉」：NVIDIA GB200/B100/H100 全系列由台積電生產
+• CoWoS 先進封裝月產能持續擴充（2025 目標 35K 片/月）
+
+■ 本益比上修邏輯（P/E Re-rating）
+• 智慧型手機時代被定義為「高級代工廠」→ 歷史 P/E 死壓 15-18x
+• AI 時代基因突變，被重新定義為「AI 基礎建設」→ 市場給予 25-30x
+• 過去歷史資料已不適用現在的台積電，不能再用河流圖低買高賣
+
+■ 關鍵觀察指標（2026）
+• CoWoS 月產能是否按計畫突破 35K 片
+• N2（2nm）良率爬坡速度
+• 美國/日本廠海外成本攤銷對毛利率的壓力
+• NVIDIA Rubin（2026 H2）量產前是否提前拉貨
+
+■ 主要風險
+• 台海地緣政治（黑天鵝）
+• 海外建廠毛利率壓力（海外比台灣貴 30-50%）
+• CoWoS 產能瓶頸若無法跟上 NVIDIA 出貨節奏`,
   },
 
   "GFS": {
@@ -658,6 +700,8 @@ const COMPANIES = {
       week52High: "$92.55",
       week52Low: "$31.51",
       divYield: "0.60%"
+    ,
+      sharesOut: "560M"
     },
     challenges: ["先進製程競爭力不足，無法承接 NVIDIA/Apple 等頂級客戶", "盈利能力持續受壓（資本支出龐大但毛利率低）"],
     risks: ["Fotonix 商業化若失敗，失去差異化定位", "AMD 若減少使用 GF 產能，收入衝擊大"]
@@ -682,6 +726,8 @@ const COMPANIES = {
       week52High: "$1,086",
       week52Low: "$72.29",
       divYield: "0%"
+    ,
+      sharesOut: "67M"
     },
     challenges: ["CPO 架構若廣泛採用，可能要求更高規格的雷射（InP 陣列），威脅現有產品", "中資廠商（天孚、旭創）在部分低端市場提供更低價格"],
     risks: ["CPO 技術路線轉換速度比預期快", "客戶（思科等）若垂直整合雷射製造"]
@@ -744,6 +790,8 @@ const COMPANIES = {
     stockMetrics: {
       marketCap: "~$950M",
       divYield: "0%"
+    ,
+      sharesOut: "270M"
     },
     notes: `【成真度查證筆記】2026/06
 
@@ -814,6 +862,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$211.79",
       week52Low: "$49.10",
       divYield: "0.62%"
+    ,
+      sharesOut: "840M"
     },
     challenges: ["光纖產品毛利率受原材料（二氧化矽）成本影響", "顯示玻璃（Gorilla Glass）業務受手機市場疲軟拖累"],
     risks: ["資料中心建設若放緩或延遲", "中資廠商低價競爭擠壓市場"]
@@ -832,6 +882,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
     outlook: { positive: ["AI GPU（H100/B100/GB200）功耗 700W-1000W，風冷無法處理，液冷滲透率快速提升", "浸沒式液冷為次世代高功耗需求準備就緒"], catalysts: ["GB200 NVL72 Rack-scale 機櫃大規模出貨（2025）"] },
     stockMetrics: {
       divYield: "0%"
+    ,
+      sharesOut: "NT$18.5億"
     },
     challenges: ["浸沒式液冷技術尚未大規模商業化，驗證周期長", "競爭激烈，海外廠商（Vertiv、Modine）也在搶台積電客戶"],
     risks: ["液冷滲透速度若不如預期", "客戶將散熱業務自主化"]
@@ -856,6 +908,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$3010",
       week52Low: "NT$608",
       divYield: "0.37%"
+    ,
+      sharesOut: "NT$33.2億"
     },
     challenges: ["風冷轉液冷若轉換過快，風冷模組業務下滑", "客戶集中度高（廣達緯穎）"],
     risks: ["NVIDIA 散熱規格若改變（影響現有設計)", "競爭加劇導致毛利率下滑"]
@@ -879,6 +933,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$2275",
       week52Low: "NT$561",
       divYield: "0.41%"
+    ,
+      sharesOut: "NT$4.3億"
     },
     challenges: ["國際大廠若降低採購門檻擠壓毛利", "快接頭技術壁壘持續維護需要研發投入"],
     risks: ["液冷標準若走向整合（廠商自製接頭）", "原材料（金屬）成本波動"]
@@ -902,6 +958,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$2955",
       week52Low: "NT$1140",
       divYield: "1.57%"
+    ,
+      sharesOut: "NT$13億"
     },
     challenges: ["LGA 插座是成熟市場，成長有天花板", "快接頭新市場需要時間建立客戶認證"],
     risks: ["Intel/AMD 伺服器 CPU 若改變封裝形式（BGA 化）", "液冷快接頭業務尚未規模化"]
@@ -919,6 +977,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
     outlook: { positive: ["浸沒式液冷 2026-2028 年預計開始大規模商業化", "GB300/未來超高功耗 GPU 將強制要求浸沒式"], catalysts: ["主要 Hyperscaler 宣布採用浸沒式液冷的時程"] },
     stockMetrics: {
       divYield: "0%"
+    ,
+      sharesOut: "NT$6.1億"
     },
     challenges: ["浸沒式液冷商業化速度比預期慢", "技術驗證周期長"],
     risks: ["浸沒式液冷若被其他散熱技術取代", "市場啟動時間延遲"]
@@ -942,6 +1002,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$148",
       week52Low: "NT$90",
       divYield: "0.49%"
+    ,
+      sharesOut: "NT$8.1億"
     },
     challenges: ["低毛利金屬加工業務，難以提升獲利能力", "大廠競爭"],
     risks: ["規模難以擴大", "被整合商自製取代"]
@@ -966,6 +1028,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$20.81",
       week52Low: "$3.87",
       divYield: "0%"
+    ,
+      sharesOut: "200M"
     },
     challenges: ["小型公司資金有限，技術商業化時間壓力大", "大型競爭者（Intel、台積電）也在做 CPO"],
     risks: ["技術商業化時程延遲", "大廠以自有平台取代外部方案", "資金不足導致競爭力下滑"]
@@ -989,6 +1053,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$1310",
       week52Low: "NT$235",
       divYield: "0.42%"
+    ,
+      sharesOut: "NT$7.5億"
     },
     challenges: ["規模較小，接大單能力有限", "與 Alfa Laval 等國際大廠競爭"],
     risks: ["液冷標準若改變設計規格", "毛利率受壓"]
@@ -1013,6 +1079,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$33.51",
       week52Low: "$4.40",
       divYield: "0%"
+    ,
+      sharesOut: "178M"
     },
     challenges: ["毛利率仍為負（大型整合商常見問題）", "與 Tesla Megapack 的價格競爭激烈"],
     risks: ["儲能市場競爭加劇導致持續虧損", "美國政策風險（IRA 若修改）", "原材料（鋰電池）成本波動"]
@@ -1036,6 +1104,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$32.23",
       week52Low: "$5.92",
       divYield: "0%"
+    ,
+      sharesOut: "189M"
     },
     challenges: ["硬體業務虧損持續拖累整體財務", "需要盡快轉型為純軟體/平台商"],
     risks: ["Tesla、Fluence 等大廠推出競爭軟體", "客戶若選擇電池廠自帶軟體（如 CATL、BYD）"]
@@ -1061,6 +1131,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$121.43",
       week52Low: "$62.71",
       divYield: "1.40%"
+    ,
+      sharesOut: "4.2B"
     },
     challenges: ["Arista 在雲端客戶中快速搶佔市場份額", "Splunk 收購整合消化"],
     risks: ["AI 資料中心若從傳統以太網轉向 InfiniBand（NVIDIA 主導）", "企業 IT 支出景氣周期"]
@@ -1099,6 +1171,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$179.80",
       week52Low: "$85.58",
       divYield: "0%"
+    ,
+      sharesOut: "308M"
     },
   },
 
@@ -1137,6 +1211,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$372",
       week52Low: "NT$252",
       divYield: "3.83%"
+    ,
+      sharesOut: "NT$387.6億"
     },
   },
 
@@ -1159,6 +1235,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$5880",
       week52Low: "NT$2360",
       divYield: "2.66%"
+    ,
+      sharesOut: "NT$17.9億"
     },
     challenges: ["Meta 單一客戶集中度過高（風險）", "液冷整合能力追趕廣達"],
     risks: ["Meta 若放緩資料中心投資", "AI 伺服器設計若轉向台積電 COUPE 要求 ODM 重新設計"]
@@ -1184,6 +1262,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$304",
       week52Low: "NT$151",
       divYield: "2.01%"
+    ,
+      sharesOut: "NT$1,386億"
     },
     challenges: ["AI 伺服器毛利率低於傳統代工", "MIH 電動車平台商業化進度緩慢"],
     risks: ["Apple 訂單轉移（地緣政治）", "AI 伺服器需求週期調整"]
@@ -1208,6 +1288,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$64",
       week52Low: "NT$37",
       divYield: "1.62%"
+    ,
+      sharesOut: "NT$24.8億"
     },
     challenges: ["轉型速度慢（AI 佔比僅 1%）", "線束業務毛利率偏低"],
     risks: ["轉型若失敗，傳統業務萎縮", "機器人商業化時程延遲"]
@@ -1232,6 +1314,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$435.43",
       week52Low: "$311.90",
       divYield: "1.10%"
+    ,
+      sharesOut: "398M"
     },
     challenges: ["重電業務交期長（12-18 個月），短期供應瓶頸", "估值已高（AI 資料中心溢價充分反映）"],
     risks: ["資料中心建設若出現景氣反轉", "替代技術（直流配電系統）普及"]
@@ -1256,6 +1340,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$1,182",
       week52Low: "$458.65",
       divYield: "0.21%"
+    ,
+      sharesOut: "272M"
     },
     challenges: ["重型製造業勞工成本高漲", "交期長導致收入確認延遲"],
     risks: ["能源轉型速度若導致天然氣發電需求萎縮", "風電業務毛利率持續承壓"]
@@ -1280,6 +1366,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$252",
       week52Low: "NT$160",
       divYield: "2.05%"
+    ,
+      sharesOut: "NT$19.3億"
     },
     challenges: ["台灣本土市場有限", "海外拓展能力弱於競爭者"],
     risks: ["台電資本支出若縮減", "重電業務景氣周期"]
@@ -1303,6 +1391,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$1115",
       week52Low: "NT$403",
       divYield: "1.03%"
+    ,
+      sharesOut: "NT$16億"
     },
     challenges: ["外銷競爭激烈（歐美大廠、中資廠商）", "匯率風險"],
     risks: ["外銷市場若受保護主義影響", "大型訂單交期長，收入波動大"]
@@ -1326,6 +1416,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$189",
       week52Low: "NT$142",
       divYield: "3.60%"
+    ,
+      sharesOut: "NT$13.9億"
     },
     challenges: ["政府採購流程緩慢，訂單確認周期長", "人才招募困難（重電工程師短缺）"],
     risks: ["政府基礎建設預算縮減", "競爭加劇"]
@@ -1366,6 +1458,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$278.56",
       week52Low: "$196.00",
       divYield: "0%"
+    ,
+      sharesOut: "10.5B"
     },
   },
 
@@ -1402,6 +1496,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$404.47",
       week52Low: "$163.33",
       divYield: "0.23%"
+    ,
+      sharesOut: "12.2B"
     },
   },
 
@@ -1424,6 +1520,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$555.45",
       week52Low: "$356.28",
       divYield: "0.81%"
+    ,
+      sharesOut: "7.4B"
     },
     challenges: ["資本支出暴增（$800 億美元/年）壓縮自由現金流", "AI 投資回報時程的市場疑慮"],
     risks: ["OpenAI 若另起爐灶或被競爭對手超越", "反壟斷監管（歐盟）"]
@@ -1448,6 +1546,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$796.25",
       week52Low: "$520.26",
       divYield: "0.33%"
+    ,
+      sharesOut: "2.5B"
     },
     challenges: ["Reality Labs 每年虧損 $150-200 億（長期拖累）", "歐盟 GDPR 廣告數據監管"],
     risks: ["TikTok 持續搶奪年輕用戶廣告預算", "反壟斷（Instagram/WhatsApp 強制分拆風險）"]
@@ -1472,6 +1572,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$98.75",
       week52Low: "$67.20",
       divYield: "2.86%"
+    ,
+      sharesOut: "2.0B"
     },
     challenges: ["電網連接瓶頸（Interconnection Queue 等待時間過長）", "稀土材料（風機磁鐵）供應鏈風險"],
     risks: ["美國能源政策轉向化石燃料", "利率上升壓縮再生能源 IRR（資本密集型）"]
@@ -1496,6 +1598,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$322.83",
       week52Low: "$18.12",
       divYield: "0%"
+    ,
+      sharesOut: "308M"
     },
     challenges: ["設備成本仍高（$5,000-10,000/kW，高於傳統電力）", "SOFC 運維複雜度較高"],
     risks: ["天然氣價格若大幅上漲侵蝕成本優勢", "政策支持若減少（IRA 氫能補貼）"]
@@ -1520,6 +1624,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$498.83",
       week52Low: "$273.21",
       divYield: "0%"
+    ,
+      sharesOut: "3.2B"
     },
     challenges: ["汽車業務毛利率持續下滑（價格戰）", "Optimus 量產時程屢次延遲"],
     risks: ["馬斯克過度分心（xAI、X、SpaceX）影響執行力", "比亞迪在全球市場持續壓低電動車定價", "監管風險（FSD 事故）"]
@@ -1544,6 +1650,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$516.85",
       week52Low: "$455.19",
       divYield: "0%"
+    ,
+      sharesOut: "1.44B"
     },
     challenges: ["BHE Iowa 電網野火賠償訴訟（最大已知風險）", "龐大規模限制未來回報率"],
     risks: ["接班人問題（巴菲特/芒格後波克夏文化能否維持）", "BHE 監管風險（電力公用事業監管）"]
@@ -1568,6 +1676,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "$41.10",
       week52Low: "$9.26",
       divYield: "0.93%"
+    ,
+      sharesOut: "NT$70.4億"
     },
     challenges: ["台積電 CoWoS 吸走部分高端訂單", "先進封裝研發資本支出龐大"],
     risks: ["台積電前道與後道整合進一步壓縮日月光市場", "中國 OSAT 廠（長電、通富微）快速追趕"]
@@ -1590,6 +1700,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$642",
       week52Low: "NT$198",
       divYield: "0.57%"
+    ,
+      sharesOut: "NT$9.5億"
     },
     challenges: ["Metalens 量產良率仍在爬升", "市場教育期較長"],
     risks: ["Metalens 商業化若慢於預期", "傳統光學廠轉型切入競爭"]
@@ -1658,6 +1770,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       week52High: "NT$7,000+",
       week52Low: "NT$3,500",
       divYield: "~0.5%"
+    ,
+      sharesOut: "NT$4.66億"
     },
     notes: `【信驊（5274）分析備忘】
 ─────────────────────────────
@@ -1762,6 +1876,8 @@ OpenBMC 生態：全球 BMC 韌體都基於 Aspeed 平台開發
       week52High: "NT$230",
       week52Low: "NT$50",
       divYield: "0.21%"
+    ,
+      sharesOut: "NT$35.9億"
     },
     notes: `【新唐（4919）轉機股分析筆記】2026/06
 
@@ -1842,6 +1958,8 @@ Q1 扭虧含業外收入成分（員工留任條件達成）
       week52High: "$313.75",
       week52Low: "$135.50",
       divYield: "0%"
+    ,
+      sharesOut: "107M"
     },
     challenges: ["中國競爭者低價傾銷壓力（雖有關稅保護）", "原材料（碲 Te）供應有限"],
     risks: ["美國政策風險（IRA 補貼若修改）", "碲原料供應瓶頸限制擴產速度"]
@@ -1858,6 +1976,8 @@ Q1 扭虧含業外收入成分（員工留任條件達成）
     outlook: { positive: ["Intel/TSMC 玻璃基板封裝路線圖確認，TGV 設備需求確定", "AI 晶片封裝複雜度提升推動玻璃基板採用"], catalysts: ["台積電玻璃基板封裝正式量產時程"] },
     stockMetrics: {
       divYield: "0%"
+    ,
+      sharesOut: "NT$3.3億"
     },
     challenges: ["玻璃基板封裝商業化時程慢於預期風險", "公司規模小，接大單能力有限"],
     risks: ["玻璃基板若被其他材料取代", "大型設備廠進入競爭（Tokyo Electron 等）"]
@@ -1880,6 +2000,8 @@ Q1 扭虧含業外收入成分（員工留任條件達成）
       week52High: "NT$30",
       week52Low: "NT$13",
       divYield: "1.29%"
+    ,
+      sharesOut: "NT$10.4億"
     },
     challenges: ["技術進入門檻需持續研發投入", "日本設備廠競爭壓力"],
     risks: ["台積電若改用日商設備", "封裝技術路線轉換（如全面改用 CoWoS）"]
@@ -1948,6 +2070,8 @@ Q1 扭虧含業外收入成分（員工留任條件達成）
       week52High: "NT$11490",
       week52Low: "NT$1000",
       divYield: "0.29%"
+    ,
+      sharesOut: "NT$9.6億"
     },
     notes: `【穎崴（6515）深度分析筆記】2026/06
 
@@ -2027,6 +2151,8 @@ Q1 扭虧含業外收入成分（員工留任條件達成）
       week52High: "$198.32",
       week52Low: "$49.56",
       divYield: "0.23%"
+    ,
+      sharesOut: "730M"
     },
     challenges: ["ATE 是資本財，景氣周期波動明顯", "韓系（三星/SK）若自製 ATE 設備"],
     risks: ["半導體景氣下行時客戶削減 ATE 採購", "中國自製 ATE（中科飛測）崛起，中國市場份額流失"]
@@ -2050,6 +2176,8 @@ Q1 扭虧含業外收入成分（員工留任條件達成）
       week52High: "$370.18",
       week52Low: "$152.85",
       divYield: "0%"
+    ,
+      sharesOut: "171M"
     },
     challenges: ["測試儀器是資本財，景氣周期敏感", "中國客戶市場受出口限制影響"],
     risks: ["半導體/通訊設備投資景氣下行", "中國競爭者（鼎陽科技等）切入中低端市場"]

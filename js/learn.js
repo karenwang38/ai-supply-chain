@@ -473,6 +473,79 @@
     },
 
     {
+      id: 'stock-math',
+      icon: '📐',
+      title: '股票數學・估值進化論',
+      html: `
+        <p class="learn-lead">當一檔股票創歷史新高、進入「無頭部行情」時，過去所有的歷史本益比區間與河流圖，會瞬間「報廢」不能用。這在股市裡有一個專有名詞，叫做 <strong>${T('本益比上修','spec')}（P/E Re-rating）</strong>。</p>
+
+        <h3 class="learn-h3">一、公司「基因」發生突變（毛毛蟲變蝴蝶）</h3>
+        <p>過去的歷史資料，建立在公司的「舊業務」上。當股價衝破歷史新高，通常意味著它<strong>跨入了全新、暴利的未知領域</strong>。</p>
+
+        <div class="learn-insight">
+          <div class="learn-insight-icon">🏭</div>
+          <div>
+            <strong>經典案例：${co('2330.TW','台積電（2330）')}</strong><br>
+            智慧型手機時代，市場對台積電的認知是「高級代工廠」，歷史本益比被死死壓在 ${T('15～18倍','spec')}。當 AI 時代來臨，台積電靠著 ${T('CoWoS','spec')} 先進封裝和 2 奈米成為全球 AI 晶片的唯一咽喉——市場賦予它全新身份「AI 基礎建設」，本益比直接拉高到 ${T('25～30倍','spec')}。<br>
+            <strong>過去的歷史資料不是錯了，而是它「不配」用在現在的台積電身上了。</strong>
+          </div>
+        </div>
+
+        <h3 class="learn-h3">二、黃金公式與動態滾動預測</h3>
+        <p>過去資料失效後，法人和高手會把舊的歷史表格丟掉，改用「<strong>${T('動態滾動預測','spec')}（Rolling Forecast）</strong>」——不看過去 P/E 區間，而是重新去算這場新變革能帶來多大的<strong>極限獲利</strong>。</p>
+
+        <div class="learn-formula-box">
+          <div class="learn-formula-label">黃金公式</div>
+          <div class="learn-formula-eq">股價 ＝ 預估 EPS × 本益比</div>
+        </div>
+
+        <div class="learn-insight">
+          <div class="learn-insight-icon">💡</div>
+          <div>
+            <strong>EPS 暴放大案例：${co('5274.TW','信驊（5274）')}</strong><br>
+            過去一台通用伺服器只需 1 顆 BMC 晶片；現在一台 ${T('NVIDIA NVL72','spec')} 機櫃架構需要 ${T('72 顆','spec')} BMC。出貨量直接翻了幾十倍，預估明後年的 EPS 出現非線性暴增（例如從 NT$30 直接跳到 NT$80～100）。<strong>就算本益比不變，光靠 EPS 的暴放大，就能解釋為什麼股價可以創歷史新高。</strong>
+          </div>
+        </div>
+
+        <h3 class="learn-h3">三、本夢比：買的是「無法證偽的未來」</h3>
+        <p>當股價創歷史新高，連明年預估 EPS 都快解釋不了當下股價時，市場進入最瘋狂也最唯心的階段——</p>
+
+        <div class="learn-compare-grid">
+          <div class="learn-compare-card">
+            <div class="learn-compare-head">${T('本益比','spec')}（P/E）</div>
+            <div class="learn-compare-sub">Price-to-Earnings</div>
+            <p>用<strong>已實現或可預測的 EPS</strong> 來估價。歷史上有跡可循，分析師可以建模驗證。</p>
+            <p>適用場景：公司處於正常成長軌道，業務模式無根本改變。</p>
+          </div>
+          <div class="learn-compare-card">
+            <div class="learn-compare-head">${T('本夢比','dream')}（P/Dream）</div>
+            <div class="learn-compare-sub">Price-to-Dream Ratio</div>
+            <p>買的是一個「<strong>當下無法被證明，但也無法被否定（無法證偽）</strong>」的宏大夢想。</p>
+            <p>歷史新高前方沒有「學長（歷史套牢區）」在賣股，天空沒有天花板，熱錢不斷湧入把本益比主觀估計值推到 ${T('50～60倍','spec')}。</p>
+          </div>
+        </div>
+
+        <h3 class="learn-h3">實戰結論：看到創新高，第一個動作是什麼？</h3>
+
+        <div class="learn-role-grid">
+          <div class="learn-role-card">
+            <div class="learn-role-title">😰 平庸的投資人</div>
+            <p>「這比過去歷史<strong>貴太多了</strong>」→ 提早下車 → 錯失後面最肥美的翻倍行情。</p>
+          </div>
+          <div class="learn-role-card">
+            <div class="learn-role-title">🎯 頂尖的投資人</div>
+            <p>「公司一定發生了過去歷史<strong>沒發生過的大事</strong>」→ 立刻修正模型，放棄舊資料，評估公司最新的<strong>未來極限獲利能力</strong>。</p>
+          </div>
+        </div>
+
+        <div class="learn-insight">
+          <div class="learn-insight-icon">📌</div>
+          <div>股市永遠迷人，因為它是一門<strong>永遠在修正過去、擁抱未來的動態心理學</strong>。遇到創新高股票，不要先問「貴不貴」，而是先問：<em>「它的基因突變了什麼？」</em></div>
+        </div>
+      `
+    },
+
+    {
       id: 'key-terms',
       icon: '📖',
       title: '術語速查表',
@@ -493,6 +566,8 @@
             ['EML', 'Electro-absorption Modulated Laser', '電吸收調製雷射，CPO 光引擎核心光源組件'],
             ['TGV', 'Through-Glass Via 穿玻璃通孔', '鈦昇（8027）的核心技術，先進封裝玻璃基板的關鍵製程'],
             ['ASP', 'Average Selling Price 平均銷售單價', '分析散熱、模組廠毛利結構的關鍵指標'],
+            ['P/E Re-rating', '本益比上修', '股價創新高時，市場重新給予更高的本益比倍數，原因是公司基因突變進入新賽道'],
+            ['本夢比', 'Price-to-Dream Ratio', '連預估 EPS 都解釋不了股價時的估值邏輯；買的是「無法被證偽的宏大夢想」'],
             ['PEG', 'Price/Earnings to Growth 市盈增長比', 'P/E 除以 EPS 成長率，<1.0 表示成長被低估，>1.14 開始過熱'],
             ['PCIe', 'Peripheral Component Interconnect Express', 'CPU 與 GPU 之間的標準高速介面，Gen 6 是下一代'],
             ['CXL', 'Compute Express Link', '新一代 CPU-GPU-記憶體互連協議，解決傳統 PCIe 延遲瓶頸'],
