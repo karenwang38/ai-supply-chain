@@ -1687,56 +1687,213 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ═══════════════════════════════════════════════════════════
-   CARTOON / STREET ART THEME OVERRIDES
-   Neon palette · Thick outlines · Sticker cards · Bold type
+   CARTOON THEME – Flat colour · Comic panels · Fredoka headings
    ═══════════════════════════════════════════════════════════ */
+
+/* ── Colour rework (flat, vivid, no glow) ── */
+:root {
+  --bg:  #121218;
+  --bg2: #1a1a24;
+  --bg3: #22222e;
+  --border: rgba(255,255,255,0.13);
+  --text: #f0ede8;
+  --text-muted: #9898b0;
+  --text-dim: #545468;
+  --accent:  #f5b800;
+  --accent2: #e05252;
+
+  --l0: #e05252; --l0-bg: rgba(224,82,82,0.12);
+  --l1: #f5b800; --l1-bg: rgba(245,184,0,0.12);
+  --l2: #1db887; --l2-bg: rgba(29,184,135,0.10);
+  --l3: #f07020; --l3-bg: rgba(240,112,32,0.12);
+  --l4: #9b5cf0; --l4-bg: rgba(155,92,240,0.12);
+
+  --font:      'Nunito',  'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  --font-head: 'Fredoka', 'Nunito', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  --radius: 14px;
+  --radius-sm: 10px;
+}
+
+/* ── Body: dot-grid halftone background ── */
+body {
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.75;
+  background-color: var(--bg);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* ── Fredoka for all headings ── */
+h1, h2, h3,
+.page-title, .page-subtitle,
+.site-header .logo,
+.layer-info h2, .tree-layer-title,
+.company-big-name,
+.intel-card-title,
+.learn-section-title, .learn-h3,
+.content-block h3,
+.battle-card h3,
+.learn-compare-head,
+.company-tagline {
+  font-family: var(--font-head);
+  letter-spacing: 0.01em;
+}
 
 /* ── Header ── */
 .site-header {
-  height: 70px;
-  background: #090910;
+  height: 68px;
+  background: #0e0e16;
   border-bottom: 3px solid var(--accent);
-  padding: 0 36px;
-  gap: 28px;
 }
 .site-header .logo {
-  font-size: 21px;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  text-shadow: 2px 2px 0 var(--accent2);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: var(--text);
+  text-shadow: none;
 }
 .site-header .logo span { color: var(--accent); }
 .site-header nav a {
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 700;
   padding: 8px 16px;
   border-radius: 10px;
-  letter-spacing: 0.02em;
 }
 .site-header nav a:hover,
 .site-header nav a.active {
-  background: rgba(255,230,0,0.13);
+  background: rgba(245,184,0,0.12);
   color: var(--accent);
 }
-.header-right { font-size: 14px; font-weight: 700; color: var(--text-muted); }
 
-/* ── Layer color tokens (sticker shadow per layer) ── */
-.layer-0 { --lc: var(--l0); --ls: rgba(255,45,120,0.45); }
-.layer-1 { --lc: var(--l1); --ls: rgba(255,230,0,0.45); }
-.layer-2 { --lc: var(--l2); --ls: rgba(0,255,170,0.35); }
-.layer-3 { --lc: var(--l3); --ls: rgba(255,107,53,0.45); }
-.layer-4 { --lc: var(--l4); --ls: rgba(192,132,252,0.45); }
+/* ── Page titles ── */
+.page-title { font-size: 28px; font-weight: 600; text-shadow: none; }
+.page-subtitle { font-size: 16px; font-weight: 500; }
 
-/* ── Layer header ── */
+/* ── Layer colour tokens ── */
+.layer-0, .tl-0 { --lc: var(--l0); --ls: rgba(0,0,0,0.7); }
+.layer-1, .tl-1 { --lc: var(--l1); --ls: rgba(0,0,0,0.7); }
+.layer-2, .tl-2 { --lc: var(--l2); --ls: rgba(0,0,0,0.7); }
+.layer-3, .tl-3 { --lc: var(--l3); --ls: rgba(0,0,0,0.7); }
+.layer-4, .tl-4 { --lc: var(--l4); --ls: rgba(0,0,0,0.7); }
+
+/* ── Company card (comic sticker) ── */
+.company-card {
+  width: 215px;
+  padding: 16px 18px;
+  border: 3px solid var(--lc, var(--border));
+  border-radius: 14px;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.75);
+  background: var(--bg2);
+  transition: transform 0.14s, box-shadow 0.14s;
+}
+.company-card:hover {
+  transform: translate(-3px,-3px);
+  box-shadow: 7px 7px 0 rgba(0,0,0,0.75);
+}
+.company-card:hover::before { opacity: 1; }
+.card-flag   { font-size: 18px; margin-bottom: 6px; }
+.card-ticker { font-size: 12px; font-weight: 800; letter-spacing: 0.8px; color: var(--lc, var(--text-muted)); }
+.card-name   { font-size: 16px; font-weight: 800; margin-bottom: 8px; line-height: 1.3; font-family: var(--font-head); }
+.card-badge  {
+  font-size: 11px; padding: 3px 9px; font-weight: 800;
+  border-radius: 6px;
+  border: 2px solid var(--lc, var(--border));
+}
+
+/* ── Tree layer block (index page) ── */
+.tree-layer-block {
+  border: 3px solid var(--lc, var(--border));
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.6);
+  overflow: hidden;
+}
+.tree-layer-header {
+  border-bottom: 2px solid var(--lc, var(--border));
+  background: rgba(0,0,0,0.25);
+  padding: 16px 22px 14px;
+  position: relative;
+  overflow: hidden;
+}
+.tree-layer-number {
+  width: 34px; height: 34px;
+  border-radius: 10px;
+  font-size: 16px; font-weight: 900;
+  background: var(--lc, var(--bg3));
+  color: #000;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+  font-family: var(--font-head);
+}
+.tree-layer-title {
+  font-size: 16px; font-weight: 600;
+  font-family: var(--font-head);
+  color: var(--text);
+}
+.tree-layer-count {
+  font-size: 12px; font-weight: 800;
+  background: rgba(0,0,0,0.3);
+  border: 1.5px solid var(--lc, var(--border));
+  color: var(--lc, var(--text-muted));
+  padding: 3px 10px; border-radius: 20px;
+}
+
+/* Tree layer tl-X: colour overrides */
+.tl-0 .tree-layer-header { background: rgba(224,82,82,0.08); }
+.tl-0 .tree-layer-number { background: var(--l0); }
+.tl-1 .tree-layer-header { background: rgba(245,184,0,0.07); }
+.tl-1 .tree-layer-number { background: var(--l1); }
+.tl-2 .tree-layer-header { background: rgba(29,184,135,0.07); }
+.tl-2 .tree-layer-number { background: var(--l2); }
+.tl-3 .tree-layer-header { background: rgba(240,112,32,0.08); }
+.tl-3 .tree-layer-number { background: var(--l3); }
+.tl-4 .tree-layer-header { background: rgba(155,92,240,0.07); }
+.tl-4 .tree-layer-number { background: var(--l4); }
+
+/* ── Tree illustration area ── */
+.tree-layer-illu {
+  margin-left: auto;
+  opacity: 0.9;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+/* ── Co-chip (index page chips) ── */
+.co-chip {
+  padding: 5px 12px 5px 8px;
+  border-radius: 9px;
+  border: 2px solid rgba(255,255,255,0.13);
+  background: rgba(255,255,255,0.04);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+}
+.co-chip:hover {
+  border-color: var(--lc, rgba(255,255,255,0.3));
+  transform: translate(-1px,-1px);
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.5);
+}
+.chip-name   { font-size: 14px; font-weight: 800; font-family: var(--font-head); }
+.chip-ticker { font-size: 12px; font-weight: 700; }
+.chip-note   { font-size: 11px; font-weight: 700; border-radius: 5px; }
+
+.tl-0 .co-chip { border-color: rgba(224,82,82,0.4); }
+.tl-1 .co-chip { border-color: rgba(245,184,0,0.4); }
+.tl-2 .co-chip { border-color: rgba(29,184,135,0.4); }
+.tl-3 .co-chip { border-color: rgba(240,112,32,0.4); }
+.tl-4 .co-chip { border-color: rgba(155,92,240,0.4); }
+
+/* ── Layer block (company page) ── */
 .layer-header { padding: 20px 28px 14px; gap: 16px; }
 .layer-number {
   width: 40px; height: 40px;
   font-size: 17px; font-weight: 900;
   border-radius: 10px;
-  box-shadow: 3px 3px 0 rgba(0,0,0,0.5);
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.6);
+  font-family: var(--font-head);
 }
-.layer-info h2 { font-size: 20px; font-weight: 900; letter-spacing: -0.3px; }
-.layer-info p  { font-size: 14px; color: var(--text-muted); }
+.layer-info h2 {
+  font-size: 20px; font-weight: 600;
+  font-family: var(--font-head);
+}
+.layer-info p  { font-size: 14px; }
 .layer-count   { font-size: 13px; font-weight: 800; padding: 4px 12px; border-radius: 20px; }
 .layer-body    { padding: 20px 28px 28px; }
 .category-label {
@@ -1746,212 +1903,145 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 12px;
 }
 
-/* ── Company card (sticker style) ── */
-.company-card {
-  border: 2.5px solid var(--lc, var(--border));
-  box-shadow: 3px 3px 0 var(--ls, rgba(255,255,255,0.1));
-  width: 215px;
-  padding: 16px 18px;
-  border-radius: 12px;
-  background: var(--bg2);
-}
-.company-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0 var(--ls, rgba(255,255,255,0.15));
-  border-color: var(--lc, var(--accent));
-}
-.company-card:hover::before { opacity: 1; }
-.card-flag   { font-size: 18px; margin-bottom: 6px; }
-.card-ticker { font-size: 12px; font-weight: 900; letter-spacing: 0.8px; color: var(--lc, var(--text-muted)); }
-.card-name   { font-size: 16px; font-weight: 900; margin-bottom: 8px; line-height: 1.3; }
-.card-badge  {
-  font-size: 11px; padding: 3px 9px; font-weight: 900;
-  border-radius: 6px;
-  border: 2px solid var(--lc, var(--border));
-}
+/* Layer colour overrides (company page) */
+.layer-0 .layer-header { background: rgba(224,82,82,0.09); }
+.layer-0 .layer-number { background: var(--l0); color: #000; }
+.layer-1 .layer-header { background: rgba(245,184,0,0.08); }
+.layer-1 .layer-number { background: var(--l1); color: #000; }
+.layer-2 .layer-header { background: rgba(29,184,135,0.08); }
+.layer-2 .layer-number { background: var(--l2); color: #000; }
+.layer-3 .layer-header { background: rgba(240,112,32,0.09); }
+.layer-3 .layer-number { background: var(--l3); color: #000; }
+.layer-4 .layer-header { background: rgba(155,92,240,0.08); }
+.layer-4 .layer-number { background: var(--l4); color: #000; }
 
 /* ── Battle banner ── */
 .battle-card {
   border: 3px solid;
   border-radius: 16px;
   padding: 20px 24px;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.6);
 }
-.battle-card.nvidia {
-  border-color: #76b900;
-  box-shadow: 4px 4px 0 rgba(118,185,0,0.4);
-}
-.battle-card.amd {
-  border-color: var(--accent2);
-  box-shadow: 4px 4px 0 rgba(255,45,120,0.4);
-}
-.battle-card h3 { font-size: 15px; font-weight: 900; margin-bottom: 12px; }
-.battle-card ul li { font-size: 14px; padding: 4px 0; font-weight: 600; }
+.battle-card.nvidia { border-color: #76b900; }
+.battle-card.amd    { border-color: var(--accent2); }
+.battle-card h3     { font-size: 15px; font-weight: 600; margin-bottom: 12px; font-family: var(--font-head); }
+.battle-card ul li  { font-size: 14px; font-weight: 600; padding: 4px 0; }
 .battle-vs {
-  font-size: 28px; font-weight: 900;
+  font-size: 30px; font-weight: 600;
+  font-family: var(--font-head);
   color: var(--accent2);
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.6);
+  text-shadow: none;
 }
-
-/* ── Page titles ── */
-.page-title    { font-size: 30px; font-weight: 900; letter-spacing: -0.5px; }
-.page-subtitle { font-size: 16px; font-weight: 600; }
 
 /* ── Content blocks ── */
-.content-block {
-  border: 2px solid var(--border);
-  border-radius: 14px;
-}
-.content-block h3 {
-  font-size: 15px; font-weight: 900;
-  letter-spacing: 0.5px;
-  margin-bottom: 16px;
-}
-.content-block p { font-size: 17px; line-height: 1.9; }
+.content-block { border: 2px solid var(--border); border-radius: 14px; }
+.content-block h3 { font-size: 15px; font-weight: 800; margin-bottom: 16px; }
+.content-block p  { font-size: 17px; line-height: 1.9; }
+.bullet-list li   { font-size: 17px; line-height: 1.85; padding: 6px 0 6px 20px; }
+.tag-item         { font-size: 14px; font-weight: 700; padding: 5px 14px; border-radius: 8px; }
+.risk-item        { font-size: 16px; }
 
-/* ── Bullet list ── */
-.bullet-list li { font-size: 17px; line-height: 1.85; padding: 6px 0 6px 20px; }
-
-/* ── Tag items ── */
-.tag-item {
-  font-size: 14px; font-weight: 700;
-  padding: 5px 14px;
-  border-radius: 8px;
-  border: 1.5px solid var(--border);
-}
-
-/* ── Tab bar ── */
-.tab-btn { font-size: 15px; font-weight: 800; padding: 12px 20px; }
+/* ── Tabs ── */
+.tab-btn        { font-size: 15px; font-weight: 800; padding: 12px 20px; }
 .tab-btn.active { font-weight: 900; border-bottom-color: var(--accent); }
 
 /* ── Company hero ── */
-.company-big-name { font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
-.company-tagline  { font-size: 18px; font-weight: 600; }
-.company-ticker-tag { font-size: 15px; font-weight: 900; padding: 5px 14px; }
+.company-big-name   { font-size: 36px; font-weight: 600; text-shadow: none; }
+.company-tagline    { font-size: 18px; font-weight: 500; }
+.company-ticker-tag { font-size: 15px; font-weight: 800; padding: 5px 14px; }
 .company-layer-tag  { font-size: 13px; font-weight: 800; padding: 4px 12px; border-radius: 8px; }
 .company-category-tag { font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 8px; }
 .company-platform-tag {
-  font-size: 13px; font-weight: 900;
+  font-size: 13px; font-weight: 800;
   border: 2px solid #76b900;
-  box-shadow: 2px 2px 0 rgba(118,185,0,0.4);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
   padding: 4px 12px;
+  text-shadow: none;
 }
 
 /* ── Stock metrics ── */
 .metric-card  { border: 2px solid var(--border); border-radius: 12px; padding: 16px 14px; }
-.metric-value { font-size: 21px; font-weight: 900; }
+.metric-value { font-size: 21px; font-weight: 800; font-family: var(--font-head); }
 .metric-label { font-size: 11px; font-weight: 900; letter-spacing: 0.5px; margin-bottom: 10px; }
 .metric-sub   { font-size: 12px; }
-.metric-links a { font-weight: 800; border: 1.5px solid rgba(255,230,0,0.3); }
-.metric-links a:hover { background: rgba(255,230,0,0.1); color: var(--accent); }
 
-/* ── Intel page ── */
+/* ── Intel cards ── */
 .intel-card {
   border: 2.5px solid var(--border);
   border-radius: 16px;
   margin-bottom: 20px;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.5);
 }
 .intel-card.open,
 .intel-card:hover {
   border-color: var(--accent);
-  box-shadow: 3px 3px 0 rgba(255,230,0,0.3);
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.6);
 }
-.intel-card-title   { font-size: 19px; font-weight: 900; }
+.intel-card-title   { font-size: 19px; font-weight: 700; font-family: var(--font-head); }
 .intel-card-summary { font-size: 16px; line-height: 1.85; }
 .intel-toggle-btn {
   font-size: 14px; font-weight: 900;
   border: 2px solid var(--accent);
-  border-radius: 8px;
-  padding: 7px 18px;
+  border-radius: 8px; padding: 7px 18px;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
 }
 .intel-toggle-btn:hover { background: var(--accent); color: #000; }
 .intel-date   { font-size: 13px; font-weight: 700; }
 .intel-source { font-size: 13px; font-weight: 900; }
-.intel-tag    { font-size: 12px; font-weight: 700; border-radius: 6px; }
 
-/* ── Co-chip on index ── */
-.co-chip {
-  padding: 5px 12px 5px 9px;
-  border-radius: 8px;
-  border: 2px solid rgba(255,255,255,0.12);
-}
-.co-chip:hover {
-  border-color: rgba(255,255,255,0.3);
-  box-shadow: 2px 2px 0 rgba(255,255,255,0.1);
-}
-.chip-name   { font-size: 14px; font-weight: 800; }
-.chip-ticker { font-size: 12px; font-weight: 700; }
-.chip-note   { font-size: 11px; font-weight: 700; border-radius: 5px; }
-.co-chip-platform { border-color: rgba(118,185,0,0.5); }
-.co-chip-platform:hover { border-color: rgba(118,185,0,0.8) !important; }
-.chip-span-badge {
-  font-weight: 900; font-size: 11px;
-  border: 2px solid rgba(118,185,0,0.5);
-  box-shadow: 1px 1px 0 rgba(118,185,0,0.3);
-}
-.chip-eco-badge {
-  font-weight: 900; font-size: 11px;
-  border: 1.5px solid rgba(118,185,0,0.4);
-}
-
-/* ── Notes editor ── */
+/* ── Notes ── */
 .notes-editor { font-size: 16px; line-height: 1.8; }
+
+/* ── Related intel ── */
+.related-intel-link   { border: 2px solid var(--border); border-radius: 12px; padding: 14px 18px; box-shadow: 2px 2px 0 rgba(0,0,0,0.4); }
+.related-intel-link:hover { border-color: var(--accent); }
+.related-intel-title  { font-size: 16px; font-weight: 700; }
+.related-intel-source { font-size: 13px; font-weight: 900; }
+
+/* ── Learn page ── */
+.learn-section-title { font-size: 24px; font-weight: 600; }
+.learn-lead    { font-size: 17px; line-height: 1.9; }
+.learn-h3      { font-size: 18px; font-weight: 700; font-family: var(--font-head); }
+.learn-nav-link { font-size: 15px; font-weight: 800; }
+.learn-nav-link.active { border-left: 3px solid var(--accent); padding-left: 11px; }
+.learn-compare-head  { font-size: 17px; font-weight: 700; font-family: var(--font-head); }
+.learn-compare-card  { border: 2.5px solid var(--border); border-radius: 14px; padding: 20px; box-shadow: 3px 3px 0 rgba(0,0,0,0.5); }
+.learn-compare-card:hover { border-color: var(--accent); }
+.learn-insight { border: 2px solid rgba(99,102,241,.3); border-radius: 14px; font-size: 16px; }
+.learn-formula-box { border: 2.5px solid rgba(99,102,241,.5); border-radius: 16px; }
+.learn-formula-eq  { font-size: 26px; font-weight: 700; font-family: var(--font-head); }
+.learn-glossary-item { font-size: 14px; padding: 12px 0; }
+.learn-glossary-full { font-weight: 700; }
+.comp-table { font-size: 15px; }
+.comp-name  { font-weight: 800; }
 
 /* ── Scroll top ── */
 .scroll-top {
   font-size: 22px; font-weight: 900;
   width: 52px; height: 52px;
   border: 3px solid var(--accent);
-  box-shadow: 3px 3px 0 rgba(255,230,0,0.4);
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.6);
   background: var(--bg2);
   color: var(--accent);
   border-radius: 14px;
+  text-shadow: none;
 }
 .scroll-top:hover {
   background: var(--accent);
   color: #000;
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0 rgba(255,230,0,0.5);
+  transform: translate(-2px,-2px);
+  box-shadow: 5px 5px 0 rgba(0,0,0,0.7);
 }
 
-/* ── Related intel links ── */
-.related-intel-link {
-  border: 2px solid var(--border);
-  border-radius: 12px;
-  padding: 14px 18px;
-}
-.related-intel-link:hover { border-color: var(--accent); box-shadow: 2px 2px 0 rgba(255,230,0,0.3); }
-.related-intel-title { font-size: 16px; font-weight: 700; }
-.related-intel-date  { font-size: 13px; }
-.related-intel-source { font-size: 13px; font-weight: 900; }
+/* ── NVIDIA platform ── */
+.co-chip-platform { border-color: rgba(118,185,0,0.5); }
+.co-chip-platform:hover { border-color: rgba(118,185,0,0.8) !important; }
+.chip-span-badge  { font-weight: 900; font-size: 11px; border: 2px solid rgba(118,185,0,0.5); }
+.chip-eco-badge   { font-weight: 900; font-size: 11px; border: 1.5px solid rgba(118,185,0,0.4); }
 
-/* ── Learn page ── */
-.learn-section-title { font-size: 24px; font-weight: 900; letter-spacing: -0.3px; }
-.learn-lead { font-size: 17px; line-height: 1.9; }
-.learn-h3 { font-size: 18px; font-weight: 900; }
-.learn-nav-link { font-size: 15px; font-weight: 800; }
-.learn-nav-link.active { border-left: 3px solid var(--accent); padding-left: 11px; }
-.learn-compare-head { font-size: 17px; font-weight: 900; }
-.learn-compare-card { border: 2.5px solid var(--border); border-radius: 14px; padding: 20px; }
-.learn-compare-card:hover { border-color: var(--accent); box-shadow: 3px 3px 0 rgba(255,230,0,0.2); }
-.learn-insight {
-  border: 2px solid rgba(99,102,241,.3);
-  border-radius: 14px;
-  font-size: 16px;
-}
-.learn-formula-box { border: 2.5px solid rgba(99,102,241,.5); border-radius: 16px; }
-.learn-formula-eq  { font-size: 26px; font-weight: 900; letter-spacing: .02em; }
-.learn-glossary-item { font-size: 14px; padding: 12px 0; }
-.learn-glossary-full { font-weight: 700; }
-
-/* ── Competitor table ── */
-.comp-table { font-size: 15px; }
-.comp-name  { font-weight: 800; }
-
-/* ── Risk items ── */
-.risk-item { font-size: 16px; }
-
-/* ── Responsive update ── */
+/* ── Responsive ── */
 @media (max-width: 900px) {
   .company-card { width: 175px; }
-  .card-name { font-size: 14px; }
+  .card-name    { font-size: 14px; }
+  .tree-layer-illu { display: none; }
 }
