@@ -2520,3 +2520,61 @@ h1, h2, h3, h4 { color: #18100a; }
 .notes-textarea:focus { border-color: var(--accent); box-shadow: var(--gn-shadow-sm); outline: none; }
 .notes-clear-btn    { border-radius: 0; }
 .threat-badge  { border-radius: 0; font-weight: 800; }
+
+/* ══════════════════════════════════════════════════════════════
+   最小字體 16px 全局保護  ◆  覆蓋所有小字
+   ══════════════════════════════════════════════════════════════ */
+
+/* 通用：所有會顯示文字的元素最小 16px */
+a, p, li, td, th, span, div, button, input, textarea, select,
+label, caption, blockquote, pre, code, small, em, strong, b, i,
+.chip-name, .chip-ticker, .chip-flag, .chip-note,
+.chip-span-badge, .chip-eco-badge,
+.tree-cat-name, .tree-branch, .tree-layer-count, .tree-layer-number,
+.tab-btn, .back-btn,
+.page-subtitle, .header-right,
+.layer-info p, .layer-info span,
+.battle-card h3, .battle-card ul li, .battle-vs,
+.company-layer-tag, .company-category-tag, .company-ticker-tag,
+.company-tagline, .company-platform-tag,
+.metric-label, .metric-sub, .metric-links a,
+.tag-item, .risk-item,
+.related-intel-title, .related-intel-source,
+.intel-date, .intel-source, .intel-category, .intel-tag,
+.intel-co-chip, .intel-filter-btn, .intel-card-summary,
+.learn-nav-link, .learn-glossary-item, .learn-glossary-full,
+.learn-compare-head, .comp-name, .comp-table,
+.notes-editor, .notes-textarea,
+.intel-toggle-btn, .scroll-top,
+.bar-label, .bar-value,
+.threat-badge, .stock-placeholder {
+  font-size: 16px !important;
+}
+
+/* 保留大字不被縮小 */
+h1, h2, h3,
+.company-big-name,
+.learn-section-title,
+.learn-formula-eq,
+.metric-value,
+.battle-card h3 { font-size: revert !important; }
+
+/* 保留大字覆蓋後再設定 */
+.company-big-name    { font-size: 36px !important; }
+.learn-section-title { font-size: 26px !important; }
+.learn-formula-eq    { font-size: 26px !important; }
+.metric-value        { font-size: 22px !important; }
+.learn-h3, h3        { font-size: 18px !important; }
+.intel-card-title    { font-size: 18px !important; }
+.content-block h3    { font-size: 17px !important; }
+.battle-card h3      { font-size: 16px !important; }
+.tree-layer-title    { font-size: 18px !important; }
+.learn-section-title { font-size: 26px !important; }
+
+/* 響應式也保護 */
+@media (max-width: 900px) {
+  .tree-cat-name, .chip-name { font-size: 16px !important; }
+}
+@media (max-width: 640px) {
+  .chip-name, .chip-ticker, a, p, li, td, th { font-size: 16px !important; }
+}
