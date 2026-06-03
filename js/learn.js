@@ -546,6 +546,155 @@
     },
 
     {
+      id: 'foplp-tgv',
+      icon: '🔲',
+      title: 'FOPLP vs TGV：次世代先進封裝雙引擎',
+      html: `
+        <p class="learn-lead">這兩者是半導體新聞裡最常被混淆的名詞。直接說結論：<strong>${T('FOPLP','spec')} 是封裝的「排版生產方式（方法論）」；${T('TGV','spec')} 是在玻璃上「垂直打孔導通的核心技術」</strong>。兩者的關係像「舞台與特技」——FOPLP 搭好方形舞台，TGV 是在舞台採用玻璃材料時必須施展的硬核特技。</p>
+
+        <div class="learn-compare-grid">
+          <div class="learn-compare-card">
+            <div class="learn-compare-head">${T('FOPLP','spec')} 面板級扇出封裝</div>
+            <div class="learn-compare-sub">Fan-Out Panel Level Packaging</div>
+            <p><strong>本質：「排版形狀與面積」的製程革命。</strong></p>
+            <p>傳統封裝用<strong>圓形晶圓</strong>排晶片；FOPLP 改用像 LCD 面板廠那樣的<strong>方形大面板</strong>去排晶片，一次完成大面積曝光與封裝。</p>
+            <p>⬆ 方形排晶片利用率高、廢邊少、產出大 → <strong>成本降低</strong></p>
+            <div class="learn-tag-row">${T('由圓轉方','spec')} ${T('成本為王','pro')} ${T('Warpage 是大敵','con')}</div>
+          </div>
+          <div class="learn-compare-card">
+            <div class="learn-compare-head">${T('TGV','spec')} 玻璃穿孔技術</div>
+            <div class="learn-compare-sub">Through Glass Via</div>
+            <p><strong>本質：「材料與垂直導通」的微細加工技術。</strong></p>
+            <p>當封裝改用「玻璃」當底座（極度平整、不變形、低損耗），問題出現：玻璃是絕緣體，訊號怎麼從晶片傳到下層？</p>
+            <p>→ 用高精密雷射在玻璃上轟出數百萬個微米級垂直通孔（Via），填入銅，讓電流縱向穿透玻璃。</p>
+            <div class="learn-tag-row">${T('訊號損耗極低','pro')} ${T('不翹曲','pro')} ${T('加工難度極高','con')}</div>
+          </div>
+        </div>
+
+        <div class="learn-insight">
+          <div class="learn-insight-icon">🎯</div>
+          <div><strong>一句話總結：</strong>${T('FOPLP','spec')} 決定封裝是「方形大面積」以追求極致成本；${T('TGV','spec')} 則是封裝採用「玻璃」這種完美材料時，解決晶片訊號上下導通的「雷射打孔特技」。</div>
+        </div>
+
+        <h3 class="learn-h3">兩者交織：玻璃基板面板級封裝（Glass Substrate FOPLP）</h3>
+        <p>當兩者結合，就是目前半導體界最頂級的次世代方案：</p>
+        <div class="learn-flow">
+          <div class="learn-flow-block lf-l0">
+            <div class="learn-flow-layer">舞台</div>
+            <div class="learn-flow-title">${T('FOPLP','spec')} 方形大面板</div>
+            <p>方形排晶片，產量最大、成本最低</p>
+          </div>
+          <div class="learn-flow-arrow">↓ 面板材料選用玻璃</div>
+          <div class="learn-flow-block lf-l1">
+            <div class="learn-flow-layer">材料升級</div>
+            <div class="learn-flow-title">${T('玻璃基板','spec')} Glass Core Substrate</div>
+            <p>超平整・不翹曲・低介電損耗，解決有機塑料基板的致命弱點</p>
+          </div>
+          <div class="learn-flow-arrow">↓ 玻璃是絕緣體 → 需要垂直導通</div>
+          <div class="learn-flow-block lf-l1">
+            <div class="learn-flow-layer">核心特技</div>
+            <div class="learn-flow-title">${T('TGV','spec')} 玻璃穿孔導通</div>
+            <p>雷射在玻璃上鑽孔 → 填入銅 → 訊號穿透玻璃完成上下互連</p>
+          </div>
+          <div class="learn-flow-arrow">↓ 商轉預測</div>
+          <div class="learn-flow-block lf-l3">
+            <div class="learn-flow-layer">市場時程</div>
+            <div class="learn-flow-title">2027 ~ 2028 商轉量產</div>
+            <p>${co('INTC','Intel')} 跑最快，${co('2330.TW','台積電')} CoPoS 技術驗證中，${co('3711.TW','日月光')} VIPack 整合 FOPLP + TGV 平台</p>
+          </div>
+        </div>
+
+        <h3 class="learn-h3">為什麼「玻璃」比傳統「有機塑料基板」好？</h3>
+        <div class="learn-table-wrap">
+          <table class="learn-table">
+            <thead><tr><th>特性</th><th>${T('有機塑料（ABF）','con')}</th><th>${T('玻璃基板','pro')}</th></tr></thead>
+            <tbody>
+              <tr><td>翹曲（Warpage）</td><td>❌ 熱漲冷縮變形嚴重，AI 大晶片封裝良率殺手</td><td>✅ 極度剛性，幾乎不變形</td></tr>
+              <tr><td>訊號損耗</td><td>❌ 有機材料介電損耗高，高頻訊號衰減明顯</td><td>✅ 低介電損耗（Low Dk/Df），1.6T/3.2T 高頻適配</td></tr>
+              <tr><td>線路精細度</td><td>❌ 線寬/間距（L/S）難以小於 10μm</td><td>✅ 玻璃表面極平整，L/S 可達 2μm 以下</td></tr>
+              <tr><td>加工難度</td><td>✅ 成熟製程，設備廠商多</td><td>❌ 脆、硬、絕緣，需 TGV 雷射鑽孔，難度極高</td></tr>
+              <tr><td>成本</td><td>✅ 現階段成本低</td><td>❌ 目前加工成本高，量產後成本下降</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="learn-h3">台灣玻璃基板生態供應鏈</h3>
+        <div class="learn-table-wrap">
+          <table class="learn-table">
+            <thead>
+              <tr><th>角色</th><th>公司</th><th>技術定位</th><th>商轉時程</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>${T('IC 載板（客戶）','spec')}</td>
+                <td>${co('3037.TW','欣興（3037）')}</td>
+                <td>Intel 玻璃基板官方 R&D 合作夥伴；FC-BGA 全球前二</td>
+                <td>2027-2028 量產</td>
+              </tr>
+              <tr>
+                <td>${T('IC 載板（客戶）','spec')}</td>
+                <td>${co('8046.TW','南電（8046）')}</td>
+                <td>南亞集團材料整合優勢；CoPoS 玻璃核心增層製程</td>
+                <td>驗證中</td>
+              </tr>
+              <tr>
+                <td>${T('TGV 雷射鑽孔','spec')}</td>
+                <td>${co('8027.TW','鈦昇（8027）')}</td>
+                <td>TGV 雷射改質與鑽孔設備；主導「E-Core 玻璃基板大聯盟」</td>
+                <td>設備驗收中</td>
+              </tr>
+              <tr>
+                <td>${T('TGV 金屬化','spec')}</td>
+                <td>${co('3580.TW','友威科（3580）')}</td>
+                <td>TGV 通孔電漿去渣活化 + RDL 晶種層真空濺鍍</td>
+                <td>製程驗證中</td>
+              </tr>
+              <tr>
+                <td>${T('TGV 濕製程','spec')}</td>
+                <td>${co('3583.TW','辛耘（3583）')}</td>
+                <td>TGV 鑽孔後化學濕蝕刻與垂直填孔前處理</td>
+                <td>製程驗證中</td>
+              </tr>
+              <tr>
+                <td>${T('壓合・翹曲控制','spec')}</td>
+                <td>${co('6664.TW','群翊（6664）')}</td>
+                <td>ABF 壓合設備・真空壓膜熱風烤箱；大面積翹曲控制核心</td>
+                <td>量產設備供應中</td>
+              </tr>
+              <tr>
+                <td>${T('FOPLP 剝離設備','spec')}</td>
+                <td>${co('6133.TW','東捷（6133）')}</td>
+                <td>大面積雷射載板剝離設備；FOPLP 前段雷射製程</td>
+                <td>量產設備供應中</td>
+              </tr>
+              <tr>
+                <td>${T('OSAT 整合量產','spec')}</td>
+                <td>${co('3711.TW','日月光（3711）')}</td>
+                <td>VIPack FOPLP + TGV 整合量產；全球 OSAT 第一</td>
+                <td>2027-2028 量產</td>
+              </tr>
+              <tr>
+                <td>${T('封裝材料','spec')}</td>
+                <td>${co('3595.TW','山太士（3595）')}</td>
+                <td>抗翹曲膠膜・雷射解膠層・FOPLP 製程材料</td>
+                <td>出貨中</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="learn-insight">
+          <div class="learn-insight-icon">📈</div>
+          <div><strong>投資觀察重點：</strong>
+            <br>• <strong>最前線風向球：</strong>設備商（${co('8027.TW','鈦昇')}、${co('3580.TW','友威科')}、${co('6664.TW','群翊')}）的客戶裝機驗收進度，代表良率爬坡速度
+            <br>• <strong>中長線收割者：</strong>載板龍頭 ${co('3037.TW','欣興')}（Intel 指定夥伴）在 2027 年後的商轉量產良率，才是真正財報貢獻的轉折點
+            <br>• <strong>最大尾部風險：</strong>Intel 玻璃基板商轉時間延遲（此技術已延遲過一次），或有機基板材料有突破性改良而降低玻璃基板的轉換動力
+          </div>
+        </div>
+      `
+    },
+
+    {
       id: 'burn-in',
       icon: '🔥',
       title: 'AI 老化測試（Burn-in）生態解析',
@@ -663,7 +812,12 @@
             ['SOI', 'Silicon On Insulator 絕緣矽晶圓', 'Soitec 壟斷 70-80%，矽光子晶片不可或缺的物理地基'],
             ['InP', 'Indium Phosphide 磷化銦', '高速雷射的關鍵材料，Sivers（SIVE）的核心技術'],
             ['EML', 'Electro-absorption Modulated Laser', '電吸收調製雷射，CPO 光引擎核心光源組件'],
-            ['TGV', 'Through-Glass Via 穿玻璃通孔', '鈦昇（8027）的核心技術，先進封裝玻璃基板的關鍵製程'],
+            ['TGV', 'Through-Glass Via 穿玻璃通孔', '玻璃基板先進封裝的核心技術：雷射在玻璃上鑽孔填銅，實現垂直導通；鈦昇（8027）設備、友威科（3580）金屬化'],
+            ['FOPLP', 'Fan-Out Panel Level Packaging 面板級扇出封裝', '化圓為方的封裝革命：用方形大面板取代圓晶圓排晶片，成本更低、產出更大；2027-2028 導入玻璃基板'],
+            ['Glass Substrate', '玻璃基板', '以玻璃替代有機塑料作為封裝底座：不翹曲、低介電損耗、線路更精細；Intel 2026-2028 商轉，欣興（3037）是 Intel 指定台廠夥伴'],
+            ['CoPoS', 'Chip on Package on Substrate', '台積電次世代封裝平台：將矽中介層部分以玻璃中介層替換，兼顧成本與電氣性能'],
+            ['FC-BGA', 'Flip Chip Ball Grid Array', 'AI 晶片高階封裝基板；欣興（3037）、南電（8046）主力產品，隨 AI GPU 需求爆增'],
+            ['Warpage', '翹曲變形', '大面積封裝因熱漲冷縮導致的基板彎曲，是 FOPLP 最大良率殺手；群翊（6664）壓合設備、山太士（3595）抗翹曲膠膜是解決方案'],
             ['ASP', 'Average Selling Price 平均銷售單價', '分析散熱、模組廠毛利結構的關鍵指標'],
             ['P/E Re-rating', '本益比上修', '股價創新高時，市場重新給予更高的本益比倍數，原因是公司基因突變進入新賽道'],
             ['本夢比', 'Price-to-Dream Ratio', '連預估 EPS 都解釋不了股價時的估值邏輯；買的是「無法被證偽的宏大夢想」'],
