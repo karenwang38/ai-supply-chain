@@ -1724,7 +1724,7 @@ body {
   background-size: 22px 22px;
 }
 
-/* ── Fredoka for all headings ── */
+/* ── Dela Gothic One for all headings ── */
 h1, h2, h3,
 .page-title, .page-subtitle,
 .site-header .logo,
@@ -1736,8 +1736,9 @@ h1, h2, h3,
 .battle-card h3,
 .learn-compare-head,
 .company-tagline {
-  font-family: var(--font-head);
+  font-family: 'Dela Gothic One', 'Bangers', var(--font-head);
   letter-spacing: 0.01em;
+  color: #18100a;
 }
 
 /* ── Header ── */
@@ -2053,7 +2054,6 @@ h1, h2, h3,
 
 /* ── Color reset: warm comic newsprint ─────────────────────── */
 :root {
-  /* Light paper background — makes black borders & shadows visible */
   --bg:         #f5f0e3;
   --bg2:        #fffef8;
   --bg3:        #fff3d6;
@@ -2062,7 +2062,6 @@ h1, h2, h3,
   --text-dim:   #8a7a60;
   --border:     rgba(24,16,10,0.22);
 
-  /* Vivid ink layer palette (adjusted for light bg) */
   --l0: #d40f3a;  --l0-bg: #fde8ed;
   --l1: #b87000;  --l1-bg: #fff3c0;
   --l2: #007a50;  --l2-bg: #d4f0e5;
@@ -2074,10 +2073,10 @@ h1, h2, h3,
 
   --radius:     0px;
   --radius-sm:  0px;
-  --font-head:  'Bangers', 'Fredoka', 'PingFang TC', sans-serif;
-  --font:       'Nunito', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  /* Dela Gothic One = CJK漫畫粗體, Bangers = 英文漫畫字 */
+  --font-head:  'Dela Gothic One', 'Bangers', 'Fredoka', 'PingFang TC', sans-serif;
+  --font:       'Noto Sans TC', 'Nunito', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
 
-  /* Comic border/shadow tokens — black on light = highly visible */
   --gn-border:      3px solid #18100a;
   --gn-border-thin: 2px solid #18100a;
   --gn-shadow:      6px 6px 0 #18100a;
@@ -2086,29 +2085,36 @@ h1, h2, h3,
 }
 
 /* ── Body: halftone dot comic paper ─────────────────────────── */
+/* !important 確保覆蓋所有舊規則及快取 */
 body {
-  background-color: var(--bg);
-  background-image: radial-gradient(circle, rgba(0,0,0,0.10) 1.2px, transparent 1.2px);
-  background-size: 14px 14px;
-  font-family: var(--font);
-  color: var(--text);
+  background-color: #f5f0e3 !important;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.09) 1.2px, transparent 1.2px) !important;
+  background-size: 14px 14px !important;
+  color: #18100a !important;
+  font-family: 'Noto Sans TC', 'Nunito', 'PingFang TC', sans-serif !important;
+  font-size: 16px !important;
 }
+/* 確保所有文字用深色 */
+p, li, span, td, th, div { color: inherit; }
+h1, h2, h3, h4 { color: #18100a; }
 
 /* ── Site header ─────────────────────────────────────────────── */
 .site-header {
-  background: #18100a;
+  background: #18100a !important;
   border-bottom: 5px solid #b87000;
   height: 64px;
+  color: #fff !important;
 }
 .site-header .logo {
-  font-family: 'Bangers', 'Fredoka', sans-serif;
-  font-size: 26px;
+  font-family: 'Dela Gothic One', 'Bangers', 'Fredoka', sans-serif !important;
+  font-size: 24px !important;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #fff;
+  color: #fff !important;
 }
-.site-header .logo span { color: #f5b800; }
+.site-header .logo span { color: #f5b800 !important; }
+.site-header nav a { color: rgba(255,255,255,0.8) !important; }
 .site-header nav a {
   color: rgba(255,255,255,0.72);
   border-radius: 0;
@@ -2146,11 +2152,10 @@ body {
   font-size: 16px;
 }
 .tree-layer-title {
-  font-family: var(--font-head);
-  font-size: 20px;
+  font-family: 'Dela Gothic One', 'Bangers', 'PingFang TC', sans-serif !important;
+  font-size: 18px !important;
   font-weight: 400;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .tree-layer-count {
   border-radius: 0;
@@ -2217,10 +2222,10 @@ body {
   background: var(--bg3);
   border-color: #18100a;
 }
-.chip-name   { font-size: 16px !important; font-weight: 800; color: #18100a; }
-.chip-ticker { font-size: 13px !important; font-weight: 700; color: #4a3a28; }
+.chip-name   { font-size: 16px !important; font-weight: 900; color: #18100a !important; }
+.chip-ticker { font-size: 13px !important; font-weight: 700; color: #4a3a28 !important; }
 .chip-flag   { font-size: 15px; }
-.chip-note   { border-radius: 0; border: 1px solid rgba(24,16,10,0.25); font-size: 12px; background: rgba(0,0,0,0.05); color: #18100a; }
+.chip-note   { border-radius: 0; border: 1px solid rgba(24,16,10,0.25); font-size: 12px; background: rgba(0,0,0,0.05); color: #18100a !important; }
 .chip-span-badge { border-radius: 0; font-weight: 900; border: 2px solid #18100a; font-size: 11px; background: rgba(0,0,0,0.07); color: #18100a; }
 .chip-eco-badge  { border-radius: 0; font-weight: 900; font-size: 11px; border: 1.5px solid rgba(60,120,0,0.6); background: rgba(60,120,0,0.08); color: #2a5000; }
 
@@ -2234,11 +2239,11 @@ body {
 /* ── Company page ────────────────────────────────────────────── */
 .company-hero  { border-bottom: var(--gn-border); background: var(--bg); }
 .company-big-name {
-  font-family: 'Bangers', 'Fredoka', 'PingFang TC', sans-serif;
-  font-size: 40px;
+  font-family: 'Dela Gothic One', 'Bangers', 'PingFang TC', sans-serif !important;
+  font-size: 36px !important;
   font-weight: 400;
   letter-spacing: 2px;
-  color: var(--text);
+  color: #18100a !important;
 }
 .company-tagline    { color: var(--text-muted); font-size: 18px; }
 .company-ticker-tag {
@@ -2291,14 +2296,14 @@ body {
   background: var(--bg2);
 }
 .content-block h3 {
-  font-family: var(--font-head);
-  font-size: 19px;
+  font-family: 'Dela Gothic One', 'Bangers', 'PingFang TC', sans-serif !important;
+  font-size: 17px !important;
   font-weight: 400;
-  letter-spacing: 1px;
-  color: var(--accent);
+  letter-spacing: 0.5px;
+  color: #18100a !important;
 }
-.content-block p  { font-size: 16px; color: var(--text); }
-.bullet-list li   { font-size: 16px; color: var(--text); }
+.content-block p  { font-size: 16px !important; color: #18100a !important; }
+.bullet-list li   { font-size: 16px !important; color: #18100a !important; }
 .bullet-list li::before { content: '◆'; font-size: 8px; top: 7px; color: var(--accent); }
 
 /* Metric cards */
@@ -2346,11 +2351,11 @@ body {
 }
 .intel-card-head { border-bottom: 2px solid rgba(24,16,10,0.12); }
 .intel-card-title {
-  font-family: var(--font-head);
-  font-size: 20px;
+  font-family: 'Dela Gothic One', 'Bangers', 'PingFang TC', sans-serif !important;
+  font-size: 18px !important;
   font-weight: 400;
   letter-spacing: 0.5px;
-  color: var(--text);
+  color: #18100a !important;
 }
 .intel-card-summary { color: var(--text); font-size: 16px; }
 .intel-toggle-btn {
@@ -2418,14 +2423,14 @@ body {
   margin-bottom: 32px;
 }
 .learn-section-title {
-  font-family: var(--font-head);
-  font-size: 28px;
+  font-family: 'Dela Gothic One', 'Bangers', 'PingFang TC', sans-serif !important;
+  font-size: 26px !important;
   font-weight: 400;
-  letter-spacing: 1.5px;
-  color: var(--text);
+  letter-spacing: 1px;
+  color: #18100a !important;
 }
-.learn-lead { font-size: 17px; line-height: 1.9; color: var(--text); }
-.learn-h3   { font-size: 19px; font-weight: 700; font-family: var(--font-head); color: var(--text); }
+.learn-lead { font-size: 16px !important; line-height: 1.9; color: #18100a !important; }
+.learn-h3   { font-size: 18px !important; font-family: 'Dela Gothic One', 'PingFang TC', sans-serif !important; font-weight: 400; color: #18100a !important; }
 .learn-compare-card {
   border: var(--gn-border-thin);
   box-shadow: var(--gn-shadow-sm);
