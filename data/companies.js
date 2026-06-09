@@ -3168,6 +3168,9 @@ const CHAIN_DEFINITION = [
       { id: "4063.JP" },
       { id: "6488.TW" },
     ]},
+    { name: "先進封裝基板材料", entries: [
+      { id: "2802.T",  note: "ABF 膜全球近壟斷・載板三雄最上游" },
+    ]},
     { name: "IC 載板・玻璃基板", entries: [
       { id: "3037.TW", note: "Intel 玻璃基板戰略夥伴・2027-2028 量產" },
       { id: "8046.TW", note: "南亞集團材料整合優勢・CoPoS 卡位" },
@@ -3234,6 +3237,9 @@ const CHAIN_DEFINITION = [
     ]},
     { name: "先進封裝製程材料", entries: [
       { id: "3595.TW", note: "抗翹曲膠膜・雷射解膠層・FOPLP 材料" },
+    ]},
+    { name: "先進封裝設備與檢測", entries: [
+      { id: "KLAC", note: "CoWoS 良率守門人・AP 收入衝向 $1B" },
     ]},
   ]},
 
