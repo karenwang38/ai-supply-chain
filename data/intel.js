@@ -3,6 +3,109 @@
 
 const INTEL_DATA = [
   {
+    id: "2026-06-09-ai-semiconductor-supply-chain",
+    title: "AI 半導體產業鏈深度研究：六大卡點排序與優先研究名單",
+    date: "2026-06-09",
+    source: "Serenity.skill 主題掃描・方法論整理",
+    category: "產業研究",
+    tags: ["AI半導體", "CoWoS", "先進封裝", "HBM", "卡點分析", "產業鏈", "ABF基板", "玻璃基板", "電力冷卻", "A股設備"],
+    summary: "真實的 AI 算力擴張被四道物理約束卡住，不是「晶片不夠」，而是更上游的東西先卡死。按緊迫程度排序六大卡點：① CoWoS 先進封裝（TSMC 壟斷，最緊）② HBM 高頻寬記憶體（SK Hynix 良率壟斷期）③ CoWoS 封裝設備（KLA 議價權被低估）④ ABF 基板材料（Ajinomoto 近壟斷，市場盲區）⑤ 玻璃基板 TGV（2026–2027 開始落地）⑥ 電力/液態冷卻基礎設施（變壓器交期超過 160 週）。市場可能沒看清的地方：封裝設備商議價能力 > 封裝代工商；Ajinomoto 在食品公司旗下被分析師忽略；電力/冷卻是 AI 數據中心的終極約束但沒人當半導體供應鏈研究。",
+    companies: [
+      "台積電（2330.TW / TSM）", "SK Hynix（000660.KS）", "KLA Corporation（KLAC）",
+      "Ajinomoto（2802.T）", "BESI（BESI.AS）", "ASMPT（522.HK）",
+      "Corning（GLW）", "Vertiv（VRT）", "Eaton（ETN）",
+      "長電科技（600584.SH）", "中微公司（688012.SH）", "盛美上海（688082.SH）",
+      "北方華創（002371.SZ）", "通富微電（002156.SZ）"
+    ],
+    keyNumbers: [
+      { label: "NVIDIA 佔全球 CoWoS 產能比例", value: "~60%（2026 年約 595,000 片）" },
+      { label: "四大 AI 晶片設計商合計 CoWoS 耗用", value: "~90% 全球產能" },
+      { label: "TSMC CoWoS 擴張目標", value: "35k 片/月（2024末）→ 120–140k 片/月（2026末）" },
+      { label: "AI 加速器 die 面積成長", value: "H100（814mm²）→ B200（1800mm²+），翻倍以上" },
+      { label: "功耗密度成長", value: "H100 700W → GB300 2,700W/架" },
+      { label: "SK Hynix HBM 市占率", value: "~55%，領先競爭者 1–2 個世代" },
+      { label: "2026 年 HBM 均價漲幅", value: ">70%" },
+      { label: "KLA Advanced Packaging 收入", value: "$635M（2025）→ 接近 $1B（2026）" },
+      { label: "先進鍵合機（BESI/ASMPT）交期", value: "14–18 個月" },
+      { label: "高端玻璃纖維布（CCL 用）2024–2027 缺口", value: "20–30%，高端品 >40%" },
+      { label: "電力變壓器交期", value: "超過 160 週（>3 年），2023 年約 140 週" },
+      { label: "Transformer 年需求預估成長", value: "1,500 台/年（2023）→ 9,000 台/年（2030）" },
+      { label: "長電科技 2026 資本支出", value: "上調至 100 億元" },
+    ],
+    sections: [
+      {
+        title: "產業鏈層級地圖與系統變化核心邏輯",
+        bullets: [
+          "AI 加速器 die 面積從 H100（814mm²）到 B200（1800mm²+）翻倍，超出單一矽片極限，必須靠 2.5D/3D 封裝把多顆 die 拼起來",
+          "每顆 GPU 搭配 6–8 顆 HBM stack，HBM 本身需要把 12 層 DRAM die 精確堆疊（TSV 互連）",
+          "功耗密度從 H100 的 700W 到 GB300 的 2,700W/架，冷卻基礎設施跟不上",
+          "這三個物理約束，決定誰是真正的卡點",
+        ]
+      },
+      {
+        title: "卡點 #1：CoWoS 先進封裝（最緊，結構性）",
+        bullets: [
+          "TSMC 是全球唯一具備量產能力且良率穩定的 CoWoS 供應商，NVIDIA 一家就吃掉全球 ~60% 產能",
+          "四大 AI 晶片設計商合計消耗全球 ~90% CoWoS 產能",
+          "TSMC 擴張：35k 片/月（2024 末）→ 目標 120–140k 片/月（2026 末），但 mid-2026 前仍 oversubscribed",
+          "Vera Rubin（GB300 繼任）開始 ramp，與 Blackwell 產線同時搶產能",
+          "一旦設計定案 CoWoS，整個封裝線（interposer、bump、underfill、基板）都是定製化，換廠等同重設計",
+          "供應商數量：世界 1（TSMC 主體）+ 少數幾家 OSAT 跟進次代技術",
+        ]
+      },
+      {
+        title: "卡點 #2：HBM 高頻寬記憶體（緊，SK Hynix 壟斷優勢期）",
+        bullets: [
+          "2026 年全球 HBM 產能幾乎全被預訂鎖定",
+          "SK Hynix HBM3E 12-Hi 良率領先三星、美光 1–2 個世代，HBM4 認證週期 9–12 個月",
+          "三星 HBM3E 良率持續落後，NVIDIA 已降低三星採購比例（2025 Q4 公告）",
+          "2026 年 HBM 均價上漲 >70%",
+          "12 層 die 堆疊的 TSV 對位精度要求在 nm 級，任何一層偏差直接報廢整顆 stack，良率本身就是護城河",
+        ]
+      },
+      {
+        title: "卡點 #3：CoWoS 封裝設備（新興卡點，常被市場低估）",
+        bullets: [
+          "CoWoS 產能擴張需要大量鍵合機（hybrid bonding）、電鍍設備、CMP 設備、檢測設備",
+          "KLA Advanced Packaging 收入：$635M（2025）→ 接近 $1B（2026），遠超早期預測",
+          "BESI、ASMPT 的先進鍵合機交期拉長至 14–18 個月",
+          "市場注意力集中在「誰做封裝」（TSMC、長電），但「封裝設備商」在產能爬坡期的議價能力更強，訂單能見度 18 個月以上",
+          "中國盛美上海的先進封裝電鍍設備全球市占率 #3，在 A 股有國產替代邏輯",
+        ]
+      },
+      {
+        title: "卡點 #4–6：ABF 基板、玻璃基板 TGV、電力/冷卻基礎設施",
+        bullets: [
+          "ABF 基板：Ajinomoto（2802.T）是唯一大量商業供應商，但在「食品公司」旗下，分析師少覆蓋，是典型的 Serenity 式市場盲區",
+          "高端玻璃纖維布（CCL 用）2024–2027 預測缺口 20–30%，高端品 >40%",
+          "玻璃基板 TGV：Corning（GLW）與 AGC（5201.T）預計 2026–2027 年第一批高量出貨，SKC/Absolics 認證進度最快",
+          "電力變壓器交期已超過 160 週（>3 年），年需求預估從 1,500 台/年飆升到 9,000 台/年（2030）",
+          "即使超大型雲端廠商已有電力合約，沒有 CDU（冷卻分配單元）仍無法部署",
+          "Vertiv（VRT）、Eaton（ETN）不在半導體分析師的覆蓋範圍，但 2028 年以前的數據中心電力容量，今天必須下單",
+        ]
+      },
+      {
+        title: "市場可能沒看清的四個地方",
+        bullets: [
+          "CoWoS 設備商 > CoWoS 代工商（邊際定價權）：KLA、BESI、ASMPT 在產能爬坡期議價能力更強，訂單能見度 18 個月以上",
+          "Ajinomoto 這個名字沒有出現在任何 AI 主題基金：ABF 材料護城河極深，因在食品公司旗下沒有進入 AI 半導體主流研究視野",
+          "電力/冷卻是 AI 數據中心的終極約束，但沒人當作「半導體供應鏈」來研究：Vertiv、Eaton 是結構性而非週期性缺口",
+          "Samsung HBM 落後創造了 SK Hynix 定價週期，但 Micron 追趕節奏被低估：市場還在按 2024 年的 HBM 格局定價",
+        ]
+      },
+      {
+        title: "失敗條件與下一步核驗方向",
+        bullets: [
+          "CoWoS 失敗條件：Samsung Foveros 或 Intel 18A 取得 NVIDIA 認可；中國 OSAT 突破 CoWoS 技術",
+          "HBM 失敗條件：Samsung HBM3E 良率在 Q3 2026 前明顯修復；Micron 提前 ramp HBM4",
+          "ABF 失敗條件：玻璃基板商業化提前至 2026；Intel 宣布全面切換",
+          "電力失敗條件：超大型雲端廠商自建變壓器；核電/SMR 加速部署解除電力瓶頸",
+          "核驗方向：TSMC 法說會 CoWoS 月產能實際數字、SK Hynix 財報 HBM 份額、KLA 財報 AP 分項、Vertiv/Eaton 訂單 backlog",
+        ]
+      },
+    ],
+  },
+  {
     id: "2026-06-02-4919-milestones",
     title: "新唐科技 (4919) 三大里程碑：2026/05/05 法說會後的出貨驗證時間表",
     date: "2026-06-02",
