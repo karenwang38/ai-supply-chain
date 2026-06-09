@@ -400,6 +400,79 @@ const COMPANIES = {
     risks: ["AI 驅動設計工具若降低對傳統 EDA 依賴", "地緣政治加劇"]
   },
 
+  "2802.T": {
+    id: "2802.T", name: "味之素（Ajinomoto）", ticker: "2802.T", flag: "🇯🇵",
+    layer: 0, category: "先進封裝基板材料",
+    badge: "ABF 膜全球近壟斷",
+    tagline: "食品公司出身，卻壟斷了全球 AI 晶片載板最核心的絕緣材料",
+    overview: "味之素（Ajinomoto，2802.T）以食品調味料起家，卻意外壟斷了全球先進 IC 載板不可或缺的絕緣介電材料——ABF（Ajinomoto Build-up Film）增層薄膜。幾乎每顆高端 AI 晶片（NVDA GPU、AMD EPYC、Apple M 系列）的 BGA 封裝基板，都必須使用 ABF 膜作為增層介電層。台股載板三雄（欣興、南亞電路板、景碩）全是它的超級大客戶。因為藏在「食品公司」旗下，傳統半導體分析師長期忽視，是典型的 Serenity 式市場盲區：真實卡點 + 分析師覆蓋空白。",
+    technology: {
+      core: "ABF（Ajinomoto Build-up Film）熱固性環氧樹脂複合介電薄膜，用於 FC-BGA 載板增層製程",
+      products: [
+        "ABF 膜（GX 系列）— 高端 AI/HPC 晶片 FC-BGA 載板標準材料",
+        "ABF 膜（GZ/GY 系列）— 伺服器 CPU、網路晶片用途",
+        "新世代低介電損耗 ABF — 因應 112G/224G 高速傳輸需求"
+      ],
+      advantages: [
+        "材料配方為核心機密，技術壁壘極深，競爭者難以複製",
+        "ABF 膜生產需要特殊設備與工藝，新廠認證週期長達 2–3 年",
+        "全球唯一大量商業供應商地位，使得客戶黏著度極高",
+        "AI 晶片 die 面積持續增大，每顆晶片所需 ABF 層數與面積同步擴增"
+      ]
+    },
+    marketShare: {
+      global: "近 100%（唯一大量商業供應商）",
+      desc: "高端玻璃纖維布（CCL 用）2024–2027 年預測缺口 20–30%，高端品種缺口 >40%。雖有少數廠商嘗試開發替代品，但認證週期長，短期內難以撼動壟斷地位",
+      competitors: [
+        { name: "Panasonic（松下）", share: "小量", threat: "low", note: "特定規格有供應，但品項窄" },
+        { name: "Nitto Denko（日東電工）", share: "極少", threat: "low", note: "研發中，尚未量產" }
+      ]
+    },
+    customers: {
+      major: [
+        { name: "欣興電子（3037.TW）", pct: "主要客戶", note: "AI GPU/HPC 最先進 FC-BGA 載板最大採購方" },
+        { name: "南亞電路板（8046.TW）", pct: "主要客戶", note: "台灣 ABF 載板三雄之一" },
+        { name: "景碩科技（3189.TW）", pct: "主要客戶", note: "台灣 ABF 載板三雄之一" },
+        { name: "Ibiden（4062.T）", pct: "主要客戶", note: "日本載板龍頭，NVDA GPU 載板主供應商" },
+        { name: "Shinko Electric（6967.T）", pct: "主要客戶", note: "日本另一載板大廠" }
+      ],
+      breakdown: "下游客戶幾乎涵蓋全球所有高端 IC 載板製造商，並間接服務 NVIDIA、AMD、Intel、Apple 等所有頂級晶片設計商"
+    },
+    outlook: {
+      positive: [
+        "AI 晶片 die 面積持續增大，每顆 GPU 所需 ABF 面積與層數大幅增加",
+        "CoWoS 封裝基板對 ABF 需求量與規格要求同步提升",
+        "AI 伺服器部署加速，FC-BGA 載板出貨量結構性成長",
+        "玻璃基板 TGV 若普及，Ajinomoto 有機會切入新世代基板材料供應"
+      ],
+      catalysts: [
+        "NVIDIA Blackwell 系列 ramp 帶動 FC-BGA 載板訂單爆增",
+        "欣興/Ibiden 等客戶擴產認證進度確認",
+        "玻璃基板材料供應合約披露"
+      ]
+    },
+    stockMetrics: {
+      pe: "~28x",
+      eps: "¥98（預估 FY2026）",
+      epg: "+18%",
+      peg: "~1.5",
+      marketCap: "~¥2.3兆（約 $155億 USD）",
+      week52High: "¥3,180",
+      week52Low: "¥2,200",
+      divYield: "~2.1%",
+      sharesOut: "7.6億股"
+    },
+    challenges: [
+      "玻璃基板（TGV）若提早商業化，可能部分取代 ABF 膜的需求",
+      "日股流動性相對低，國際投資者覆蓋少"
+    ],
+    risks: [
+      "玻璃基板商業化時間點提前至 2026–2027 年",
+      "競爭者突破 ABF 配方並獲得主要客戶認證",
+      "日圓匯率波動影響美元計價估值"
+    ]
+  },
+
   // ── Layer 1 ──────────────────────────────────────────────────
   "NVDA": {
     id: "NVDA", name: "輝達", ticker: "NVDA", flag: "🇺🇸",
@@ -1681,6 +1754,83 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
     },
     challenges: ["台積電 CoWoS 吸走部分高端訂單", "先進封裝研發資本支出龐大"],
     risks: ["台積電前道與後道整合進一步壓縮日月光市場", "中國 OSAT 廠（長電、通富微）快速追趕"]
+  },
+
+  "KLAC": {
+    id: "KLAC", name: "科磊（KLA Corporation）", ticker: "KLAC", flag: "🇺🇸",
+    layer: 1, category: "先進封裝設備與檢測",
+    badge: "先進封裝檢測唯一解",
+    tagline: "拯救台積電 CoWoS 良率的頂級機台——沒有 KLA，先進封裝無法量產",
+    overview: "KLA Corporation（科磊，KLAC）是全球半導體製程控制與良率管理設備的絕對龍頭，市佔率超過 50%。在 AI 時代，KLA 最被低估的業務是 Advanced Packaging（先進封裝）部門：專門用來偵測 CoWoS 封裝中的晶圓翹曲（warpage）、凸塊對位偏差（bump misalignment）、缺陷（defect），確保將多顆 die 拼在一起的 2.5D/3D 封裝良率達標。沒有 KLA 的量測機台，台積電無法穩定量產 CoWoS；沒有穩定量產 CoWoS，NVIDIA H100/H200/B200 出不了貨。市場追著「誰做封裝」，卻忽略「讓封裝能量產的設備商」定價權更強——KLA Advanced Packaging 收入從 $635M（2025）快速爬向 $1B（2026），且訂單能見度超過 18 個月。",
+    technology: {
+      core: "製程控制（Process Control）、缺陷檢測（Defect Inspection）、量測（Metrology）設備，專攻先進封裝翹曲控制與凸塊對位",
+      products: [
+        "Wafer Inspection System — 晶圓缺陷全面掃描，捕捉封裝過程中的微米級缺陷",
+        "Overlay Metrology（ARCHER 系列）— 量測各層對位精度，確保 HBM/GPU die 疊合準確",
+        "Warpage Measurement — 偵測晶圓翹曲，這是 CoWoS 封裝最難控制的物理變形問題",
+        "Advanced Packaging Inspection — 專為 2.5D/3D 封裝設計的整合缺陷管控方案",
+        "Film/Surface Metrology — 薄膜厚度量測，用於 ABF 基板增層製程監控"
+      ],
+      advantages: [
+        "先進封裝製程控制市占率 >50%，客戶一旦導入難以切換",
+        "CoWoS/SoIC/Foveros 等異質整合架構對 KLA 設備依賴度日增",
+        "訂單能見度超過 18 個月，因設備交期長且客戶需要提前鎖定",
+        "Advanced Packaging 部門快速成長，補足傳統前道設備週期性風險"
+      ]
+    },
+    marketShare: {
+      global: "製程控制設備市占 ~52%（全球第一）",
+      desc: "KLA 在製程控制（Process Control）設備市場的壟斷程度遠高於應用材料（AMAT）或泛林（LRCX）在各自領域的地位。競爭對手在先進封裝檢測領域更是難以追趕",
+      competitors: [
+        { name: "日立High-Tech", share: "~12%", threat: "low", note: "部分利基型缺陷檢測，高端不如KLA" },
+        { name: "ONTO Innovation", share: "~8%", threat: "medium", note: "先進封裝量測有切入，但規模差距大" },
+        { name: "Onto/Rudolph（合併後）", share: "~6%", threat: "low", note: "小型利基市場" }
+      ]
+    },
+    customers: {
+      major: [
+        { name: "台積電（TSMC）", pct: "最大客戶", note: "CoWoS、SoIC 每一道製程都需要 KLA 設備監控良率" },
+        { name: "三星（Samsung）", pct: "主要客戶", note: "HBM 堆疊與先進邏輯製程" },
+        { name: "SK Hynix", pct: "主要客戶", note: "HBM3E/4 製程控制" },
+        { name: "英特爾（Intel）", pct: "主要客戶", note: "Foveros 3D 封裝製程監控" },
+        { name: "日月光（ASE）", pct: "主要客戶", note: "VIPack 先進封裝良率管控" }
+      ],
+      breakdown: "全球前十大晶圓廠與封測廠幾乎全是 KLA 客戶，Advanced Packaging 業務近兩年快速放量"
+    },
+    outlook: {
+      positive: [
+        "Advanced Packaging 收入：$635M（2025）→ 接近 $1B（2026），遠超早期預測",
+        "CoWoS、SoIC、Foveros 等先進封裝技術普及，每個新節點都需要更多 KLA 設備",
+        "HBM 堆疊層數從 8-Hi 到 12-Hi 持續增加，每增一層都需要更多量測步驟",
+        "訂單能見度超過 18 個月，在設備商中能見度最高之一"
+      ],
+      catalysts: [
+        "台積電 CoWoS 擴產至 120k 片/月帶動設備採購加速",
+        "HBM4 認證進入量產，堆疊量測需求大增",
+        "Advanced Packaging 季報收入突破 $250M 單季",
+        "中國先進封裝投資加速，若不受出口管制限制則為額外上行"
+      ]
+    },
+    stockMetrics: {
+      pe: "~38x",
+      eps: "$25.50（預估 FY2026）",
+      epg: "+22%",
+      peg: "~1.7",
+      marketCap: "~$870億 USD",
+      week52High: "$965",
+      week52Low: "$610",
+      divYield: "~0.9%",
+      sharesOut: "1.36億股"
+    },
+    challenges: [
+      "傳統前道設備週期性下行時，整體收入會受影響（但 AP 部門提供緩衝）",
+      "中國出口管制限制部分高端設備出口，影響中國客戶收入"
+    ],
+    risks: [
+      "半導體資本支出週期下行壓縮設備採購預算",
+      "新競爭者切入先進封裝檢測（ONTO、日立等）",
+      "地緣政治導致中國客戶採購受限"
+    ]
   },
 
   "6789.TW": {
