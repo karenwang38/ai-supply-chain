@@ -473,7 +473,8 @@ const COMPANIES = {
       "玻璃基板商業化時間點提前至 2026–2027 年",
       "競爭者突破 ABF 配方並獲得主要客戶認證",
       "日圓匯率波動影響美元計價估值"
-    ]
+    ],
+    relatedIntel: ["2026-06-10-ajinomoto-2802-full-analysis", "2026-06-09-ai-semiconductor-supply-chain"],
   },
 
   // ── Layer 1 ──────────────────────────────────────────────────
@@ -1833,7 +1834,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       "半導體資本支出週期下行壓縮設備採購預算",
       "新競爭者切入先進封裝檢測（ONTO、日立等）",
       "地緣政治導致中國客戶採購受限"
-    ]
+    ],
+    relatedIntel: ["2026-06-09-ai-semiconductor-supply-chain"],
   },
 
   "6789.TW": {
