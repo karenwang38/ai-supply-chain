@@ -452,15 +452,18 @@ const COMPANIES = {
       ]
     },
     stockMetrics: {
-      pe: "~28x",
-      eps: "¥98（預估 FY2026）",
-      epg: "+18%",
-      peg: "~1.5",
-      marketCap: "~¥2.3兆（約 $155億 USD）",
-      week52High: "¥3,180",
-      week52Low: "¥2,200",
+      price: "~¥5,200",
+      pe: "41x (TTM)",
+      eps: "¥138 (TTM)",
+      forwardPe: "~30-32x（FY2027E EPS ¥165-175）",
+      epg: "+21%（FY2027E 業務利潤指引）",
+      tamAdjPeg: "1.05（合理偏便宜）",
+      marketCap: "~¥5兆（約 $340億 USD）",
+      week52High: "¥5,739",
+      week52Low: "¥3,242",
       divYield: "~2.1%",
-      sharesOut: "7.6億股"
+      sharesOut: "~7.6億股",
+      gfDmaHealth: "75/100（Strong but Watch）"
     },
     challenges: [
       "玻璃基板（TGV）若提早商業化，可能部分取代 ABF 膜的需求",
