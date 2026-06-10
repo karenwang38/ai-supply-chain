@@ -3,6 +3,98 @@
 
 const INTEL_DATA = [
   {
+    id: "2026-06-10-liquid-cooling-supply-chain",
+    title: "AI 液冷散熱供應鏈深度研究：五層架構、七家公司比較與優先排序",
+    date: "2026-06-10",
+    source: "Serenity.skill 主題掃描・供應鏈分析整理",
+    category: "產業研究",
+    tags: ["液冷", "散熱", "CDU", "奇鋐", "雙鴻", "健策", "Vertiv", "Modine", "AI資料中心", "冷板式", "浸沒式", "TDP"],
+    summary: "從 GB200 開始，單機架 TDP 達 100kW，空氣冷卻物理上無法勝任，直接液冷從「可選」變「必需」——這不是趨勢預測，是已在出貨的產品規格。液冷鏈分五層：L0 TIM 材料→L1 晶片/板卡散熱（vapor chamber、cold plate）→L2 機架液冷（CDU、manifold）→L3 機房冷卻→L4 浸沒式。最值得優先研究的是奇鋐（3017），Q1 2026 EPS 20.17 元（YoY +110%）已強力驗證，L1-L2 一站式、客戶最多元、護城河最可量化。雙鴻（3324）是高 β 選擇（液冷純度最高）。Modine（MOD）的 $4B 合約 + $165M 預付是整條鏈中最罕見的客戶承諾信號。Vertiv（VRT）護城河最深（$15B backlog，2.9x book-to-bill），但市值已充分定價，報酬彈性最低。",
+    companies: [
+      "奇鋐科技（3017.TW）", "雙鴻（3324.TW）", "健策精密（3653.TW）",
+      "Modine Manufacturing（MOD）", "Vertiv Holdings（VRT）",
+      "建準電機（2421.TW）", "CoolIT（→ Ecolab $4.75B 收購）", "LiquidStack（→ Trane TT 收購）",
+      "Henkel（L0 TIM 材料）", "Liqtech（LIQT，SiC 冷卻水過濾）"
+    ],
+    keyNumbers: [
+      { label: "NVIDIA GB200 單機架 TDP", value: "2,700W/rack unit（傳統 H100 700W）" },
+      { label: "預期 Rubin 平台 TDP", value: "5,000W+（空冷物理極限已突破）" },
+      { label: "奇鋐 Q1 2026 EPS", value: "NT$20.17（+110% YoY，歷史新高）" },
+      { label: "奇鋐 2026E 共識 EPS", value: "NT$93.75（19位分析師，大摩目標 NT$3,333）" },
+      { label: "雙鴻 Q4 2025 水冷佔收入比例", value: "51%（業界首家水冷超過風冷）" },
+      { label: "雙鴻 2026E EPS 預估", value: "NT$56.2（2025全年 EPS 28.26元 +36% YoY）" },
+      { label: "健策 2025全年 EPS", value: "NT$36.75（+54% YoY）" },
+      { label: "健策散熱模組佔比（Q4 2025）", value: "75%（AI 伺服器驅動）" },
+      { label: "健策毛利率", value: "41.6%（業界最高，代表定價權）" },
+      { label: "Modine FY2025 資料中心營收", value: "$644M（+119% YoY）" },
+      { label: "Modine 客戶合約承諾", value: "$4B 長期合約 + $165M 預付款（匿名超大廠）" },
+      { label: "Vertiv Q4 2025 成長", value: "+22.7% YoY，book-to-bill 2.9x" },
+      { label: "Vertiv backlog（Q4 2025）", value: "$15B，2026E 全年指引 $13.5B" },
+      { label: "全球液冷市場規模預估（2029）", value: "接近 $7B（Dell'Oro Group 預估）" },
+      { label: "Ecolab 收購 CoolIT 金額", value: "$4.75B（2026/03，預計 Q3 2026 完成）" },
+    ],
+    sections: [
+      {
+        title: "需求確認：TDP 升級讓液冷從「可選」變「必需」",
+        bullets: [
+          "AI 晶片 TDP 升級路徑：A100 400W → H100 700W → H200 1,000W → GB200 2,700W/rack unit → 預期 Rubin 5,000W+",
+          "從 GB200 開始，單機架 TDP 達 100kW 以上，空氣冷卻物理上無法勝任，直接液冷從「可選」變「必需」",
+          "這不是趨勢預測，是已在出貨的 NVIDIA GB200 NVL72 產品規格——每套機架出廠前必須通過液冷認證",
+          "Rubin 平台預期 TDP 5,000W+ 代表液冷要求只會更嚴格，不是暫時現象",
+        ]
+      },
+      {
+        title: "供應鏈五層架構與公司對應位置",
+        bullets: [
+          "L0 散熱材料：晶片表面 TIM、封裝填充料（Henkel/Parker/Laird，AI 敞口稀釋，定價權有限）",
+          "L1 晶片/板卡散熱：均熱片（vapor chamber）、熱管、冷卻板——直接接觸 die（健策 3653 在此層）",
+          "L2 機架液冷：CDU、manifold、quick connect、pump/valve——機架整合層（奇鋐 3017、雙鴻 3324 橫跨 L1-L2）",
+          "L3 機房冷卻：CRAC/CRAH 精密空調、冷卻水塔、chiller（Modine Airedale、Vertiv Liebert 在此層）",
+          "L4 替代液冷：浸沒式（single-phase / two-phase）——市場滲透率 <5%，2028-2030 的故事（Trane 收購 LiquidStack）",
+          "奇鋐（3017）：L1-L2 橫跨，cold plate + CDU 一站式，客戶最多元",
+          "雙鴻（3324）：L1-L2，以 AI 伺服器液冷模組為核心，液冷純度 51%（業界最高）",
+          "健策（3653）：L1，均熱片（vapor chamber），晶片最近端，毛利率 41.6%",
+          "Modine（MOD）：L2-L3，CDU + Airedale 精密空調，$4B 合約鎖入",
+          "Vertiv（VRT）：L2-L3，端對端熱鏈（CDU→CRAC→chiller），$15B backlog",
+          "建準（2421）：L2 輔助（水泵、風扇），AI 受益間接，Q1 YoY +20.6%（遠低於奇鋐/雙鴻 100%+）",
+        ]
+      },
+      {
+        title: "優先排序與比較：#1 奇鋐 vs #2 雙鴻 vs #3 Modine",
+        bullets: [
+          "#1 奇鋐（3017）：Q1 2026 EPS 20.17元（+110% YoY，歷史高），客戶多元（NVIDIA/AMD/超大廠），heat sink + cold plate + CDU 一站式，19位分析師覆蓋，大摩目標 NT$3,333，2026E EPS 93.75元",
+          "#2 雙鴻（3324）：液冷轉型最純（Q4 2025 水冷 51%），泰國新廠開出，2025全年 EPS 28.26元（+36%），2026E 56.2元（近倍增）——高β選擇，液冷快速滲透下彈性更大",
+          "#3 Modine（MOD）：$4B 合約 + $165M 預付款是整條鏈中最罕見客戶承諾信號，FY2025 DC 收入 $644M（+119%），FY2026E >30%；缺點：客戶高度集中（1 個匿名超大廠）",
+          "#4 健策（3653）：毛利率 41.6% 是定價權直接體現，NVIDIA 近獨家認證，均熱片可替代性高於 CDU 是主要差距",
+          "#5 Vertiv（VRT）：護城河最深（唯一端對端），但市值 $35-40B 已充分定價，報酬彈性最低",
+          "奇鋐優於雙鴻的關鍵：財務驗證更清楚（Q1 EPS 已印證）、客戶多元讓財報更平滑、L1+L2 一站式鏈上韌性更強；雙鴻的液冷純度更高，若押注液冷快速滲透是高β選擇但研究難度更大",
+          "Modine 優於健策的關鍵：$4B 合約預付款是整個供應鏈中客戶承諾最明確的信號，健策均熱片雖護城河深但可替代性高於 CDU",
+        ]
+      },
+      {
+        title: "哪些是「主題概念」而非真正卡點（請謹慎）",
+        bullets: [
+          "浸沒式冷卻（Submer/GRC/Asperitas）：技術令人興奮，但 2026 年全球滲透率 <5%，無季度財報驗證節點，是 2028-2030 的故事",
+          "Liqtech（LIQT，冷卻水過濾膜）：市值 $20-30M、收入 <$15M，AI 資料中心選用 SiC 陶瓷膜案例仍早期，高投機性主題小票",
+          "建準（2421，風扇主題）：液冷對傳統風扇是部分替代而非增量，Q1 YoY +20.6% 遠低於奇鋐/雙鴻的 100%+，AI 受益不直接",
+          "Henkel（TIM 散熱材料）：AI 散熱為其一小部門，財報無法單獨量化，業務稀釋",
+          "真正控制卡點：奇鋐/雙鴻的 CDU+cold plate（每 GB200 NVL72 機架必須通過 NVIDIA 認證）、Vertiv 的服務合約與 backlog（$15B，2.9x book-to-bill）、健策均熱板（NVIDIA GPU 近乎獨家，41.6% 毛利率）",
+        ]
+      },
+      {
+        title: "關鍵驗證條件與失敗情境",
+        bullets: [
+          "奇鋐：Q2 2026 財報（8月）季營收維持 NT$450億以上、毛利率站穩 30% → 2026E EPS 93.75元共識基本確認；若 Q2 毛利率跌破 28% 或 NVIDIA GB300 交期延後 → 應降級",
+          "雙鴻：Q2 2026 財報水冷佔比能否突破 55%（更純的液冷轉型信號）",
+          "健策：NVIDIA GB300（Rubin）均熱板認證時程與放量；若 NVIDIA 改為直接液冷不需均熱板→風險",
+          "Modine：FY2026 Q2 DC 收入是否維持 >30% 成長；第二個超大廠合約是否披露",
+          "Vertiv：2026 Q2 book-to-bill 是否維持 >2x；若超大廠延後資本支出（2026 下半年可能）→ backlog 消化速度放緩",
+          "浸沒式（L4）判斷標準：若任一超大廠宣布新建數據中心標配浸沒式，才算進入真正加速期",
+        ]
+      },
+    ],
+  },
+  {
     id: "2026-06-10-ajinomoto-2802-full-analysis",
     title: "Ajinomoto（味之素）2802.T 完整鏈分析：壟斷複利型個股的四維研究框架",
     date: "2026-06-10",

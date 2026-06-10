@@ -948,48 +948,224 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
 
   "3324.TW": {
     id: "3324.TW", name: "雙鴻", ticker: "3324.TW", flag: "🇹🇼",
-    layer: 1, category: "重電與散熱基礎元件",
+    layer: 2, category: "液冷散熱系統整合",
     platform: "NVDA",
-    badge: "液冷散熱雙架構",
-    tagline: "冷板式+浸沒式液冷解決方案",
-    overview: "雙鴻從傳統散熱片廠商升級為能夠提供「冷板式」與「浸沒式」雙架構的 CDU（冷卻液分配裝置）整機機櫃方案商。AI 伺服器的散熱需求從傳統風冷轉向液冷，雙鴻是台灣液冷散熱的核心廠商之一，出現在產業鏈第 1 層（元件）與第 2 層（系統整合）。",
-    technology: { core: "液冷水冷板（Cold Plate）、CDU、浸沒式液冷槽", products: ["冷板式水冷板（GPU 直接接觸冷卻）", "CDU 冷卻液分配裝置", "浸沒式液冷整機機櫃", "Manifold 分流管"], advantages: ["雙架構能力（冷板＋浸沒）差異化優勢", "台灣本土廠，鄰近廣達/緯穎 AI 伺服器客戶", "從元件到整機系統方案的垂直整合"] },
-    marketShare: { global: "台灣液冷散熱市場前二大", desc: "與奇鋐並列台灣液冷雙雄", competitors: ["奇鋐（3017.TW）", "高力（8996.TW）", "Vertiv（美系整合商）"] },
-    customers: { major: ["廣達（AI 伺服器 CDU）", "緯穎", "鴻海（鴻準）"], breakdown: "台灣 AI 伺服器 ODM 廠是主要客戶群" },
-    outlook: { positive: ["AI GPU（H100/B100/GB200）功耗 700W-1000W，風冷無法處理，液冷滲透率快速提升", "浸沒式液冷為次世代高功耗需求準備就緒"], catalysts: ["GB200 NVL72 Rack-scale 機櫃大規模出貨（2025）"] },
+    badge: "液冷純度最高",
+    tagline: "Q4 2025 水冷佔 51%，業界首家水冷超過風冷——AI 液冷轉型最純、最快",
+    overview: "雙鴻是台灣液冷轉型純度最高的散熱廠商。Q4 2025 水冷佔營收 51%（超過風冷），成為業界第一家水冷超過風冷的大廠。泰國新廠 2026 年開始放量，提升產能同時降低地緣政治風險。2025 全年 EPS 28.26 元（+36% YoY），2026E EPS 共識 56.2 元（近倍增），2027E 71.65 元。與奇鋐差異：雙鴻液冷純度更高、β 更大（若液冷快速滲透，雙鴻財務彈性更強），但客戶集中度也更高，研究難度較大。1 月 2026 月營收 YoY +121%，趨勢確認中。",
+    technology: {
+      core: "冷板式（Cold Plate）水冷板、CDU 冷卻液分配裝置、浸沒式液冷槽（Manifold）",
+      products: [
+        "AI GPU 冷板式水冷板（Cold Plate，直接接觸 GPU）",
+        "CDU 冷卻液分配裝置（機架級整合）",
+        "浸沒式液冷整機機櫃（次世代高 TDP 應用）",
+        "Manifold 分流管（液冷管路分配）"
+      ],
+      advantages: [
+        "Q4 2025 水冷佔收入 51%（業界首家水冷超過風冷），液冷轉型最純",
+        "泰國新廠 2026 提升產能，降低台灣地緣政治風險",
+        "冷板+浸沒雙架構，客戶選擇彈性大",
+        "高 β 特性：液冷滲透加速時，財務彈性最大"
+      ]
+    },
+    marketShare: {
+      global: "台灣液冷散熱市場前二大",
+      desc: "與奇鋐並列台灣液冷雙雄。差異：雙鴻液冷純度更高（51% vs 奇鋐多角化），奇鋐客戶多元度更高",
+      competitors: [
+        { name: "奇鋐（3017.TW）", share: "台灣第一", threat: "medium", note: "品項更廣、客戶更多元，一站式覆蓋 L1+L2" },
+        { name: "高力（8996.TW）", share: "台灣第三", threat: "low", note: "熱交換器專注，品項較窄" },
+        { name: "Vertiv（VRT）", share: "美系", threat: "medium", note: "端對端整合，但主攻大型機房設施" }
+      ]
+    },
+    customers: {
+      major: [
+        { name: "廣達（2382.TW）", pct: "主要客戶", note: "AI 伺服器 CDU 方案" },
+        { name: "緯穎（6669.TW）", pct: "主要客戶", note: "AI 伺服器液冷模組" },
+        { name: "鴻海（鴻準）", pct: "主要客戶", note: "AI 伺服器散熱整合" }
+      ],
+      breakdown: "客戶集中度較奇鋐高，特定伺服器客戶拉貨節奏直接影響季度財報；這也是雙鴻高 β 的來源"
+    },
+    outlook: {
+      positive: [
+        "液冷滲透率持續提升，作為「最純」液冷廠，需求彈性最大",
+        "泰國新廠提升產能，進入 2026 全力放量",
+        "2026E EPS 56.2元、2027E 71.65元，P/E 相對奇鋐更低，估值重估空間大",
+        "1月 2026 月營收 YoY +121%，趨勢最強的財務信號"
+      ],
+      catalysts: [
+        "Q2 2026 財報（8月）驗證水冷佔比能否突破 55%（液冷轉型加速信號）",
+        "泰國新廠出貨量確認（降低地緣政治溢價）",
+        "新客戶（超大廠或 AMD 平台）合約披露"
+      ]
+    },
     stockMetrics: {
-      divYield: "0%"
-    ,
+      eps2025: "NT$28.26（2025全年，+36% YoY）",
+      eps2026e: "NT$56.2（2026E）",
+      eps2027e: "NT$71.65（2027E）",
+      epg: "+99%（2026E YoY）",
+      waterCoolingMix: "51%（Q4 2025，業界首家水冷超過風冷）",
+      jan2026Growth: "+121% YoY（2026年1月月營收）",
+      divYield: "0%",
       sharesOut: "NT$18.5億"
     },
-    challenges: ["浸沒式液冷技術尚未大規模商業化，驗證周期長", "競爭激烈，海外廠商（Vertiv、Modine）也在搶台積電客戶"],
-    risks: ["液冷滲透速度若不如預期", "客戶將散熱業務自主化"]
+    challenges: [
+      "客戶集中度較高，特定 AI 伺服器客戶拉貨波動直接衝擊財報",
+      "浸沒式液冷技術商業化驗證周期長"
+    ],
+    risks: [
+      "液冷滲透速度若不如預期，高 β 也帶來高波動",
+      "NVIDIA GB300 交期延後影響拉貨節奏",
+      "台幣大幅升值侵蝕毛利"
+    ],
+    relatedIntel: ["2026-06-10-liquid-cooling-supply-chain"],
   },
 
   "3017.TW": {
     id: "3017.TW", name: "奇鋐科技", ticker: "3017.TW", flag: "🇹🇼",
-    layer: 1, category: "重電與散熱基礎元件",
+    layer: 2, category: "液冷散熱系統整合",
     platform: "NVDA",
-    badge: "散熱龍頭",
-    tagline: "AI 伺服器散熱模組龍頭",
-    overview: "奇鋐是台灣散熱模組龍頭，從傳統風冷散熱模組切入液冷解決方案，為 AI 伺服器（尤其是 NVIDIA GPU 伺服器）提供核心散熱元件。客戶涵蓋廣達、緯穎等主要 AI 伺服器 ODM 廠。",
-    technology: { core: "熱管（Heat Pipe）、均溫板（Vapor Chamber）、液冷冷板", products: ["AI GPU 散熱模組", "均溫板（VC）", "液冷冷板", "伺服器散熱組件"], advantages: ["台灣最大散熱模組廠，規模優勢", "均溫板技術領先，AI GPU 散熱需求直接受益"] },
-    marketShare: { global: "台灣散熱模組市佔最大，全球伺服器散熱前三", desc: "與雙鴻差異：奇鋐以散熱模組起家，雙鴻偏向液冷系統整合", competitors: ["雙鴻（3324.TW）", "建碁（亞馬遜散熱供應商）", "海外 Modine"] },
-    customers: { major: ["廣達", "緯穎", "富士康/鴻海", "戴爾（間接）"], breakdown: "NVIDIA GB200 相關機台散熱是近期最大訂單驅動力" },
-    outlook: { positive: ["GB200/B300 系列散熱需求極高（每 GPU 液冷強制要求）", "均溫板單價隨 AI 升級而上升"], catalysts: ["NVIDIA Blackwell Ultra 系列出貨節奏"] },
+    badge: "液冷一站式龍頭",
+    tagline: "Cold Plate + CDU 一站式、客戶最多元——液冷鏈中財務彈性最清楚的一節",
+    overview: "奇鋐是台灣散熱模組最大廠，也是整條 AI 液冷鏈中產品廣度最大的公司——同時覆蓋晶片級冷卻板（L1）與機架級 CDU（L2），客戶橫跨 NVIDIA、AMD、各超大廠，切換成本極高。Q1 2026 EPS 20.17 元創歷史新高（YoY +110%），已有 19 位分析師覆蓋，大摩目標 3,333 元，2026E EPS 共識 93.75 元（P/E ~27x）。關鍵邏輯：GB200 NVL72 機架每套必備液冷方案，奇鋐的「heat sink + cold plate + CDU 一站式」讓下游客戶不需要跨供應商整合，黏著度最高。是整條液冷鏈中財務彈性最清楚、護城河最可量化的一節。",
+    technology: {
+      core: "熱管（Heat Pipe）、均溫板（Vapor Chamber）、液冷冷板（Cold Plate）、CDU 冷卻液分配裝置",
+      products: [
+        "AI GPU 液冷冷板（Cold Plate，直接接觸 die）",
+        "CDU 冷卻液分配裝置（機架級整合）",
+        "均溫板（Vapor Chamber，傳統風冷 / 混合冷卻）",
+        "散熱鰭片組（Heat Sink）",
+        "伺服器散熱整套系統方案（一站式）"
+      ],
+      advantages: [
+        "L1+L2 一站式覆蓋，客戶無須跨廠商整合散熱系統（唯一能力）",
+        "NVIDIA/AMD 雙平台認證，客戶多元化降低拉貨波動",
+        "19 位分析師覆蓋，機構投資者能見度最高（財報後透明度最強）",
+        "Q1 2026 EPS 20.17 元（+110% YoY），護城河進入財報驗證階段"
+      ]
+    },
+    marketShare: {
+      global: "台灣散熱模組最大廠，全球伺服器散熱前三",
+      desc: "與雙鴻並列台灣液冷雙雄，差異：奇鋐產品廣度更高（一站式 L1+L2），雙鴻液冷純度更高（水冷佔 51%）",
+      competitors: [
+        { name: "雙鴻（3324.TW）", share: "台灣第二", threat: "medium", note: "液冷模組純度更高，但品項較窄" },
+        { name: "Vertiv（VRT）", share: "美系", threat: "medium", note: "端對端整合能力更強，但主攻機房級大型設施" },
+        { name: "Modine（MOD）", share: "美系", threat: "low", note: "CDU + 精密空調，主攻機房設施側，不直接競爭 cold plate" }
+      ]
+    },
+    customers: {
+      major: [
+        { name: "廣達（2382.TW）", pct: "最大客戶", note: "GB200/NVL72 主要散熱方案供應商" },
+        { name: "緯穎（6669.TW）", pct: "主要客戶", note: "AI 伺服器 ODM 散熱方案" },
+        { name: "鴻海/鴻準", pct: "主要客戶", note: "AI 伺服器散熱整合" },
+        { name: "AMD 平台客戶", pct: "次要客戶", note: "多平台認證降低 NVIDIA 單一依賴" }
+      ],
+      breakdown: "NVIDIA GB200/B300 相關機台散熱是近期最大訂單驅動力，多客戶結構讓財報波動較雙鴻平滑"
+    },
+    outlook: {
+      positive: [
+        "GB200 NVL72 每機架液冷方案必配，2026 下半年進入大規模出貨",
+        "Rubin 平台（GB300 繼任）預期 TDP 5,000W+，液冷要求更高",
+        "2026E EPS 共識 93.75 元（19 位分析師），當前 P/E ~27x（~2,555元），有重估空間",
+        "多客戶結構讓季度財報波動更平滑，適合作為液冷鏈核心持倉"
+      ],
+      catalysts: [
+        "Q2 2026 財報（8月）：季營收維持 NT$450億以上、毛利率站穩 30%",
+        "NVIDIA GB300（Rubin Ultra）出貨節奏確認",
+        "新超大廠客戶（直供合約）披露"
+      ]
+    },
     stockMetrics: {
-      pe: "57.5x",
-      eps: "NT$48.24",
-      epg: "+145.8%",
-      marketCap: "NT$10893億",
-      week52High: "NT$3010",
+      price: "~NT$2,555",
+      pe2026e: "~27x（2026E EPS 93.75元，19位分析師共識）",
+      q1Eps: "NT$20.17（Q1 2026 歷史新高，+110% YoY）",
+      eps2026e: "NT$93.75（共識）",
+      epg: "+110%（Q1 2026 YoY）",
+      marketCap: "~NT$1.1兆",
+      week52High: "NT$3,010",
       week52Low: "NT$608",
-      divYield: "0.37%"
-    ,
+      analystTarget: "NT$3,333（大摩目標）",
+      divYield: "~0.37%",
       sharesOut: "NT$33.2億"
     },
-    challenges: ["風冷轉液冷若轉換過快，風冷模組業務下滑", "客戶集中度高（廣達緯穎）"],
-    risks: ["NVIDIA 散熱規格若改變（影響現有設計)", "競爭加劇導致毛利率下滑"]
+    challenges: [
+      "台幣升值侵蝕美元計價毛利（每升值 1%，稅前獲利影響約 3-5%）",
+      "客戶若自建散熱能力或要求供應商整合"
+    ],
+    risks: [
+      "NVIDIA GB300 交期若延後，Q3/Q4 出貨節奏受壓",
+      "台幣大幅升值（>5%）壓縮毛利率低於 28%",
+      "競爭者擴產導致毛利率滑落"
+    ],
+    relatedIntel: ["2026-06-10-liquid-cooling-supply-chain"],
+  },
+
+  "3653.TW": {
+    id: "3653.TW", name: "健策精密", ticker: "3653.TW", flag: "🇹🇼",
+    layer: 1, category: "晶片級均熱散熱元件",
+    badge: "NVIDIA GPU 均熱板首選",
+    tagline: "毛利率 41.6% 的護城河——最接近晶片的散熱那一層",
+    overview: "健策精密是台灣均熱板（Vapor Chamber）最大廠，也是整條 AI 液冷鏈中「最接近晶片」的那一節。均熱板直接貼附 NVIDIA GPU die 表面，是晶片熱量進入冷卻液路徑的第一道關卡，也是最難替換的元件之一——NVIDIA 有嚴格認證門檻，導入後切換需要 6-12 個月重新認證。2025 全年 EPS 36.75 元（+54% YoY），毛利率 41.6%（業界最高，直接體現定價權），散熱模組佔 Q4 2025 營收 75%。與奇鋐/雙鴻的差異：健策最接近晶片（定價權最強），但均熱板可替代性高於 CDU，是比較之下的主要弱點。",
+    technology: {
+      core: "均熱板（Vapor Chamber）、熱管（Heat Pipe）、散熱鰭片組（Fin Array）",
+      products: [
+        "NVIDIA GPU 用均熱板（Vapor Chamber，主力產品）",
+        "高端伺服器 CPU 散熱模組（Intel/AMD Xeon/EPYC）",
+        "液冷混合散熱元件（Cold Plate 前端過渡材料）",
+        "散熱鰭片（Fin）成形加工"
+      ],
+      advantages: [
+        "NVIDIA GPU 認證供應商，導入後切換需 6-12 個月重新認證，黏著度極高",
+        "毛利率 41.6%（業界最高），直接體現對 NVIDIA 供應商的定價權",
+        "均熱板技術壁壘比散熱片高，生產設備投資與製程 know-how 門檻深",
+        "散熱模組佔比 Q4 2025 已達 75%，轉型 AI 幾近完成"
+      ]
+    },
+    marketShare: {
+      global: "台灣均熱板最大廠，全球伺服器均熱板前二大",
+      desc: "均熱板市場比冷卻板更集中，全球主要供應商不超過 5 家，健策在 AI GPU 應用具備近獨占地位",
+      competitors: [
+        { name: "奇鋐（3017.TW）", share: "台灣競爭", threat: "medium", note: "均溫板亦有生產，但奇鋐重心在 CDU 系統整合" },
+        { name: "Fujikura（日本）", share: "日本", threat: "low", note: "主攻消費電子，AI 伺服器非主力" },
+        { name: "CelServ（泰國）", share: "亞洲競爭", threat: "low", note: "規模較小" }
+      ]
+    },
+    customers: {
+      major: [
+        { name: "NVIDIA GPU 下游 ODM", pct: "最大客戶群", note: "廣達/緯穎等組裝 H100/H200/B200 時必用健策均熱板" },
+        { name: "AMD GPU 散熱應用", pct: "次要客戶", note: "AMD MI300 / MI400 系列散熱" }
+      ],
+      breakdown: "AI 伺服器 GPU 散熱模組是主要收入來源（75%），隨 AI GPU 出貨量線性擴張"
+    },
+    outlook: {
+      positive: [
+        "AI GPU TDP 持續升級（H100 700W → B200 1,000W+），每顆 GPU 需要的均熱板面積與熱傳能力需求同步提升",
+        "毛利率 41.6% 顯示定價權穩固，NVIDIA 認證壁壘阻擋競爭者進入",
+        "散熱模組佔比已達 75%，轉型 AI 完成度最高的散熱元件廠"
+      ],
+      catalysts: [
+        "NVIDIA GB300（Rubin Ultra）均熱板認證完成並開始放量",
+        "AI GPU 出貨量 2026 下半年大幅提升",
+        "新客戶（AMD MI400 系列）認證完成披露"
+      ]
+    },
+    stockMetrics: {
+      eps2025: "NT$36.75（2025全年，+54% YoY）",
+      grossMargin: "41.6%（2025，業界最高）",
+      aiMix: "75%（散熱模組，Q4 2025）",
+      epg: "+54%（2025 YoY）",
+      divYield: "~1.5%",
+      sharesOut: "~NT$6.3億"
+    },
+    challenges: [
+      "均熱板可替代性高於 CDU（若 NVIDIA 改用直接液冷方案，不需均熱板則需求結構改變）",
+      "長期而言，直接液冷（cold plate 直接接觸 die）可能部分減少均熱板需求"
+    ],
+    risks: [
+      "NVIDIA GPU 散熱設計若改為全液冷（不需均熱板），需求結構性改變",
+      "NVIDIA 若調整認證供應商策略（增加第二供應商）壓縮定價權",
+      "均熱板技術壁壘若被競爭者突破"
+    ],
+    relatedIntel: ["2026-06-10-liquid-cooling-supply-chain"],
   },
 
   "6805.TW": {
@@ -1014,7 +1190,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       sharesOut: "NT$4.3億"
     },
     challenges: ["國際大廠若降低採購門檻擠壓毛利", "快接頭技術壁壘持續維護需要研發投入"],
-    risks: ["液冷標準若走向整合（廠商自製接頭）", "原材料（金屬）成本波動"]
+    risks: ["液冷標準若走向整合（廠商自製接頭）", "原材料（金屬）成本波動"],
+    relatedIntel: ["2026-06-10-liquid-cooling-supply-chain"],
   },
 
   "3533.TW": {
@@ -1134,7 +1311,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       sharesOut: "NT$7.5億"
     },
     challenges: ["規模較小，接大單能力有限", "與 Alfa Laval 等國際大廠競爭"],
-    risks: ["液冷標準若改變設計規格", "毛利率受壓"]
+    risks: ["液冷標準若改變設計規格", "毛利率受壓"],
+    relatedIntel: ["2026-06-10-liquid-cooling-supply-chain"],
   },
 
   "FLNC": {
@@ -1186,6 +1364,208 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
     },
     challenges: ["硬體業務虧損持續拖累整體財務", "需要盡快轉型為純軟體/平台商"],
     risks: ["Tesla、Fluence 等大廠推出競爭軟體", "客戶若選擇電池廠自帶軟體（如 CATL、BYD）"]
+  },
+
+  "MOD": {
+    id: "MOD", name: "Modine Manufacturing", ticker: "MOD", flag: "🇺🇸",
+    layer: 2, category: "液冷機房冷卻設備整合",
+    badge: "$4B 合約・CDU + 精密空調",
+    tagline: "超大廠願意預付 $165M 鎖定產能——整條液冷鏈最罕見的客戶承諾信號",
+    overview: "Modine Manufacturing 透過收購 Airedale（英國精密空調）和快速發展的 CDU 業務，成為 AI 資料中心「L2-L3 熱鏈解決方案」的關鍵廠商。最重要的護城河信號：一個匿名超大廠客戶（市場猜測為 Microsoft 或 Google）與 Modine 簽訂 $4B 長期供貨合約，並預付 $165M——客戶願意付現金鎖定產能，代表 Modine CDU 技術已無退路，是整個液冷鏈中最罕見的客戶承諾信號。FY2025 數據中心營收 $644M（+119% YoY），FY2026E 公司指引成長 >30%。",
+    technology: {
+      core: "CDU（冷卻液分配裝置）、精密空調（CRAC/CRAH，Airedale 品牌）、冷卻塔與 Chiller 系統",
+      products: [
+        "Airedale 精密空調（CRAC/CRAH，機房級冷卻）",
+        "資料中心 CDU（AI 機架級液冷分配）",
+        "冷卻塔（Cooling Tower）與 Chiller 系統",
+        "液冷整合工程服務"
+      ],
+      advantages: [
+        "$4B 匿名客戶合約 + $165M 預付款——客戶承諾在液冷供應鏈中極罕見，鎖定多年能見度",
+        "CDU 工程設計門檻高（整合泵、熱交換、管路、控制系統）",
+        "Airedale 精密空調補足機房級冷卻，L2+L3 一站式",
+        "訂單能見度超過 18 個月，FY2026E >30% 有公司指引背書"
+      ]
+    },
+    marketShare: {
+      global: "CDU + 精密空調市場北美前三",
+      desc: "精密空調市場：Vertiv、施耐德（Schneider）、Modine 三強，Modine Airedale 在歐英市場更強",
+      competitors: [
+        { name: "Vertiv（VRT）", share: "北美第一", threat: "high", note: "更完整的端對端熱鏈整合能力" },
+        { name: "施耐德電氣（Schneider）", share: "全球第一", threat: "medium", note: "電力+冷卻組合更全面" },
+        { name: "高力（8996.TW）", share: "亞洲競爭", threat: "low", note: "台灣在地，規模小" }
+      ]
+    },
+    customers: {
+      major: [
+        { name: "匿名超大廠（$4B合約）", pct: "單一最大客戶", note: "市場猜測 Microsoft 或 Google，已支付 $165M 預付款" },
+        { name: "北美大型資料中心建設商", pct: "主要客戶群", note: "CDU + 精密空調組合採購" }
+      ],
+      breakdown: "客戶高度集中（1個匿名超大客戶佔大部分 DC 收入），是護城河也是風險；第二客戶合約若披露，估值重估機會"
+    },
+    outlook: {
+      positive: [
+        "FY2026E 數據中心收入成長 >30%（公司指引）",
+        "$4B 合約提供多年能見度，抗單季波動",
+        "CDU 需求隨 AI 液冷滲透率提升，Airedale 精密空調提供額外成長",
+        "若第二個超大廠合約披露，客戶集中度風險大幅降低"
+      ],
+      catalysts: [
+        "FY2026 Q2（8月）財報：DC 業務能否維持 >30% 成長",
+        "第二個超大廠合約披露（降低客戶集中度風險，估值重估觸媒）",
+        "CDU 單季收入突破 $200M"
+      ]
+    },
+    stockMetrics: {
+      dcRevenueFY25: "$644M（FY2025 DC 業務，+119% YoY）",
+      dcGrowthFY26e: ">30%（FY2026 公司指引）",
+      contractBacklog: "$4B（匿名超大廠，已付 $165M 預付款）",
+      divYield: "~0.4%",
+      sharesOut: "~51M"
+    },
+    challenges: [
+      "單一超大廠客戶集中度過高（若合約延後或縮水，財報直接受衝擊）",
+      "氣冷 HVAC 傳統部門估值拖累，市場難以給予純 DC 冷卻估值"
+    ],
+    risks: [
+      "匿名超大廠若降低資本支出或延後建設，$4B 合約節奏受壓",
+      "Vertiv、施耐德等大廠挖取中小型客戶",
+      "利率上升增加資料中心建設成本，影響新項目起動節奏"
+    ],
+    relatedIntel: ["2026-06-10-liquid-cooling-supply-chain"],
+  },
+
+  "VRT": {
+    id: "VRT", name: "Vertiv Holdings", ticker: "VRT", flag: "🇺🇸",
+    layer: 2, category: "液冷機房冷卻設備整合",
+    badge: "端對端熱鏈唯一解",
+    tagline: "$15B backlog + 2.9x book-to-bill——AI 散熱基礎設施的最終守門者",
+    overview: "Vertiv 是全球唯一提供「從機架液冷到機房設施」完整熱鏈的公司——同時做 CDU（液冷分配）、CRAC（精密空調）、Chiller（冷水機），以及 UPS 電力保護系統。護城河深度最高：$15B backlog + 2.9x book-to-bill（Q4 2025）+ 長期服務合約鎖入客戶（服務合約占收入 ~35%）。是整條 AI 散熱鏈中訂單能見度最強的公司。代價是市值 $35-40B 已高度反映 AI 需求，估值彈性（股價上行空間）最低，適合作為「基準線」而非高報酬標的。",
+    technology: {
+      core: "CDU 液冷分配、精密空調（CRAC/CRAH，Liebert 品牌）、Chiller 冷水機、UPS 電源保護",
+      products: [
+        "Liebert CDU（液冷分配裝置，AI 機架級）",
+        "Liebert CRAC/CRAH（機房精密空調）",
+        "Liebert EXM/EXS UPS（電力保護）",
+        "Geist 電源分配（PDU）",
+        "服務合約與現場維護（軟硬體一體化服務，佔收入 ~35%）"
+      ],
+      advantages: [
+        "唯一端對端熱鏈（CDU → CRAC → Chiller），客戶不需要跨廠商整合",
+        "$15B backlog（Q4 2025），訂單能見度最長",
+        "2.9x book-to-bill（Q4 2025），訂單流入速度是消化速度 2.9 倍",
+        "服務合約鎖入：設備安裝後維護合約通常 3-5 年，現金流可見度極高",
+        "全球 70 個服務中心，本地化服務能力是外資進入的高壁壘"
+      ]
+    },
+    marketShare: {
+      global: "AI 資料中心熱鏈整合設備全球第一（CDU + 精密空調市場）",
+      desc: "精密空調市場：Vertiv #1、Schneider #2；CDU 市場 Vertiv 也是全球前三。服務合約占收入約 35%，遠高於競爭者",
+      competitors: [
+        { name: "施耐德電氣（Schneider Electric）", share: "全球第二", threat: "high", note: "電力+冷卻組合更全面，但精密冷卻不如 Vertiv 深入" },
+        { name: "Modine（MOD）", share: "北美競爭", threat: "medium", note: "$4B 合約客戶是潛在競爭來源" },
+        { name: "雙鴻（3324.TW）", share: "亞太競爭", threat: "low", note: "台系液冷，主要在台灣 ODM 客戶側" }
+      ]
+    },
+    customers: {
+      major: [
+        { name: "微軟（MSFT）", pct: "重要客戶", note: "Azure 資料中心大規模採購" },
+        { name: "Google（GOOG）", pct: "重要客戶", note: "GCP 及 AI 基礎設施" },
+        { name: "Amazon（AMZN）", pct: "重要客戶", note: "AWS 資料中心" },
+        { name: "Meta（META）", pct: "重要客戶", note: "AI 超算中心" }
+      ],
+      breakdown: "全球主要 CSP 幾乎全是 Vertiv 客戶，服務合約鎖定後切換成本極高"
+    },
+    outlook: {
+      positive: [
+        "2026E 全年營收指引 $13.5B，YoY ~+16%",
+        "Q4 2025 +22.7% YoY，book-to-bill 2.9x，動能持續",
+        "服務合約比例提升（軟體化），毛利率結構改善",
+        "AI 投資週期長（資料中心建設 3-5 年），backlog 提供極長能見度"
+      ],
+      catalysts: [
+        "Q2 2026 財報（8月）驗證 book-to-bill 是否維持 >2x",
+        "新一代液冷產品針對 GB300（5,000W+）認證",
+        "服務合約收入超過總收入 40%（毛利率提升信號）"
+      ]
+    },
+    stockMetrics: {
+      q4_2025Growth: "+22.7% YoY（Q4 2025）",
+      backlog: "$15B（Q4 2025）",
+      bookToBill: "2.9x（Q4 2025）",
+      revenue2026e: "$13.5B（2026E 公司指引）",
+      marketCap: "~$35-40B",
+      divYield: "~0.1%",
+      sharesOut: "~423M"
+    },
+    challenges: [
+      "市值 $35-40B 已大幅反映 AI 需求預期，成長驚喜空間有限（適合作基準線，非高報酬標的）",
+      "大客戶集中（少數超大廠資本支出決策影響大）"
+    ],
+    risks: [
+      "超大廠若延後資本支出（2026 下半年可能），backlog 消化速度放緩",
+      "施耐德、Johnson Controls 等大廠切入液冷市場侵蝕份額",
+      "服務合約若發生大型設備失效，維修成本侵蝕毛利"
+    ],
+    relatedIntel: ["2026-06-10-liquid-cooling-supply-chain"],
+  },
+
+  "2421.TW": {
+    id: "2421.TW", name: "建準電機", ticker: "2421.TW", flag: "🇹🇼",
+    layer: 2, category: "散熱輔助元件（泵/風扇）",
+    badge: "液冷泵模組供應商",
+    tagline: "AI 液冷泵是新增需求，但傳統風扇面臨替代壓力——AI 受益間接",
+    overview: "建準電機以精密風扇起家，在 AI 液冷時代提供冷卻系統所需的水泵（Pump）、風扇模組，是液冷管路中的動力來源元件。AI 液冷對傳統風扇而言是部分替代（機架風扇需求下降），但液冷泵是新增需求。Q1 2026 YoY +20.6%，遠低於奇鋐/雙鴻的 100%+，顯示 AI 直接受益程度較弱。適合作為「液冷普及深化」的間接觀察標的，但不是優先研究對象。",
+    technology: {
+      core: "無刷直流（BLDC）風扇技術、液冷水泵設計製造",
+      products: [
+        "伺服器散熱風扇（傳統風冷，AI 時代需求下降）",
+        "液冷系統水泵模組（新增 AI 受益點）",
+        "工業用風扇及散熱元件"
+      ],
+      advantages: [
+        "風扇技術深厚，轉型液冷泵有工藝基礎",
+        "全球伺服器主機板廠的長期合作關係（黏著度）"
+      ]
+    },
+    marketShare: {
+      global: "台灣伺服器風扇前二大",
+      desc: "液冷泵市場仍在建立，建準是新進者，尚未建立明確市佔。傳統風扇市場與台達電、奇鋐競爭",
+      competitors: [
+        { name: "台達電（2308.TW）", share: "工業泵/風扇", threat: "medium", note: "更大規模的競爭者" },
+        { name: "奇鋐（3017.TW）", share: "散熱方案", threat: "medium", note: "奇鋐的 CDU 整合包含泵模組" }
+      ]
+    },
+    customers: {
+      major: [
+        { name: "AI 伺服器 ODM 廠", pct: "主要客戶", note: "風扇為主，液冷泵逐步增加" }
+      ],
+      breakdown: "傳統風扇業務面臨液冷替代壓力，泵業務是新增長點但規模仍小"
+    },
+    outlook: {
+      positive: [
+        "液冷系統水泵需求隨液冷滲透率提升而成長（每套 CDU 需 2-4 個水泵）",
+        "風扇業務雖受壓，但工業用風扇維持基本盤"
+      ],
+      catalysts: [
+        "液冷泵業務佔比突破 20%（轉型加速信號）",
+        "與奇鋐/雙鴻 CDU 系統確認大規模配套供應"
+      ]
+    },
+    stockMetrics: {
+      q1_2026Growth: "+20.6% YoY（遠低於奇鋐/雙鴻 100%+）",
+      divYield: "~2.5%",
+      sharesOut: "~NT$7.8億"
+    },
+    challenges: [
+      "AI 液冷對傳統風扇是部分替代（風扇需求下降），AI 受益不純粹",
+      "液冷泵新業務規模仍小，無法大幅改變整體財務結構"
+    ],
+    risks: [
+      "風扇業務因液冷替代持續萎縮，若泵業務無法及時填補，整體營收承壓",
+      "AI 受益程度遠低於奇鋐/雙鴻，不適合作為純 AI 液冷標的"
+    ],
+    relatedIntel: ["2026-06-10-liquid-cooling-supply-chain"],
   },
 
   // ── Layer 3 ──────────────────────────────────────────────────
@@ -3215,10 +3595,11 @@ const CHAIN_DEFINITION = [
       { id: "5274.TW", note: "BMC 全球 70% 壟斷・NVL72 每台需 72 顆" },
       { id: "4919.TW", note: "BMC 全球二哥 + BBU 電池管理 BMS" },
     ]},
-    { name: "底層散熱與重電元件", entries: [
-      { id: "3324.TW", note: "Cold Plate" },
-      { id: "3017.TW" },
-      { id: "6805.TW", note: "快接頭" },
+    { name: "晶片級散熱元件", entries: [
+      { id: "3653.TW", note: "NVIDIA GPU 均熱板首選・毛利 41.6%" },
+      { id: "3324.TW", note: "Cold Plate・液冷純度最高（Q4 2025 水冷 51%）" },
+      { id: "3017.TW", note: "Cold Plate + CDU 一站式・Q1 2026 EPS +110% YoY" },
+      { id: "6805.TW", note: "液冷快接頭" },
       { id: "FSLR" },
     ]},
     { name: "後段先進製程設備", entries: [
@@ -3255,9 +3636,15 @@ const CHAIN_DEFINITION = [
       { id: "TFC",      note: "Nvidia Mellanox 光引擎・55-60 億人民幣利潤" },
       { id: "POET" },
     ]},
-    { name: "熱能管理系統整合", entries: [
-      { id: "3324.TW", note: "CDU 液冷/浸沒式整機機櫃" },
-      { id: "8996.TW" },
+    { name: "液冷散熱系統整合", entries: [
+      { id: "3017.TW", note: "CDU + Cold Plate 一站式・2026E EPS 93.75元" },
+      { id: "3324.TW", note: "CDU 液冷/浸沒式整機機櫃・液冷純度業界第一" },
+      { id: "8996.TW", note: "CDU + 熱交換器" },
+      { id: "2421.TW", note: "液冷水泵/風扇輔助元件" },
+    ]},
+    { name: "液冷機房冷卻設備整合", entries: [
+      { id: "MOD",  note: "$4B 合約・CDU + Airedale 精密空調" },
+      { id: "VRT",  note: "端對端熱鏈・$15B backlog・2.9x BTB" },
     ]},
     { name: "能源與儲能系統整合", entries: [
       { id: "FLNC" },
