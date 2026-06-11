@@ -125,8 +125,8 @@
               <div class="mm-row">
                 <span class="mm-cat">先進製程設備</span>
                 <div class="mm-chips">
-                  ${co('8027.TW','鈦昇')} <span class="mm-note">TGV 玻璃打孔</span>
-                  ${co('6133.TW','東捷')} <span class="mm-note">雷射載板剝離</span>
+                  ${co('8027.TWO','鈦昇')} <span class="mm-note">TGV 玻璃打孔</span>
+                  ${co('8064.TWO','東捷')} <span class="mm-note">雷射載板剝離</span>
                 </div>
               </div>
               <div class="mm-row">
@@ -639,7 +639,7 @@
               </tr>
               <tr>
                 <td>${T('TGV 雷射鑽孔','spec')}</td>
-                <td>${co('8027.TW','鈦昇（8027）')}</td>
+                <td>${co('8027.TWO','鈦昇（8027）')}</td>
                 <td>TGV 雷射改質與鑽孔設備；主導「E-Core 玻璃基板大聯盟」</td>
                 <td>設備驗收中</td>
               </tr>
@@ -663,7 +663,7 @@
               </tr>
               <tr>
                 <td>${T('FOPLP 剝離設備','spec')}</td>
-                <td>${co('6133.TW','東捷（6133）')}</td>
+                <td>${co('8064.TWO','東捷（8064）')}</td>
                 <td>大面積雷射載板剝離設備；FOPLP 前段雷射製程</td>
                 <td>量產設備供應中</td>
               </tr>
@@ -686,7 +686,7 @@
         <div class="learn-insight">
           <div class="learn-insight-icon">📈</div>
           <div><strong>投資觀察重點：</strong>
-            <br>• <strong>最前線風向球：</strong>設備商（${co('8027.TW','鈦昇')}、${co('3580.TW','友威科')}、${co('6664.TW','群翊')}）的客戶裝機驗收進度，代表良率爬坡速度
+            <br>• <strong>最前線風向球：</strong>設備商（${co('8027.TWO','鈦昇')}、${co('3580.TW','友威科')}、${co('6664.TW','群翊')}）的客戶裝機驗收進度，代表良率爬坡速度
             <br>• <strong>中長線收割者：</strong>載板龍頭 ${co('3037.TW','欣興')}（Intel 指定夥伴）在 2027 年後的商轉量產良率，才是真正財報貢獻的轉折點
             <br>• <strong>最大尾部風險：</strong>Intel 玻璃基板商轉時間延遲（此技術已延遲過一次），或有機基板材料有突破性改良而降低玻璃基板的轉換動力
           </div>

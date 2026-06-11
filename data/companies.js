@@ -1216,7 +1216,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       sharesOut: "NT$13億"
     },
     challenges: ["LGA 插座是成熟市場，成長有天花板", "快接頭新市場需要時間建立客戶認證"],
-    risks: ["Intel/AMD 伺服器 CPU 若改變封裝形式（BGA 化）", "液冷快接頭業務尚未規模化"]
+    risks: ["Intel/AMD 伺服器 CPU 若改變封裝形式（BGA 化）", "液冷快接頭業務尚未規模化"],
+    relatedIntel: ["2026-06-10-liquid-cooling-supply-chain"]
   },
 
   "6125.TW": {
@@ -1235,7 +1236,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       sharesOut: "NT$6.1億"
     },
     challenges: ["浸沒式液冷商業化速度比預期慢", "技術驗證周期長"],
-    risks: ["浸沒式液冷若被其他散熱技術取代", "市場啟動時間延遲"]
+    risks: ["浸沒式液冷若被其他散熱技術取代", "市場啟動時間延遲"],
+    relatedIntel: ["2026-06-10-liquid-cooling-supply-chain"]
   },
 
   "3013.TW": {
@@ -1260,7 +1262,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
       sharesOut: "NT$8.1億"
     },
     challenges: ["低毛利金屬加工業務，難以提升獲利能力", "大廠競爭"],
-    risks: ["規模難以擴大", "被整合商自製取代"]
+    risks: ["規模難以擴大", "被整合商自製取代"],
+    relatedIntel: ["2026-06-10-liquid-cooling-supply-chain"]
   },
 
   // ── Layer 2 ──────────────────────────────────────────────────
@@ -2495,7 +2498,7 @@ Q1 扭虧含業外收入成分（員工留任條件達成）
 
   "FSLR": {
     id: "FSLR", name: "First Solar", ticker: "FSLR", flag: "🇺🇸",
-    layer: 1, category: "重電與散熱基礎元件",
+    layer: 4, category: "乾淨電力供給營運商",
     badge: "薄膜太陽能龍頭", tagline: "美國薄膜太陽能模組製造霸主",
     overview: "First Solar 是美國最大的薄膜太陽能（CdTe）模組製造商，也是全球效率最高的薄膜太陽能技術持有者。AI 資料中心的大規模再生能源採購（PPA）中，First Solar 是美國本土製造內容最高（IRA AMPC 補貼受益最大）的太陽能供應商，是 NextEra、AES 等綠電廠商的核心供應商。",
     technology: { core: "碲化鎘（CdTe）薄膜太陽能技術、Series 7 高效模組", products: ["Series 7 CdTe 太陽能模組（700W+）", "Ganymede 系列大面積薄膜", "系統整合服務"], advantages: ["CdTe 薄膜技術不依賴中國多晶矽，地緣政治風險最低", "IRA AMPC 稅收抵免每瓦補貼 $0.17+，製造成本大幅降低", "美國本土製造，避開 Uyghur Forced Labor Prevention Act 問題"] },
@@ -2518,46 +2521,106 @@ Q1 扭虧含業外收入成分（員工留任條件達成）
     risks: ["美國政策風險（IRA 補貼若修改）", "碲原料供應瓶頸限制擴產速度"]
   },
 
-  "8027.TW": {
-    id: "8027.TW", name: "鈦昇科技", ticker: "8027.TW", flag: "🇹🇼",
-    layer: 1, category: "後段先進製程設備",
-    badge: "TGV 玻璃打孔", tagline: "Through Glass Via 雷射鑽孔設備",
-    overview: "鈦昇科技專注於 TGV（Through Glass Via）玻璃基板雷射微孔製程設備，是先進封裝從矽轉換為玻璃基板（Glass Core Substrate）趨勢的核心設備供應商。台積電、英特爾（Glass 2.5D 計畫）推動玻璃基板封裝，鈦昇的 TGV 設備技術因此成為關鍵。",
-    technology: { core: "雷射微孔加工設備（TGV）、玻璃精密加工技術", products: ["TGV 雷射鑽孔設備", "超薄玻璃切割設備", "半導體玻璃制程設備"], advantages: ["TGV 技術壁壘高，全球掌握商用化技術的廠商極少", "先進封裝玻璃基板轉型的早期卡位者", "台灣本土設備廠，服務台廠反應速度快"] },
-    marketShare: { global: "TGV 設備市場利基廠，全球極少競爭者", desc: "市場尚早期，先佔優勢可觀", competitors: ["LPKF Laser（德國）", "DISCO（日本，切割設備）"] },
-    customers: { major: ["台積電（先進封裝研發）", "日月光（VIPack 玻璃基板）", "台灣封裝廠"], breakdown: "先進封裝廠研發與量產驗證為主" },
-    outlook: { positive: ["Intel/TSMC 玻璃基板封裝路線圖確認，TGV 設備需求確定", "AI 晶片封裝複雜度提升推動玻璃基板採用"], catalysts: ["台積電玻璃基板封裝正式量產時程"] },
+  "8027.TWO": {
+    id: "8027.TWO", name: "鈦昇科技", ticker: "8027.TWO", flag: "🇹🇼",
+    layer: 1, category: "先進封裝製程設備",
+    badge: "TGV 高速鑽孔・CoPoS", tagline: "玻璃基板 TGV 設備與 Intel CoPoS 卡位者",
+    overview: "鈦昇科技掌握 TGV（Through Glass Via）高速雷射鑽孔設備技術，並佈局 Intel CoPoS（Co-Packaged Silicon）玻璃基板封裝架構的關鍵設備。英特爾大投資訂單量年增 50%，代表 Intel 驗證進度正向。然而 2026Q1 EPS -0.22 元仍虧損，股價 255.5 元前瞻 PE 超 100x，核心假設（Intel CoPoS 驗證通過）尚未兌現——是「潛在卡點」非「已確認卡點」，現價風險極高。",
+    technology: { core: "TGV 高速雷射鑽孔設備、CoPoS 玻璃基板封裝設備", products: ["TGV 高速鑽孔設備", "玻璃基板精密加工設備", "CoPoS 架構製程設備"], advantages: ["TGV 技術壁壘高，全球商業化廠商極少", "Intel CoPoS 驗證進行中，英特爾訂單量年增 50%", "與東捷 TGV 技術路線互補（鑽孔 vs 雷射改質）"] },
+    marketShare: { global: "TGV 設備市場利基廠，CoPoS 關鍵設備候選", desc: "市場尚早期，先佔優勢可觀，但商業化時程不確定", competitors: ["LPKF Laser（德國）", "東捷科技（TGV 雷射改質，互補關係）"] },
+    customers: { major: ["Intel（CoPoS 驗證客戶，訂單量 YoY +50%）", "台積電（先進封裝研發）"], breakdown: "Intel CoPoS 驗證是最大潛在訂單，量產時程未確認" },
+    outlook: { positive: ["Intel CoPoS 驗證通過後，訂單規模龐大", "玻璃基板封裝趨勢確認，TGV 設備需求長線確定"], catalysts: ["Intel CoPoS 驗證通過公告（Kill or Confirm 事件）", "2026Q3/Q4 轉為盈利"] },
     stockMetrics: {
+      price: "~NT$255.5",
+      pe: ">100x（前瞻，虧損中）",
+      eps: "-NT$0.22（2026Q1），持續虧損中",
+      marketCap: "~NT$84億（市值已大幅領先基本面）",
       divYield: "0%"
-    ,
-      sharesOut: "NT$3.3億"
     },
-    challenges: ["玻璃基板封裝商業化時程慢於預期風險", "公司規模小，接大單能力有限"],
-    risks: ["玻璃基板若被其他材料取代", "大型設備廠進入競爭（Tokyo Electron 等）"]
+    challenges: ["2026Q1 仍虧損，核心假設尚未兌現", "股價 255.5 元在未確定盈利前估值風險極高（前瞻 PE>100x）", "商業化時程延遲的可能性高於市場預期"],
+    risks: ["Intel 取消或延遲 CoPoS 計畫 → 股價大幅修正風險", "持續虧損至 2026Q4 → 估值崩塌", "玻璃基板封裝若晚於 2028 年才大規模量產"],
+    relatedIntel: ["2026-06-11-foplp-packaging-equipment-chain"]
+  },
+
+  "8064.TWO": {
+    id: "8064.TWO", name: "東捷科技", ticker: "8064.TWO", flag: "🇹🇼",
+    layer: 1, category: "先進封裝製程設備",
+    badge: "FOPLP/TGV 設備龍頭", tagline: "TGV 雷射改質・FOPLP・Micro LED 巨量轉移設備整合",
+    overview: "東捷科技是 G2C+ 聯盟核心成員，掌握 TGV（Through Glass Via）雷射改質技術（每秒 10,000 孔・定位精度 ±5μm），同時覆蓋 FOPLP 製程設備與 Micro LED 巨量轉移系統。2025年志聖以 50.88 元私募取得 ~12% 持股，東捷正式納入 G2C+ 聯盟。群創 FOPLP 產線轉型中，東捷為核心設備供應商。2025Q4 EPS 1.52 元，毛利率飆至 38.45%（舊面板業務毛利率僅 22%），代表產品組合已結構性轉向高附加值設備。2026 1~4 月累計營收年增 30.3%。法人預估 2026E EPS 4~5 元。",
+    technology: { core: "TGV 雷射改質、FOPLP 面板級封裝設備、Micro LED 巨量轉移系統", products: ["TGV 雷射改質設備（每秒 10,000 孔・±5μm 精度）", "FOPLP 製程設備（面板級 Fan-Out 封裝）", "Micro LED 巨量轉移設備", "G2C+ 整線設備整合方案"], advantages: ["TGV 技術精度門檻極高（±5μm），全球能商業化的廠商極少", "G2C+ 整線捆綁（志聖壓膜+均豪自動化+東捷雷射）讓替換成本極高", "群創 FOPLP 唯一認證供應商，產線驗收訂單確認", "業務純度近 100% FOPLP/TGV/Micro LED，是整條鏈中財報彈性最大的設備股"] },
+    marketShare: { global: "TGV 雷射改質設備全球少數商業化廠商之一", desc: "群創 FOPLP 轉型唯一認證，G2C+ 整線整合讓下游不需跨廠整合", competitors: ["LPKF Laser（德國，TGV 競爭者）", "DISCO（日本，玻璃切割）", "Nikon（日本，雷射解鍵合）"] },
+    customers: { major: ["群創光電（FOPLP 產線轉型，驗收訂單確認）", "日月光（先進封裝設備）", "力成（先進封裝擴充）"], breakdown: "群創 FOPLP 為當前最大訂單來源，日月光/力成為次要客戶" },
+    outlook: { positive: ["FOPLP 商業化加速（群創已啟動），東捷為核心設備供應商", "G2C+ 整線方案讓客戶不需跨廠整合，黏著度高", "毛利率 38%+ 結構性提升（vs 舊業務 22%）", "Micro LED 巨量轉移設備為第三成長引擎"], catalysts: ["2026Q2/Q3 EPS 確認（關鍵驗證：≥0.8元且毛利率 ≥35%）", "群創 FOPLP 量產正式公告", "新客戶（三星/中國大廠）取得"] },
+    stockMetrics: {
+      price: "~NT$152.5",
+      pe: "~30~38x（前瞻）",
+      eps: "NT$1.36（2025全年），Q4 NT$1.52",
+      forwardEps: "NT$4~5（2026E，法人預估）",
+      marketCap: "~NT$40億",
+      grossMargin: "38.45%（2025Q4）",
+      revenueGrowth: "+30.3%（2026 1~4月 YoY）",
+      divYield: "0%"
+    },
+    challenges: ["群創 FOPLP 轉型若延遲，東捷是最直接受衝擊的設備商", "客戶集中度高（群創單一大客戶）"],
+    risks: ["群創 FOPLP 量產時程延後兩季以上 → EPS 無法達 4 元門檻", "FOPLP 若被 CoWoS-R 等替代路線取代", "G2C+ 整線方案若客戶自建設備能力"],
+    relatedIntel: ["2026-06-11-foplp-packaging-equipment-chain"]
+  },
+
+  "2467.TW": {
+    id: "2467.TW", name: "志聖工業", ticker: "2467.TW", flag: "🇹🇼",
+    layer: 1, category: "先進封裝整線設備整合",
+    badge: "G2C+ 聯盟盟主", tagline: "台積電 CoWoS 壓膜設備龍頭・FOPLP 整線整合主導者",
+    overview: "志聖工業是台積電 CoWoS 先進封裝製程中壓膜機設備的長期核心供應商（合作 12 年），也是 G2C+ 聯盟（志聖+均豪+均華+東捷）的主導者。2025年以 50.88 元私募取得東捷科技約 12% 持股，G2C+ 聯盟首度在 COMPUTEX 2026 聯合參展，展出 TGV、FOPLP、Micro LED、翹曲控制全製程設備整合方案。Q1 2026 營收創歷史新高，CoWoS 擴產確認直接受益。業務涵蓋傳統 LCD 熱製程 + CoWoS 壓膜 + FOPLP 設備，純度次於東捷但業務穩定性更高。",
+    technology: { core: "壓膜機（Laminator）、烘烤設備（Oven）、熱製程設備、FOPLP 整線整合", products: ["CoWoS 壓膜機（台積電認證）", "先進封裝熱製程烘烤設備", "FOPLP 製程設備（透過 G2C+）", "翹曲控制系統"], advantages: ["台積電 12 年合作關係，壓膜技術難複製", "G2C+ 整線整合能力（壓膜+雷射+自動化）讓替換成本極高", "CoWoS 需求確定性最高（台積電主力先進封裝製程）"] },
+    marketShare: { global: "台積電 CoWoS 壓膜設備核心供應商", desc: "台積電 CoWoS 擴產直接拉動訂單，業務可見度高", competitors: ["日本熱製程設備廠（Dainippon Screen 等）"] },
+    customers: { major: ["台積電（CoWoS 壓膜設備，12年合作）", "日月光", "力成"], breakdown: "台積電為最大客戶，CoWoS 擴產驅動訂單成長" },
+    outlook: { positive: ["台積電 CoWoS 持續擴產（NVIDIA AI 晶片需求推動）", "G2C+ 整線方案打開 FOPLP 整機設備商機", "COMPUTEX 2026 聯合參展提升品牌能見度"], catalysts: ["台積電 CoWoS N+1/N+2 世代產能擴充計畫", "群創 FOPLP 量產正式啟動（帶動 G2C+ 整線訂單）"] },
+    stockMetrics: {
+      revenueGrowth: "Q1 2026 營收創歷史新高",
+      divYield: "0%"
+    },
+    challenges: ["業務分散（傳統 LCD 熱製程仍佔部分收入），FOPLP 純度次於東捷", "G2C+ 整線訂單節奏取決於群創 FOPLP 量產進度"],
+    risks: ["台積電 CoWoS 若放緩擴產（2026 下半年風險）", "FOPLP 採用速度若慢於預期"],
+    relatedIntel: ["2026-06-11-foplp-packaging-equipment-chain"]
+  },
+
+  "5443.TW": {
+    id: "5443.TW", name: "均豪精密", ticker: "5443.TW", flag: "🇹🇼",
+    layer: 1, category: "先進封裝製程設備",
+    badge: "面板級封裝自動化", tagline: "FOPLP 面板級封裝自動化搬運與清洗設備",
+    overview: "均豪精密（UNIZO）提供面板級（panel-level）封裝製程的自動化搬運、清洗設備，是 G2C+ 聯盟成員之一（均豪負責搬運自動化與面板清洗環節）。2025 EPS 成長 120.1% YoY，與台積電有供應關係。然而 2026Q1 EPS 季減 69%（至 NT$0.19），動能轉弱，全年 EPS 預估 5.7 元面臨下修風險；本益比 40x 估值並不便宜。G2C+ 聯盟的 FOPLP 整線整合商機是中期催化劑，但短期財報可見度轉弱。",
+    technology: { core: "面板級搬運自動化設備、精密清洗設備、FOPLP 製程輔助設備", products: ["面板級 FOPLP 搬運自動化系統", "精密清洗設備（Cleaning System）", "先進封裝製程輔助設備"], advantages: ["台積電供應關係建立品質認證門檻", "G2C+ 聯盟成員，受惠整線整合商機", "面板級大尺寸自動化搬運技術壁壘"] },
+    marketShare: { global: "台灣面板級封裝自動化設備利基廠", desc: "FOPLP 市場尚早期，先佈局有優勢但商業化時程不確定", competitors: ["日本自動化設備廠", "韓國設備廠"] },
+    customers: { major: ["台積電（自動化設備）", "面板廠 FOPLP 轉型客戶"], breakdown: "台積電與 G2C+ 客戶為主要收入來源" },
+    outlook: { positive: ["G2C+ 整線 FOPLP 商機", "台積電先進封裝擴產"], catalysts: ["Q2 2026 EPS 回升確認（否則全年預估有下修風險）", "G2C+ FOPLP 整線訂單正式啟動"] },
+    stockMetrics: {
+      eps: "NT$0.19（2026Q1，季減 69%）",
+      forwardEps: "NT$5.7（2026E 預估，面臨下修風險）",
+      pe: "~40x",
+      epsGrowth2025: "+120.1% YoY",
+      divYield: "0%"
+    },
+    challenges: ["2026Q1 季減 69%，動能轉弱", "本益比 40x 非便宜，下修風險高", "FOPLP 商業化速度決定中期業績"],
+    risks: ["全年 EPS 預估 5.7 元若下修至 4 元以下 → 估值壓力", "G2C+ FOPLP 整線訂單若延遲"],
+    relatedIntel: ["2026-06-11-foplp-packaging-equipment-chain"]
   },
 
   "6133.TW": {
-    id: "6133.TW", name: "東捷科技", ticker: "6133.TW", flag: "🇹🇼",
-    layer: 1, category: "後段先進製程設備",
-    badge: "雷射載板剝離", tagline: "雷射解鍵合設備 / 載板剝離製程",
-    overview: "東捷科技提供雷射解鍵合（Laser Debonding）設備，是先進封裝製程中「載板剝離」步驟的關鍵設備供應商。Fan-Out 封裝、RDL（重佈線層）製程中，晶片被暫時鍵合在載板上，製程完成後需精確雷射剝離，東捷設備是這個製程的台灣本土唯一解決方案。",
-    technology: { core: "雷射解鍵合設備、Fan-Out 載板剝離技術", products: ["雷射解鍵合系統", "晶圓薄化/切割設備", "先進封裝製程設備"], advantages: ["Fan-Out 封裝的雷射剝離設備台灣唯一本土廠商", "台積電 InFO 封裝供應鏈成員", "設備維護本土化，反應速度快"] },
-    marketShare: { global: "台灣雷射封裝設備利基廠", desc: "日本 Nikon、SUSS MicroTec 是主要競爭者", competitors: ["Nikon（日本）", "SUSS MicroTec（德國）"] },
-    customers: { major: ["台積電（InFO 封裝設備）", "日月光（Fan-Out 封裝）"], breakdown: "台積電是最重要客戶，直接受益於 InFO 產能擴充" },
-    outlook: { positive: ["InFO 封裝需求跟隨 Apple A 系列晶片持續成長", "AI ASIC 的 Fan-Out 封裝需求增加"], catalysts: ["台積電 InFO 產能擴充計畫"] },
+    id: "6133.TW", name: "金橋", ticker: "6133.TW", flag: "🇹🇼",
+    layer: 3, category: "高階連接線束組裝",
+    badge: "AI 高速連接線材", tagline: "AI 伺服器高速連接線材與連接器組件",
+    overview: "金橋（Golden Bridge Electech）生產 AI 伺服器用高速連接線材與連接器組件（Layer 3 外圍零組件）。隨 AI 伺服器建設升溫而有主題性受惠，但 2026年 1~4 月累計營收年增僅 5.74%，財報驗證弱，屬主題概念多於實質卡點。連接器/線材屬競爭激烈的外圍市場，任何線材廠均可搶單，缺乏製程壁壘與客戶黏著度。注意：金橋 (6133.TW) 與東捷科技 (8064.TWO) 是完全不同的兩家公司。",
+    technology: { core: "高速連接線材設計製造、連接器組件", products: ["AI 伺服器高速連接線組", "高速傳輸線材", "連接器組件"], advantages: ["既有連接器客戶關係", "AI 伺服器線材市場成長中"] },
+    marketShare: { global: "台灣中型連接器/線材廠", desc: "市場分散，競爭激烈，差異化有限", competitors: ["其他台灣連接線廠", "和碩電子", "正崴精密"] },
+    customers: { major: ["AI 伺服器 ODM 廠"], breakdown: "AI 伺服器建設帶動高速線材需求" },
+    outlook: { positive: ["AI 伺服器建設持續帶動線材需求"], catalysts: ["大型 AI 伺服器廠商線材採購放量"] },
     stockMetrics: {
-      pe: "32.7x",
-      eps: "NT$0.7200",
-      epg: "+7.1%",
-      marketCap: "NT$28億",
-      week52High: "NT$30",
-      week52Low: "NT$13",
-      divYield: "1.29%"
-    ,
-      sharesOut: "NT$10.4億"
+      revenueGrowth: "+5.74%（2026 1~4月 YoY，驗證偏弱）",
+      divYield: "0%"
     },
-    challenges: ["技術進入門檻需持續研發投入", "日本設備廠競爭壓力"],
-    risks: ["台積電若改用日商設備", "封裝技術路線轉換（如全面改用 CoWoS）"]
+    challenges: ["財報驗證弱（4M 年增僅 5.74%）", "無製程壁壘，任何線材廠可競爭"],
+    risks: ["主題概念退潮後估值壓縮", "競爭對手搶單導致毛利壓縮"],
+    relatedIntel: ["2026-06-11-foplp-packaging-equipment-chain"]
   },
 
   "6515.TW": {
@@ -3600,14 +3663,17 @@ const CHAIN_DEFINITION = [
       { id: "3324.TW", note: "Cold Plate・液冷純度最高（Q4 2025 水冷 51%）" },
       { id: "3017.TW", note: "Cold Plate + CDU 一站式・Q1 2026 EPS +110% YoY" },
       { id: "6805.TW", note: "液冷快接頭" },
-      { id: "FSLR" },
     ]},
-    { name: "後段先進製程設備", entries: [
-      { id: "8027.TW",  note: "TGV 玻璃打孔" },
-      { id: "6133.TW",  note: "雷射載板剝離" },
+    { name: "先進封裝製程設備", entries: [
+      { id: "8027.TWO",  note: "TGV 高速鑽孔・CoPoS・Intel 驗證中" },
+      { id: "8064.TWO",  note: "TGV 雷射改質・FOPLP・毛利率 38%・群創唯一認證" },
       { id: "3580.TW",  note: "TGV 通孔活化・RDL 晶種層濺鍍" },
       { id: "6664.TW",  note: "ABF 壓合・翹曲控制烤箱" },
       { id: "3583.TW",  note: "TGV 濕蝕刻・垂直填孔前處理" },
+    ]},
+    { name: "FOPLP 整線封裝設備整合", entries: [
+      { id: "2467.TW", note: "G2C+ 聯盟盟主・台積電 CoWoS 壓膜・Q1 2026 營收創歷史新高" },
+      { id: "5443.TW", note: "面板級 FOPLP 自動化搬運清洗設備" },
     ]},
     { name: "封測代工（OSAT）", entries: [
       { id: "3711.TW",  note: "VIPack Chiplet + FOPLP 玻璃基板整合" },
@@ -3662,6 +3728,7 @@ const CHAIN_DEFINITION = [
     ]},
     { name: "高階連接線束組裝", entries: [
       { id: "2328.TW", note: "轉型機器人 AFM 電機與 AI 線束，現階段 AI 營收僅佔 1%" },
+      { id: "6133.TW", note: "AI 伺服器高速連接線材（Layer 3 外圍，主題概念）" },
     ]},
     { name: "重電與電網終端設備", entries: [
       { id: "ETN" },
@@ -3679,8 +3746,9 @@ const CHAIN_DEFINITION = [
       { id: "META" },
     ]},
     { name: "乾淨電力供給營運商", entries: [
-      { id: "NEE", note: "全球綠能營運龍頭" },
-      { id: "BE",  note: "資料中心燃料電池" },
+      { id: "NEE",  note: "全球綠能營運龍頭" },
+      { id: "BE",   note: "資料中心燃料電池" },
+      { id: "FSLR", note: "薄膜太陽能龍頭・AI 資料中心 PPA 首選・IRA AMPC 補貼最大受益" },
     ]},
     { name: "物理 AI 與移動算力端", entries: [
       { id: "TSLA", note: "FSD 軟體、Optimus 機器人、Megapack 儲能/Autobidder 軟體" },
