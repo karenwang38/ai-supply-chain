@@ -2245,8 +2245,8 @@ make-or-break 事件 = 2026 Q4 量產良率公告。`,
     risks: ["Metalens 商業化若慢於預期", "傳統光學廠轉型切入競爭"]
   },
 
-  "5274.TW": {
-    id: "5274.TW", name: "信驊科技", ticker: "5274.TW", flag: "🇹🇼",
+  "5274.TWO": {
+    id: "5274.TWO", name: "信驊科技", ticker: "5274.TWO", flag: "🇹🇼",
     layer: 1, category: "控制與電源安全晶片",
     platform: "NVDA",
     badge: "BMC 全球七成壟斷",
@@ -2347,7 +2347,8 @@ OpenBMC 生態：全球 BMC 韌體都基於 Aspeed 平台開發
       "估值泡沫：P/E 65x 已超前部署多年成長預期，任何一季不如預期即面臨 30%+ 修正風險",
       "OpenBMC 開源生態若出現強力替代平台，切換成本壁壘下降",
       "台積電產能限制（BMC 使用成熟製程，相對可控，但整體 AI 熱度降溫會傳導）"
-    ]
+    ],
+    relatedIntel: ["2026-06-11-bmc-mcu-supply-chain"]
   },
 
   "4919.TW": {
@@ -2481,7 +2482,7 @@ Q1 扭虧含業外收入成分（員工留任條件達成）
   看：23.5kW 高功率 BBU 量產出貨（法說會明確時程）
   驗：從「頂級 AI 機櫃」擴散到「所有 CSP 通用伺服器標配」
   想像空間：從百萬台規模 → 數千萬台規模，出貨量分子大爆炸`,
-    relatedIntel: ["2026-06-02-4919-milestones"],
+    relatedIntel: ["2026-06-11-bmc-mcu-supply-chain", "2026-06-02-4919-milestones"],
     challenges: [
       "信驊（Aspeed）掌控 BMC 市場 70% 壟斷份額，新唐以二哥身份必須靠客製化與性價比流血擴張",
       "日本 NTCJ 晶圓廠固定折舊成本高，稼動率一旦下滑就重創毛利（2025 年虧損主因）",
@@ -2494,6 +2495,40 @@ Q1 扭虧含業外收入成分（員工留任條件達成）
       "信驊若推出更低價 BMC 方案搶占新唐客戶，市佔率從 20-25% 繼續被侵蝕",
       "AI 伺服器廠商（廣達/緯穎）若評估自研 BMC，長線客戶黏著度下降"
     ]
+  },
+
+  "6202.TWO": {
+    id: "6202.TWO", name: "盛群半導體", ticker: "6202.TWO", flag: "🇹🇼",
+    layer: 1, category: "控制與電源安全晶片",
+    badge: "AI 風扇控制 MCU", tagline: "AI 散熱系統風扇控制 MCU 與消費 IC",
+    overview: "盛群半導體（Holtek Semiconductor）是台灣主要 MCU 廠商之一，產品線涵蓋消費 MCU、工控 MCU 與 AI 散熱系統風扇控制 MCU。AI 資料中心散熱需求提升帶動風扇控制晶片訂單成長，但 AI 主題在盛群總業務中佔比有限，屬 Tier 2 間接受惠。MCU 景氣周期回復是近期主要驅動力。",
+    technology: { core: "8/32 位元 MCU 設計、風扇控制 IC、觸控 IC", products: ["工業/消費 MCU", "散熱風扇控制 IC", "觸控感應 MCU", "無線 MCU（BLE）"], advantages: ["成熟的台灣本土 MCU 廠商", "風扇控制 IC 在伺服器散熱市場有一定存在感"] },
+    marketShare: { global: "台灣中型 MCU 廠", desc: "消費與工控 MCU 市場，AI 伺服器風扇控制是新興利基", competitors: ["新唐科技（4919.TW）", "松翰科技（2454.TWO）", "中微半導（中國）"] },
+    customers: { major: ["消費電子廠商", "AI 伺服器散熱模組廠"], breakdown: "消費/工控客戶為主，AI 散熱是新增利基" },
+    outlook: { positive: ["MCU 景氣周期回復", "AI 資料中心散熱 MCU 需求成長"], catalysts: ["MCU 產業庫存去化完成", "AI 伺服器散熱訂單放量"] },
+    stockMetrics: {
+      divYield: "0%"
+    },
+    challenges: ["AI 主題佔總業務比重小，純度不足", "競爭激烈的 MCU 市場，毛利率壓力持續"],
+    risks: ["MCU 景氣若再度下行", "中國廠商持續搶佔低階市場"],
+    relatedIntel: ["2026-06-11-bmc-mcu-supply-chain"]
+  },
+
+  "2454.TWO": {
+    id: "2454.TWO", name: "松翰科技", ticker: "2454.TWO", flag: "🇹🇼",
+    layer: 1, category: "控制與電源安全晶片",
+    badge: "消費/工控 MCU", tagline: "消費電子與工控 MCU 設計廠",
+    overview: "松翰科技（Sonix Technology）是台灣消費電子與工控 MCU 設計廠，產品涵蓋 8/32 位元 MCU、音頻處理 IC 與 USB 控制器。MCU 景氣周期回復是近期主要驅動力，但缺乏明確的 AI 直接催化劑，是供應鏈中 Tier 2 末端位置。差異化有限，主要受益於行業整體景氣回升。",
+    technology: { core: "8/32 位元 MCU、音頻 IC、USB 控制器", products: ["工控/消費 MCU", "音頻處理 IC", "USB Type-C 控制器", "藍芽 MCU"], advantages: ["成熟的 MCU 設計能力", "多元產品線覆蓋消費與工控"] },
+    marketShare: { global: "台灣中小型 MCU 廠", desc: "消費 MCU 市場競爭激烈，差異化有限", competitors: ["盛群半導體（6202.TWO）", "新唐科技（4919.TW）", "中微半導（中國）"] },
+    customers: { major: ["消費電子廠商", "工控設備廠"], breakdown: "消費電子為主要市場" },
+    outlook: { positive: ["MCU 景氣回復帶動出貨量成長"], catalysts: ["消費電子需求回溫", "工控 MCU 庫存去化完成"] },
+    stockMetrics: {
+      divYield: "0%"
+    },
+    challenges: ["缺乏 AI 直接催化劑，主題純度低", "消費 MCU 市場競爭激烈，毛利率承壓"],
+    risks: ["MCU 市場若再度下行", "中國廠商低價競爭"],
+    relatedIntel: ["2026-06-11-bmc-mcu-supply-chain"]
   },
 
   "FSLR": {
@@ -3655,8 +3690,10 @@ const CHAIN_DEFINITION = [
       { id: "SRCP",  note: "EML 年產 6,000 萬顆" },
     ]},
     { name: "控制與電源安全晶片", entries: [
-      { id: "5274.TW", note: "BMC 全球 70% 壟斷・NVL72 每台需 72 顆" },
-      { id: "4919.TW", note: "BMC 全球二哥 + BBU 電池管理 BMS" },
+      { id: "5274.TWO", note: "BMC 全球 70% 壟斷・NVL72 每台需 72 顆・Q1 FY2026 EPS +59%" },
+      { id: "4919.TW", note: "BMC 全球二哥 + BBU 電池管理 BMS・Q1 2026 扭虧為盈" },
+      { id: "6202.TWO", note: "AI 散熱風扇控制 MCU（Tier 2 間接受惠）" },
+      { id: "2454.TWO", note: "消費/工控 MCU，MCU 景氣回復受益" },
     ]},
     { name: "晶片級散熱元件", entries: [
       { id: "3653.TW", note: "NVIDIA GPU 均熱板首選・毛利 41.6%" },

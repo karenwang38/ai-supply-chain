@@ -502,7 +502,7 @@
         <div class="learn-insight">
           <div class="learn-insight-icon">💡</div>
           <div>
-            <strong>EPS 暴放大案例：${co('5274.TW','信驊（5274）')}</strong><br>
+            <strong>EPS 暴放大案例：${co('5274.TWO','信驊（5274）')}</strong><br>
             過去一台通用伺服器只需 1 顆 BMC 晶片；現在一台 ${T('NVIDIA NVL72','spec')} 機櫃架構需要 ${T('72 顆','spec')} BMC。出貨量直接翻了幾十倍，預估明後年的 EPS 出現非線性暴增（例如從 NT$30 直接跳到 NT$80～100）。<strong>就算本益比不變，光靠 EPS 的暴放大，就能解釋為什麼股價可以創歷史新高。</strong>
           </div>
         </div>
