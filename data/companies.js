@@ -12,6 +12,8 @@ const LAYERS = [
     desc: "組裝成可直接插電、插網線、放進機房的完整巨大機台" },
   { id: 4, name: "終端客戶－雲端大廠與綠能營運（金主）", emoji: "🏢", color: "#b45309",
     desc: "整個 AI 帝國的終極金主，負責蓋起資料中心並將算力轉化為軟體服務" },
+  { id: 5, name: "生技／細胞治療", emoji: "🧬", color: "#059669",
+    desc: "台灣及亞太細胞治療、基因治療與精準醫療的里程碑選擇權型標的" },
 ];
 
 const COMPANIES = {
@@ -3636,6 +3638,81 @@ FOPLP 材料：~40-50%（大面積技術護城河）
   ✦ FOPLP 良率爬坡速度（目前 FOPLP 最大痛點）
   ✦ 客戶採用玻璃基板封裝的首家大廠（Intel？Apple？）`
   },
+
+  "6949.TWO": {
+    id: "6949.TWO", name: "沛爾生醫-創", ticker: "6949.TWO", flag: "🇹🇼",
+    layer: 5, category: "細胞治療 CAR-T",
+    badge: "台灣首個 CAR-T NDA 候選", tagline: "台灣本土 CD19 CAR-T 細胞治療先行者",
+    overview: "沛爾生醫（PearceImmune）是台灣首個有望在本土取得 CAR-T 細胞治療藥證的公司。核心產品 PL001（CD19 CAR-T）Phase 2 期中分析於 2026年4月23日由獨立數據監測委員會（IDMC）確認達統計顯著意義，T-RMAT 輔導資格已取得，NDA 文件準備中（預計 2026年底提交）。竹北 GMP 廠於 6月15日開幕，製造能力就位。完全符合「里程碑選擇權型」分析架構——無商業收入、股價由臨床進度驅動。PL001 批准概率貝葉斯估算約 52-62%，加權期望市值 421億 vs 現價 459億。",
+    technology: {
+      core: "自體 CD19 CAR-T 細胞治療（PL001）、口服小分子藥（PP011 RA）、BCMA CAR-T（PL003）",
+      products: [
+        "PL001（CD19 CAR-T）：B細胞非霍奇金淋巴瘤（B-NHL）Phase 2，期中達統計顯著，T-RMAT NDA申請中",
+        "PP011（口服 BTK/JAK 抑制劑）：類風濕性關節炎，台灣 Phase 1 進行中，2026年6月中國 NMPA IND 批准",
+        "PL003（BCMA CAR-T）：多發性骨髓瘤，Phase 1 進行中，恩慈療法多例",
+        "PL002（實體腫瘤 CAR-T）：臨床前階段",
+        "特管辦法產品（CIK/DC-CIK/ADSC）：現有收入來源，年收入 ~3,140萬"
+      ],
+      advantages: [
+        "台灣首個 CD19 CAR-T，進口替代邏輯清晰（Kymriah/Yescarta 超過 TWD 1,000萬/療程）",
+        "T-RMAT 資格取得：可用 Phase 2 數據申請有條件藥證，不需等 Phase 3",
+        "CD19 CAR-T 機制已有全球兩個上市產品（Kymriah、Yescarta），機制風險低",
+        "竹北 GMP 廠：商業化製造能力就位，NDA 必要條件達成",
+        "現金跑道約 4年（2026/01 現增 18.6億，年燒 4-5億）",
+      ]
+    },
+    marketShare: {
+      global: "台灣首個本土 CAR-T 廠，進口替代格局清晰",
+      desc: "台灣 B細胞 NHL 年新病例 1,500-2,000 人，符合 CAR-T 資格約 300-500 人/年；現全依賴進口（超過 TWD 1,000萬/療程）",
+      competitors: [
+        { name: "Kymriah（Novartis）", share: "進口", note: "全球首個 CAR-T，台灣定價超過 TWD 1,000萬，PL001 本土定價可能 60-70% 折扣", threat: "medium" },
+        { name: "Yescarta（Gilead/Kite）", share: "進口", note: "全球第二個 CD19 CAR-T，同為 B-NHL 適應症", threat: "medium" },
+      ]
+    },
+    customers: {
+      major: ["台灣醫學中心（B細胞 NHL 三線以上治療失敗患者）", "特管辦法細胞治療患者（現有收入）"],
+      breakdown: "上市後：B-NHL 患者 150-350 人/年（台灣）；定價策略 NT$600-750萬/療程（低於進口 30-40%）"
+    },
+    outlook: {
+      positive: [
+        "Phase 2 IDMC 期中達統計顯著（2026/04）：批准概率從 20% 升至 52-62%",
+        "T-RMAT 有條件藥證路徑：不需等 Phase 3，2027年有機會取得藥證",
+        "竹北 GMP 廠就位：製造瓶頸解除，規模化生產路徑清楚",
+        "PP011 中國 NMPA IND 獲批（2026/06）：第二管線期權打開",
+      ],
+      catalysts: [
+        "2026 Q3：Phase 2 完整收案（26名可評估受試者）達成",
+        "2026年底：PL001 NDA 提交食藥署（T-RMAT）",
+        "2027 H1-H2：食藥署審查結果（最大二元事件：批准 vs 退件 = ±40%+）",
+        "藥證後：NHI 給付協商進度（決定商業化規模的倍數效應）",
+      ]
+    },
+    stockMetrics: {
+      price: "~NT$700",
+      marketCap: "~NT$459億",
+      week52High: "NT$929",
+      week52Low: "NT$127",
+      eps: "-NT$1.18（Q1 2026），-NT$7.23（FY2025）",
+      revenue: "NT$3,140萬（FY2025 年收入）",
+      cashRunway: "~4年（18.6億現金，年燒 4-5億）",
+      approvalProb: "~52-62%（貝葉斯加權）",
+      weightedMarketCap: "NT$421億（加權期望）",
+      divYield: "0%"
+    },
+    challenges: [
+      "Phase 2 樣本數極小（19-23人），完整收案數據可能令人失望",
+      "自體 CAR-T 製造複雜（每批次客製化），規模化困難",
+      "創新板流動性極低（日均數百張，股東 2,236 人），主力進出造成大幅波動",
+      "累積虧損已達股本一半以上，需持續融資",
+    ],
+    risks: [
+      "Phase 2完整數據不支持期中結論 → 牛市概率降至 15%，目標市值 ~280元（-60%）",
+      "T-RMAT NDA 退件 + 需補件重申請 → 時程延後 3-4 年",
+      "食藥署退件 + 需補 Phase 3 → 商業化時程推至 2030年+",
+      "NHI 不給付 → 商業化規模受限於自費市場（150-200 人/年）",
+    ],
+    relatedIntel: ["2026-06-12-pearce-6949-cart-full-analysis"]
+  },
 };
 
 // ── 產業鏈顯示定義 ─────────────────────────────────────────────
@@ -3792,6 +3869,15 @@ const CHAIN_DEFINITION = [
     ]},
     { name: "終極資本安全堡壘", entries: [
       { id: "BRK.B", note: "手握巨額現金，全資擁有地下能源君王 BHE，轉投資比亞迪 (BYDDF)" },
+    ]},
+  ]},
+];
+
+// ── 生技產業鏈定義 ──────────────────────────────────────────────
+const BIOTECH_CHAIN_DEFINITION = [
+  { layer: 5, categories: [
+    { name: "細胞治療 CAR-T", entries: [
+      { id: "6949.TWO", note: "台灣首個 CAR-T NDA 候選・Phase 2 期中達標・T-RMAT 申請中" },
     ]},
   ]},
 ];
