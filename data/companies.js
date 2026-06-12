@@ -3261,7 +3261,101 @@ FOPLP 材料：~40-50%（大面積技術護城河）
 估值關鍵數字追蹤：
   ✦ 毛利率 QoQ 趨勢（轉型成熟度最直接指標）
   ✦ FOPLP 驗證廠商數量（下一波成長引擎蓄力速度）
-  ✦ 日系大廠份額轉移速度（競爭態勢是否惡化）`
+  ✦ 日系大廠份額轉移速度（競爭態勢是否惡化）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ Balance Film（應力平衡薄膜）— TSMC CoWoS 最具護城河的產品線
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+「抗翹曲膠膜」的進化版定義：Balance Film 精準貼合基板表面，透過 CTE 差異的應力補償層，從源頭降低封裝冷卻後的殘留應力——這是設備（印能 WSAS）無法解決的物理問題。
+
+辛耘（3583）2.52 億入股新群科技（Balance Film 設備商）= 最強第三方背書：
+  • 辛耘不會為「可能被替換的材料」開發專用設備
+  • 辛耘策略投資代表 Balance Film 製程在 TSMC CoWoS 供應鏈的必要性已確認
+
+TSMC 材料認證護城河：
+  • 認證周期 12-18 個月（幾乎不可替換）
+  • 每片 CoWoS 基板均消耗一份 Balance Film（量產即複訪收入）
+  • 競爭者須重走完整 TSMC 材料驗證流程，進入壁壘極高
+
+與設備層（印能 WSAS）的互補關係：
+  • WSAS 解決：製程中即時整平翹曲（設備鬆開後若殘留應力存在，依然 Re-Warpage）
+  • Balance Film 解決：從源頭降低材料殘留應力（根本治療 vs. 對症治療）
+  • 兩者互補，非競爭關係
+
+驗證條件（2026-2027）：
+  [ ] 2Q26 月營收出現明顯躍升（YoY 加速）
+  [ ] 法說確認台積電開始採購 Balance Film
+  [ ] 辛耘新群科技設備按時推進
+  [ ] 競爭材料未通過 TSMC 認證`,
+    relatedIntel: ["2026-06-12-advanced-pkg-yinneng-santaish-comparison"],
+  },
+
+  // ── 印能科技 ──────────────────────────────────────────────────
+  "7734.TWO": {
+    id: "7734.TWO", name: "印能科技", ticker: "7734.TWO", flag: "🇹🇼",
+    layer: 1, category: "先進封裝製程設備",
+    badge: "CoWoS 壓力真空烤箱・WSAS 翹曲控制", tagline: "先進封裝熱製程設備卡點：RTS + WSAS 雙引擎",
+    overview: "印能科技（成立 2007 年）是台灣先進封裝設備廠，APT（Advanced Packaging Technology）定位，核心產品為 RTS（壓力真空烤箱，用於 CoW/CPO 製程）與 WSAS（Warpage Substrate Alignment System，翹曲控制設備）。RTS 針對 CoWoS 覆晶焊接製程中助焊劑固化、壓力補償等熱製程需求；WSAS 在翹曲超標的大面積封裝基板上提供真空吸附加壓整平。訂單能見度延伸至 2027 Q1，交期已拉長至 4 個月（供不應求訊號），管理層指引 2026 全年 YoY +50-100%。主要風險：壓力容器零件供應商（第三方加工廠）形成交期瓶頸，已出現客戶延遲 2 個月案例。",
+    technology: {
+      core: "RTS（壓力真空烤箱）、WSAS（翹曲基板校正系統）",
+      products: [
+        "RTS（Reflow Thermal System）：CoW/CPO 製程專用壓力真空烤箱。覆晶焊接時施加壓力並配合精準熱曲線，確保助焊劑完全揮發、焊球 zero void 形成。台積電 CoWoS 及 CPO 矽光子封裝的關鍵製程設備。",
+        "WSAS（Warpage Substrate Alignment System）：大面積封裝基板翹曲控制設備。真空吸附加壓 + 熱處理整平，解決製程中即時翹曲問題。Panel-Level（面板級）封裝的必要設備，預計 2H26 開始貢獻，2027-2028 較大規模。",
+        "VTS（Vacuum Thermal System）：早期核心產品，真空熱處理系統，現已被 RTS 超越為次要產品線。"
+      ],
+      advantages: [
+        "RTS 製程 Know-how + Recipe IP：針對不同晶片/基板組合的壓力-溫度曲線（Profile）是核心 IP，開發週期長，客戶驗證後極難替換",
+        "CoWoS 壓力容器設計：腔體密封、壓力均勻分佈的工程設計是製造門檻，非標準製程設備",
+        "WSAS 翹曲控制：Panel-Level 封裝唯一可商業化的翹曲控制設備廠之一",
+        "訂單能見度至 1Q27：短期財報確定性最強的封裝設備股"
+      ]
+    },
+    marketShare: {
+      global: "台灣先進封裝設備小型專業廠，RTS 在 CoWoS 製程具有先發認證優勢",
+      desc: "壓力真空烤箱市場競爭者稀少，但設備護城河面臨大廠侵蝕風險（TEL/AMAT/Edwards 等全球設備巨頭若開發類似設備）",
+      competitors: [
+        { name: "TEL（Tokyo Electron）", share: "全球設備第三大", note: "若開發類似壓力真空烤箱可快速搶佔市場，最大潛在競爭者", threat: "high" },
+        { name: "Applied Materials（AMAT）", share: "全球設備第一大", note: "目前專注前段，若進入後段封裝設備市場威脅最大", threat: "medium" },
+        { name: "Edwards Vacuum", share: "真空系統專業廠", note: "真空子系統供應商，與印能存在零件依賴", threat: "low" },
+      ]
+    },
+    customers: {
+      major: ["台積電（CoWoS 製程 RTS 採購）", "日月光（先進封裝設備）", "Amkor（海外 OSAT）"],
+      breakdown: "台積電 CoWoS 擴產為最大訂單來源；WSAS 目標客戶為 FOPLP 面板級封裝廠（群創、三星等），2H26 開始出貨"
+    },
+    outlook: {
+      positive: [
+        "訂單能見度至 1Q27，YoY +50-100% 管理層指引，近期財報確定性最強的封裝設備股",
+        "WSAS 2H26 開始貢獻，2027-2028 面板級封裝量產後規模擴大",
+        "CoWoS 持續擴產（NVIDIA Rubin/GB 系列需求拉動）",
+        "CPO 矽光子封裝：RTS 是必要熱製程設備，矽光子進入量產後第二大成長引擎"
+      ],
+      catalysts: [
+        "2Q/3Q26 法說確認 YoY +50-100% 達標",
+        "壓力容器供應商瓶頸解決（尋找替代加工廠）",
+        "WSAS 首批 Panel-Level 客戶正式出貨確認",
+        "RTS 占總收入比例明顯提升（確認 CoWoS 設備主力化）"
+      ]
+    },
+    challenges: [
+      "壓力容器供應商瓶頸：第三方加工廠形成交期瓶頸，已出現客戶延遲 2 個月案例",
+      "設備護城河深度有限：RTS/WSAS 製程 Know-how 壁壘存在，但大型設備廠（TEL/AMAT）若投入可快速追趕",
+      "WSAS 大貢獻需等到 2027-2028：短期主要靠 RTS，成長天花板受 CoWoS 擴產節奏限制"
+    ],
+    risks: [
+      "TCB（熱壓縮接合）若取代 flux-based 製程，RTS 需求結構性減少",
+      "大型設備廠（TEL/AMAT）開發同類壓力真空烤箱切入市場",
+      "Panel-Level 封裝（WSAS 客戶）量產時程若持續延後，2026-2027 業績影響大",
+      "客戶擴產暫停（CoWoS CapEx 收縮）導致訂單消化後真空期"
+    ],
+    stockMetrics: {
+      pe: "高成長高本益比，需用訂單能見度支撐",
+      exchange: "TPEX",
+      currency: "TWD",
+      sector: "先進封裝設備",
+      peers: ["志聖工業（2467.TW）", "東捷科技（8064.TWO）", "鈦昇科技（8027.TWO）"]
+    },
+    relatedIntel: ["2026-06-12-advanced-pkg-yinneng-santaish-comparison"],
   },
 
   // ── 新增 Layer 2 公司（中資光模組）──────────────────────────
@@ -3777,6 +3871,7 @@ const CHAIN_DEFINITION = [
       { id: "6805.TW", note: "液冷快接頭" },
     ]},
     { name: "先進封裝製程設備", entries: [
+      { id: "7734.TWO", note: "CoWoS RTS 壓力真空烤箱・WSAS 翹曲控制・訂單能見度至1Q27" },
       { id: "8027.TWO",  note: "TGV 高速鑽孔・CoPoS・Intel 驗證中" },
       { id: "8064.TWO",  note: "TGV 雷射改質・FOPLP・毛利率 38%・群創唯一認證" },
       { id: "3580.TW",  note: "TGV 通孔活化・RDL 晶種層濺鍍" },
@@ -3800,7 +3895,7 @@ const CHAIN_DEFINITION = [
       { id: "6223.TW", note: "晶圓探針台 + CPO 晶圓級光電共測" },
     ]},
     { name: "先進封裝製程材料", entries: [
-      { id: "3595.TW", note: "抗翹曲膠膜・雷射解膠層・FOPLP 材料" },
+      { id: "3595.TW", note: "Balance Film・TSMC CoWoS 認證・辛耘策略投資背書・消耗品複訪收入" },
     ]},
     { name: "先進封裝設備與檢測", entries: [
       { id: "KLAC", note: "CoWoS 良率守門人・AP 收入衝向 $1B" },
