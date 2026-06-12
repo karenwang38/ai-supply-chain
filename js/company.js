@@ -14,12 +14,13 @@
   }
 
   const co = COMPANIES[id];
-  const layer = getLayer(co.layer);
+  const layer = co.layer != null ? getLayer(co.layer) : null;
+  const isBiotech = co.layer == null;
 
-  document.title = `${co.name} (${co.ticker}) — AI 產業鏈分析`;
+  document.title = `${co.name} (${co.ticker}) — 股票產業鏈分析`;
 
-  const layerColor = `var(--l${co.layer})`;
-  const layerBg    = `var(--l${co.layer}-bg)`;
+  const layerColor = isBiotech ? '#059669' : `var(--l${co.layer})`;
+  const layerBg    = isBiotech ? 'rgba(5,150,105,.12)' : `var(--l${co.layer}-bg)`;
 
   // ── Hero ──
   const hero = document.createElement('div');
@@ -33,7 +34,7 @@
     <div class="company-ticker-row">
       <span class="company-ticker-tag">${co.ticker}</span>
       <span class="company-layer-tag" style="background:${layerBg};color:${layerColor}">
-        第 ${co.layer} 層：${layer.name}
+        ${isBiotech ? '🧬 生技／細胞治療' : `第 ${co.layer} 層：${layer.name}`}
       </span>
       <span class="company-category-tag">${co.category}</span>
       ${co.platform === 'NVDA' ? `<a class="company-platform-tag" href="company.html?id=NVDA" title="本公司為 NVIDIA 生態系供應鏈">⬡ NVIDIA 生態系</a>` : ''}
@@ -49,7 +50,7 @@
   bc.innerHTML = `
     <a href="index.html">產業鏈總覽</a>
     <span>›</span>
-    <span>第 ${co.layer} 層：${layer.name}</span>
+    <span>${isBiotech ? '生技／細胞治療' : `第 ${co.layer} 層：${layer.name}`}</span>
     <span>›</span>
     <span>${co.category}</span>
     <span>›</span>
@@ -88,13 +89,15 @@
   // ── 1. Overview ──
   const tabOverview = makeTab('overview', true);
   tabOverview.appendChild(block('公司概覽', `<p>${co.overview}</p>`));
-  const activeLayers = co.spanLayers || [co.layer];
+  const activeLayers = co.spanLayers || (co.layer != null ? [co.layer] : []);
   const layerDesc = co.spanLayers
     ? `橫跨 ${co.spanLayers.map(id => `第 ${id} 層`).join('、')}，制定整段供應鏈規格`
-    : `所在層級：第 ${co.layer} 層 — ${layer.name}`;
+    : isBiotech
+      ? `所在產業：生技／細胞治療 — ${co.category}`
+      : `所在層級：第 ${co.layer} 層 — ${layer.name}`;
   tabOverview.appendChild(block('產業鏈定位', `
     <p><strong>${layerDesc}</strong></p>
-    <p style="margin-top:8px;color:var(--text-muted);font-size:13px">${layer.desc}</p>
+    <p style="margin-top:8px;color:var(--text-muted);font-size:13px">${isBiotech ? '台灣及亞太細胞治療、基因治療與精準醫療的里程碑選擇權型標的' : layer.desc}</p>
     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:14px">
       ${LAYERS.map(l => {
         const isActive = activeLayers.includes(l.id);
