@@ -12,8 +12,6 @@ const LAYERS = [
     desc: "組裝成可直接插電、插網線、放進機房的完整巨大機台" },
   { id: 4, name: "終端客戶－雲端大廠與綠能營運（金主）", emoji: "🏢", color: "#b45309",
     desc: "整個 AI 帝國的終極金主，負責蓋起資料中心並將算力轉化為軟體服務" },
-  { id: 5, name: "生技／細胞治療", emoji: "🧬", color: "#059669",
-    desc: "台灣及亞太細胞治療、基因治療與精準醫療的里程碑選擇權型標的" },
 ];
 
 const COMPANIES = {
@@ -3641,7 +3639,7 @@ FOPLP 材料：~40-50%（大面積技術護城河）
 
   "6949.TWO": {
     id: "6949.TWO", name: "沛爾生醫-創", ticker: "6949.TWO", flag: "🇹🇼",
-    layer: 5, category: "細胞治療 CAR-T",
+    layer: null, category: "細胞治療 CAR-T",
     badge: "台灣首個 CAR-T NDA 候選", tagline: "台灣本土 CD19 CAR-T 細胞治療先行者",
     overview: "沛爾生醫（PearceImmune）是台灣首個有望在本土取得 CAR-T 細胞治療藥證的公司。核心產品 PL001（CD19 CAR-T）Phase 2 期中分析於 2026年4月23日由獨立數據監測委員會（IDMC）確認達統計顯著意義，T-RMAT 輔導資格已取得，NDA 文件準備中（預計 2026年底提交）。竹北 GMP 廠於 6月15日開幕，製造能力就位。完全符合「里程碑選擇權型」分析架構——無商業收入、股價由臨床進度驅動。PL001 批准概率貝葉斯估算約 52-62%，加權期望市值 421億 vs 現價 459億。",
     technology: {
@@ -3875,7 +3873,7 @@ const CHAIN_DEFINITION = [
 
 // ── 生技產業鏈定義 ──────────────────────────────────────────────
 const BIOTECH_CHAIN_DEFINITION = [
-  { layer: 5, categories: [
+  { label: "細胞治療 CAR-T／精準醫療", categories: [
     { name: "細胞治療 CAR-T", entries: [
       { id: "6949.TWO", note: "台灣首個 CAR-T NDA 候選・Phase 2 期中達標・T-RMAT 申請中" },
     ]},

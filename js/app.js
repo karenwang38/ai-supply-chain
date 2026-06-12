@@ -37,23 +37,36 @@
     chainDef.forEach((layerDef, idx) => {
       if (idx > 0) container.appendChild(makeConnector());
 
-      const layer = getLayer(layerDef.layer);
-      if (!layer) return;
       const totalCompanies = layerDef.categories.reduce((n, c) => n + c.entries.length, 0);
-      const illu = LAYER_ILLU[layer.id] || '';
 
       const block = document.createElement('div');
-      block.className = `tree-layer-block tl-${layer.id}`;
 
-      const header = document.createElement('div');
-      header.className = 'tree-layer-header';
-      header.innerHTML = `
-        <div class="tree-layer-number">${layer.id}</div>
-        <div class="tree-layer-title">【第 ${layer.id} 層：${layer.name}】</div>
-        <span class="tree-layer-count">${totalCompanies} 家公司</span>
-        <div class="tree-layer-illu">${illu}</div>
-      `;
-      block.appendChild(header);
+      // Biotech groups use a label instead of a layer number
+      if (layerDef.label) {
+        block.className = 'tree-layer-block tl-biotech';
+        const header = document.createElement('div');
+        header.className = 'tree-layer-header';
+        header.innerHTML = `
+          <div class="tree-layer-title" style="margin-left:0">【${layerDef.label}】</div>
+          <span class="tree-layer-count">${totalCompanies} 家公司</span>
+          <div class="tree-layer-illu">${LAYER_ILLU[5] || ''}</div>
+        `;
+        block.appendChild(header);
+      } else {
+        const layer = getLayer(layerDef.layer);
+        if (!layer) return;
+        const illu = LAYER_ILLU[layer.id] || '';
+        block.className = `tree-layer-block tl-${layer.id}`;
+        const header = document.createElement('div');
+        header.className = 'tree-layer-header';
+        header.innerHTML = `
+          <div class="tree-layer-number">${layer.id}</div>
+          <div class="tree-layer-title">【第 ${layer.id} 層：${layer.name}】</div>
+          <span class="tree-layer-count">${totalCompanies} 家公司</span>
+          <div class="tree-layer-illu">${illu}</div>
+        `;
+        block.appendChild(header);
+      }
 
       const body = document.createElement('div');
       body.className = 'tree-layer-body';

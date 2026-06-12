@@ -2044,9 +2044,8 @@ h1, h2, h3,
 .sector-tab { padding: 10px 22px; border: 2.5px solid var(--border); border-radius: 999px; background: transparent; color: var(--text); font: 700 15px/1 var(--font); cursor: pointer; transition: all .15s; }
 .sector-tab:hover { background: rgba(255,255,255,0.12); }
 .sector-tab.active { background: #fff; color: #000; border-color: #fff; }
-.tl-5 { border-color: #059669 !important; }
-.tl-5 .tree-layer-header { background: rgba(5,150,105,.1); }
-.tl-5 .tree-layer-number { background: #059669 !important; }
+.tl-biotech { border-color: #059669 !important; }
+.tl-biotech .tree-layer-header { background: rgba(5,150,105,.1); }
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
