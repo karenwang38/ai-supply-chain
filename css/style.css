@@ -1117,6 +1117,133 @@ a { color: inherit; text-decoration: none; }
 }
 .intel-toggle-btn:hover { background: var(--accent); color: white; border-color: var(--accent); }
 
+/* ── VIP 情報系統 ── */
+.intel-card-vip {
+  border-color: rgba(255,215,0,0.45);
+  box-shadow: 0 0 0 1px rgba(255,215,0,0.2), inset 0 0 30px rgba(255,215,0,0.03);
+}
+.intel-card-vip.open,
+.intel-card-vip:hover { border-color: rgba(255,215,0,0.8); }
+
+.intel-vip-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  background: rgba(255,215,0,0.15);
+  color: #ffd700;
+  border: 1px solid rgba(255,215,0,0.35);
+}
+
+.intel-card-locked { cursor: pointer; }
+.intel-card-locked:hover .intel-vip-lock-banner { background: rgba(255,215,0,0.12); }
+
+.intel-vip-lock-banner {
+  margin-top: 14px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  background: rgba(255,215,0,0.07);
+  border: 1px dashed rgba(255,215,0,0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #ffd700;
+  transition: background 0.15s;
+}
+.intel-vip-lock-icon { font-size: 20px; }
+
+.vip-manage-btn {
+  background: rgba(255,215,0,0.1) !important;
+  color: #ffd700 !important;
+  border-color: rgba(255,215,0,0.3) !important;
+  font-weight: 700;
+}
+.vip-manage-btn:hover {
+  background: rgba(255,215,0,0.22) !important;
+  border-color: #ffd700 !important;
+}
+
+/* VIP 模態視窗 */
+.vip-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+.vip-modal {
+  background: var(--bg2);
+  border: 1px solid rgba(255,215,0,0.35);
+  border-radius: var(--radius);
+  padding: 32px 28px 24px;
+  width: 360px;
+  max-width: 92vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,215,0,0.1);
+}
+.vip-modal-icon { font-size: 36px; text-align: center; }
+.vip-modal h3 { font-size: 18px; font-weight: 700; color: #ffd700; text-align: center; }
+.vip-modal-desc { font-size: 13px; color: var(--text-muted); text-align: center; line-height: 1.6; }
+.vip-passphrase-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  color: var(--text);
+  font-size: 15px;
+  font-family: var(--font);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.vip-passphrase-input:focus { border-color: #ffd700; }
+.vip-btn-primary {
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: #ffd700;
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.vip-btn-primary:hover { opacity: 0.88; }
+.vip-btn-danger {
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,45,120,0.4);
+  background: rgba(255,45,120,0.1);
+  color: #ff2d78;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.vip-btn-danger:hover { background: rgba(255,45,120,0.2); }
+.vip-btn-close {
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.vip-btn-close:hover { color: var(--text); border-color: var(--text-muted); }
+.vip-modal-status { min-height: 18px; font-size: 13px; text-align: center; }
+
 /* Card body */
 .intel-card-body {
   border-top: 1px solid var(--border);
