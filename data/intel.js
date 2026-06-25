@@ -3,6 +3,68 @@
 
 const INTEL_DATA = [
   {
+    id: "2026-06-25-amd-oci-aaoi-analysis",
+    title: "AMD OCI MSA 成立＋AAOI 1.6T 訂單爆發：AI 光互連產業鏈完整拆解與柏承定位修正",
+    date: "2026-06-25",
+    source: "產業研究整合分析 2026-06-25",
+    category: "深度研究",
+    tags: ["AMD", "AAOI", "OCI", "CPO", "光互連", "ELSFP", "CW雷射", "1.6T", "800G", "mSAP", "欣興", "柏承", "Lumentum", "Coherent", "NVIDIA", "Meta", "Microsoft", "OpenAI"],
+    summary: "AMD 於 2026/03/12 OFC 宣布加入 OCI（光互連）聯盟，成員含 NVIDIA、Broadcom、Meta、Microsoft、OpenAI，目標以開放標準打破 NVLink 封閉生態。AAOI 同步爆發：2026F 全年收入指引 >$10 億（YoY 翻倍），已收到超大規模客戶首批 1.6T 量產訂單 $200M+，並在 OFC 2026 展示 25dBm ELSFP CW 雷射，從光模塊廠升格為「光連接基礎設施供應商」。對柏承的最終修正：AMD/AAOI 多頭敘事方向正確，mSAP PCB 需求確實爆發；但柏承目前在鏈條外圍等待入場，三大主力（欣興 40-50%、臻鼎 30-35%、華通 10%）已佔主導，柏承的轉折點仍是法說會公開點名 MSAP 認證通過。",
+    companies: ["Applied Optoelectronics (AAOI)", "AMD", "NVIDIA", "Broadcom", "Meta", "Microsoft", "OpenAI", "Lumentum", "Coherent", "欣興電子（3037.TW）", "柏承科技（6141.TW）"],
+    keyNumbers: [
+      { label: "AAOI 2026F 全年收入指引", value: ">$10 億美元（2025 約 $5 億，YoY ~翻倍）" },
+      { label: "AAOI Q1 2026 資料中心營收", value: "YoY +154%" },
+      { label: "AAOI 訂單積壓", value: "$324M+（其中 800G 單一客戶 $124M、1.6T $200M+）" },
+      { label: "AAOI 2026 底產能目標", value: "50 萬片/月（800G + 1.6T 合計）" },
+      { label: "CPO/NPO 市場規模", value: ">$390 億美元（TrendForce，2030 年預測）" },
+      { label: "800G 以上光模塊 PCB 出貨量", value: "YoY +244%（2026 年）" },
+    ],
+    sections: [
+      {
+        title: "OCI MSA 成立：AMD 的核心戰略邏輯",
+        bullets: [
+          "2026/03/12 OFC 2026 宣布：AMD、NVIDIA、Broadcom、Meta、Microsoft、OpenAI 為創始成員",
+          "技術規格：GEN1 4波長×50G NRZ = 200Gbps/方向；GEN2 400Gbps/方向；路線圖 3.2Tbps/纖維",
+          "戰略意圖：推動開放標準，打破 NVIDIA NVLink 封閉生態，讓 AMD GPU 在 Scale-Up 網路中更有競爭力",
+          "AMD 現實：AI GPU 市占 ~10-15% vs NVIDIA ~80%，OCI 開放標準是 AMD 攻入 Meta/Microsoft/OpenAI AI 集群的重要槓桿",
+          "部署時程：OCI 主力在「本十年後半段」（2028-2030）；短期（2026-2027）仍以可插拔光模塊為主",
+          "架構差異：傳統 GPU←銅線→交換機←可插拔光模塊→光纖；CPO 架構：GPU晶片+光學引擎共同封裝←外部 CW 雷射（ELSFP）→光纖"
+        ]
+      },
+      {
+        title: "AAOI 雙層受益：光模塊（短期）+ ELSFP CW 雷射（中期升格）",
+        bullets: [
+          "層次一（光模塊，短期主力）：Q1 2026 資料中心 YoY +154%，訂單積壓 $324M+，1.6T 首批量產訂單 $200M+，2026 底產能 50萬片/月",
+          "美國製造（德州 Sugar Land，21 萬平方英尺）：地緣政治友好，符合美系超大規模客戶在地採購要求",
+          "層次二（ELSFP，中期升格）：OFC 2026 展示 25dBm（400mW）超高功率 ELSFP，用於 CPO/NPO 架構外部雷射源",
+          "ELSFP 邏輯：傳統光模塊雷射內建；ELSFP 把雷射拿出來變成可插拔可更換外部模塊 → 熱管理更好、單光源服務多通道、功率密度提升",
+          "OIF 已標準化 ELSFP 為 CPO 系統外部雷射標準，AAOI 成為規格制定生態的一員",
+          "AAOI 從「光模塊廠」升格為「光連接基礎設施供應商」——更高毛利、更長合約的業務定位"
+        ]
+      },
+      {
+        title: "CW 雷射三強比較",
+        bullets: [
+          "AAOI：光模塊 + 新進 ELSFP；優勢：美國製造（政治友好）、25dBm 高功率、一站式供應；劣勢：規模小、資本有限",
+          "Lumentum：ELS Module，傳統雷射強廠；優勢：深厚技術積累、大廠認可；劣勢：CPO 轉型速度較慢",
+          "Coherent：全系列光學元件；優勢：NVIDIA $20 億美元投資背書、規模最大；劣勢：客戶高度集中（NVIDIA 綁定風險）",
+          "AAOI 的差異化：美國在地製造 + 高功率 ELSFP + 光模塊整合能力，在 De-risking 供應鏈趨勢下獨特"
+        ]
+      },
+      {
+        title: "柏承在 AMD/AAOI 敘述下的真實定位修正",
+        bullets: [
+          "完整鏈條：AMD（晶片+OCI標準）→ 超大規模客戶（Meta/Microsoft/OpenAI）→ 光模塊廠（AAOI/Coherent/Lumentum/InnoLight）→ PCB廠（欣興/臻鼎/華通 主力；柏承南通廠候補？）",
+          "柏承在鏈條最末端，且三大先佔者（欣興 40-50%、臻鼎 30-35%、華通 10%）已鎖定主要客戶",
+          "AMD + AAOI 帶動光模塊 PCB 需求：是真實趨勢，需求確實爆發（800G以上 PCB 出貨 YoY +244%）",
+          "柏承直接受益 AMD/AAOI 需求：未確認——無任何公開資訊把柏承連結到 AAOI 或 AMD 供應鏈",
+          "mSAP 溢價修正：產業報告顯示 1.6T 模塊 PCB 板材價值比 800G 時代提升約 2.5 倍（非 20-25%，而是更高）",
+          "最終結論：AMD/AAOI 多頭敘事對柏承是「方向正確的想像空間」，不是「可驗證的財務傳導」；轉折點仍是法說會公開點名任一光模塊客戶的 MSAP 認證通過"
+        ]
+      }
+    ]
+  },
+  {
     id: "2026-06-18-6141-mgmt-meeting",
     title: "柏承科技（6141）管理層深度訪談 MEMO：兩廠定位、光模組驗證關鍵時程、財務挑戰與募資策略",
     date: "2026-06-18",
