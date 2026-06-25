@@ -56,14 +56,14 @@
       modal.innerHTML = `
         <div class="vip-modal">
           <div class="vip-modal-icon">🔑</div>
-          <h3>設定 VIP 密語</h3>
-          <p class="vip-modal-desc">首次設定：輸入你的私密密語，之後用此密語解鎖 VIP 情報。</p>
+          <h3>設定你的 VIP 密語</h3>
+          <p class="vip-modal-desc">這是你<strong>自己設定</strong>的私人密語，請輸入任何你好記的字串。<br>設定後此裝置會永久解鎖，換新裝置再輸入一次即可。</p>
           <input class="vip-passphrase-input" id="vip-input" type="password"
-            placeholder="設定密語（至少6字）..." autocomplete="new-password" />
+            placeholder="輸入你想要的密語（至少6字）..." autocomplete="new-password" />
           <input class="vip-passphrase-input" id="vip-input2" type="password"
             placeholder="再次確認密語..." autocomplete="new-password"
             style="margin-top:8px" />
-          <button class="vip-btn-primary" id="vip-submit">儲存密語</button>
+          <button class="vip-btn-primary" id="vip-submit">設定並解鎖</button>
           <div class="vip-modal-status" id="vip-status"></div>
           <button class="vip-btn-close" id="vip-close">取消</button>
         </div>`;
@@ -158,7 +158,7 @@
   // VIP 管理按鈕
   const vipManageBtn = document.createElement('button');
   vipManageBtn.className = 'intel-tag-btn vip-manage-btn';
-  vipManageBtn.innerHTML = isVipUnlocked() ? '🔓 VIP 已解鎖' : '🔐 VIP 解鎖';
+  vipManageBtn.innerHTML = isVipUnlocked() ? '🔓 VIP 已解鎖' : '🔐 設定 VIP 閱讀';
   vipManageBtn.addEventListener('click', () => {
     if (isVipUnlocked()) {
       showVipModal('manage');
@@ -222,7 +222,9 @@
             </div>
             <div class="intel-vip-lock-banner">
               <span class="intel-vip-lock-icon">🔐</span>
-              <span>VIP 限定情報 — 點此輸入密語解鎖</span>
+              <span>${localStorage.getItem(VIP_KEY) === null
+                ? 'VIP 限定情報 — 點此設定你的私人密語（首次使用）'
+                : 'VIP 限定情報 — 點此輸入密語解鎖'}</span>
             </div>
           </div>`;
         card.querySelector('[data-vip-unlock]').addEventListener('click', () => {
