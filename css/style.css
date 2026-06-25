@@ -1033,6 +1033,55 @@ a { color: inherit; text-decoration: none; }
 .intel-tag-btn:hover  { border-color: var(--accent); color: var(--accent); }
 .intel-tag-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
 
+/* ── 個股分組 ── */
+.intel-groups { display: flex; flex-direction: column; gap: 12px; }
+
+.intel-group {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg2);
+}
+.intel-group.open { border-color: rgba(255,255,255,0.22); }
+
+.intel-group-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s;
+}
+.intel-group-header:hover { background: rgba(255,255,255,0.04); }
+.intel-group.open .intel-group-header { background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--border); }
+
+.group-flag { font-size: 20px; flex-shrink: 0; }
+.group-name { font-size: 15px; font-weight: 700; color: var(--text); }
+.group-ticker {
+  font-size: 12px; font-weight: 600;
+  padding: 2px 8px; border-radius: 6px;
+  background: var(--bg3); color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+.group-count { font-size: 12px; color: var(--text-dim); margin-left: auto; }
+.group-vip-hint {
+  display: inline-block;
+  color: #ffd700;
+  font-size: 11px;
+  margin-left: 6px;
+}
+.group-arrow { font-size: 11px; color: var(--text-dim); margin-left: 8px; }
+
+.intel-group-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.intel-group-body .intel-card { margin-bottom: 12px; }
+.intel-group-body .intel-card:last-child { margin-bottom: 0; }
+
 /* Card */
 .intel-card {
   background: var(--bg2);
