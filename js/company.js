@@ -278,11 +278,14 @@
     const rows = items.map(d => {
       const dateParts = d.date.split('-');
       const dateStr = `${dateParts[0]}/${dateParts[1]}/${dateParts[2]}`;
+      const vipBadge = d.vip
+        ? `<span class="intel-vip-badge" style="font-size:10px;padding:2px 7px;margin-left:4px">🔐 VIP</span>`
+        : '';
       return `
         <a class="related-intel-link" href="intel.html#${d.id}">
           <span class="related-intel-date">${dateStr}</span>
           <span class="related-intel-source">${d.source}</span>
-          <span class="related-intel-title">${d.title}</span>
+          <span class="related-intel-title">${d.title}${vipBadge}</span>
           <span class="related-intel-arrow">→</span>
         </a>`;
     }).join('');

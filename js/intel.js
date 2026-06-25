@@ -132,30 +132,10 @@
     setTimeout(() => document.getElementById('vip-input')?.focus(), 50);
   }
 
-  // ── 收集所有 tags（排除 VIP 專屬 tag 不進篩選列） ──
-  const VIP_FILTER_TAG = 'VIP';
-  const allTags = ['全部'];
-  INTEL_DATA.forEach(d => d.tags.forEach(t => {
-    if (t !== VIP_FILTER_TAG && !allTags.includes(t)) allTags.push(t);
-  }));
-
-  // ── Filter bar ──
+  // ── VIP 管理按鈕列 ──
   const filterBar = document.createElement('div');
   filterBar.className = 'intel-filter-bar';
-  allTags.forEach(tag => {
-    const btn = document.createElement('button');
-    btn.className = 'intel-tag-btn' + (tag === '全部' ? ' active' : '');
-    btn.textContent = tag;
-    btn.addEventListener('click', () => {
-      activeTag = tag === '全部' ? 'all' : tag;
-      document.querySelectorAll('.intel-tag-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderCards();
-    });
-    filterBar.appendChild(btn);
-  });
 
-  // VIP 管理按鈕
   const vipManageBtn = document.createElement('button');
   vipManageBtn.className = 'intel-tag-btn vip-manage-btn';
   vipManageBtn.innerHTML = isVipUnlocked() ? '🔓 VIP 已解鎖' : '🔐 設定 VIP 閱讀';
@@ -181,9 +161,7 @@
     vipManageBtn.innerHTML = isVipUnlocked() ? '🔓 VIP 已解鎖' : '🔐 VIP 解鎖';
 
     cardsWrap.innerHTML = '';
-    const filtered = activeTag === 'all'
-      ? INTEL_DATA
-      : INTEL_DATA.filter(d => d.tags.includes(activeTag));
+    const filtered = INTEL_DATA;
 
     if (!filtered.length) {
       cardsWrap.innerHTML = '<div class="intel-empty">沒有符合的情報</div>';
@@ -217,9 +195,6 @@
               ${vipBadge}
             </div>
             <div class="intel-card-title">${entry.title}</div>
-            <div class="intel-card-tags">
-              ${entry.tags.filter(t => t !== VIP_FILTER_TAG).map(t => `<span class="intel-tag">${t}</span>`).join('')}
-            </div>
             <div class="intel-vip-lock-banner">
               <span class="intel-vip-lock-icon">🔐</span>
               <span>${localStorage.getItem(VIP_KEY) === null
@@ -241,9 +216,6 @@
               ${vipBadge}
             </div>
             <div class="intel-card-title">${entry.title}</div>
-            <div class="intel-card-tags">
-              ${entry.tags.filter(t => t !== VIP_FILTER_TAG).map(t => `<span class="intel-tag">${t}</span>`).join('')}
-            </div>
             <div class="intel-card-summary">${entry.summary}</div>
             <div class="intel-card-companies">
               ${entry.companies.map(c => `<span class="intel-co-chip">${c}</span>`).join('')}
