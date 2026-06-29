@@ -49,6 +49,164 @@
     },
 
     {
+      id: 'cpo-layers',
+      icon: '🔬',
+      title: 'CPO 完全圖解：從材料到系統的八層架構',
+      html: `
+        <p class="learn-lead">CPO 產業鏈從最上游的材料到最終的系統端，共分八個層級。每一層的共同使命可用一句話概括：<strong>用最短的距離把電變成光，用最低的功耗把數據傳得更遠、更快。</strong></p>
+
+        <h3 class="learn-h3">一、八層供應鏈全覽</h3>
+        <div class="learn-table-wrap">
+          <table class="learn-table">
+            <thead><tr><th>層級</th><th>技術定位</th><th>核心功能</th><th>代表材料 / 技術</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>L1 材料/基板</strong></td>
+                <td>光與電的「棲息地」</td>
+                <td>提供導光與發光的物理基礎；矽不會發光，必須引入三五族材料解決「先天失明」</td>
+                <td>${T('SOI 晶圓','spec')} / ${T('InP','spec')} / ${T('GaAs','spec')}</td>
+              </tr>
+              <tr>
+                <td><strong>L2 外延片</strong></td>
+                <td>晶體結構工廠</td>
+                <td>在基板上原子級堆疊出「量子井/量子點」微觀結構，同時服務發光（電→光）與偵測（光→電）兩種元件</td>
+                <td>${T('量子點外延 QD','spec')} / ${T('鍺矽 SiGe','spec')}</td>
+              </tr>
+              <tr>
+                <td><strong>L3 雷射源</strong></td>
+                <td>系統光能量馬達</td>
+                <td>把材料的散亂自發輻射，透過光學諧振腔「提煉」成高方向性、單色、高功率的雷射光束，作為資料傳輸載體</td>
+                <td>${T('ELS 外置雷射源','spec')} / ${T('CW-WDM 多波長','spec')}</td>
+              </tr>
+              <tr>
+                <td><strong>L4 PIC + SiPh</strong></td>
+                <td>電轉光 / 光轉電</td>
+                <td>ASIC 的 0101 電訊號由「調變器」刻進光束；光抵達彼端後由「探測器」還原成電訊號，實現晶片級光速傳輸</td>
+                <td>${T('MZM / MRM 調變器','spec')} / ${T('鍺矽探測器','spec')}</td>
+              </tr>
+              <tr>
+                <td><strong>L5 封裝/組裝</strong></td>
+                <td>光電次元壁</td>
+                <td>利用 CoWoS / 2.5D 封裝，將 ASIC 與光晶片（PIC）的距離縮至幾毫米，消滅電訊號在電路板上的長途能量損耗</td>
+                <td>${T('CoWoS','spec')} / ${T('主被動光學對準','spec')}</td>
+              </tr>
+              <tr>
+                <td><strong>L6 測試燒機</strong></td>
+                <td>良率與壽命守門人</td>
+                <td>在出廠前以高溫高壓篩除「早夭型缺陷」；CPO 時代需在熱循環中同步完成光電共測，精度 &lt;1μm</td>
+                <td>${T('晶圓級 Burn-in','spec')} / ${T('光電共測探針台','spec')}</td>
+              </tr>
+              <tr>
+                <td><strong>L7 ASIC</strong></td>
+                <td>高速運算/交換大腦</td>
+                <td>執行 AI 算力或路由調度的邏輯晶片；CPO 架構讓 ASIC 無需強力 SerDes，直接省下 30%+ 系統功耗</td>
+                <td>${T('Switch ASIC 51.2T','spec')} / ${T('SerDes 簡化','spec')}</td>
+              </tr>
+              <tr>
+                <td><strong>L8 系統</strong></td>
+                <td>落地商用基礎設施</td>
+                <td>將光、電、散熱、機構整合成可放進機架的標準設備（CPO 交換機 / AI 伺服器），提供資料中心最終商業價值</td>
+                <td>${T('CPO Switch','spec')} / ${T('液冷管線','spec')}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="learn-h3">二、為什麼電的 0101 不夠用？</h3>
+        <p>光通訊幾十年前就存在（家用光纖、海底光纜），但 AI 時代把需求放大到讓「舊方法撐不住」的程度。電訊號在高速、高頻寬下遭遇三重物理牆：</p>
+
+        <div class="learn-bw-stack">
+          <div class="learn-bw-level">
+            <div class="learn-bw-num">牆 ①</div>
+            <div class="learn-bw-name">訊號衰減（趨膚效應）</div>
+            <p>電訊號在銅線上高速傳輸，超過 10-15 公分，高頻成分因電阻轉為熱能散失。光子在玻璃光纖中幾乎無電阻，可傳輸數公里不衰減。</p>
+          </div>
+          <div class="learn-bw-level">
+            <div class="learn-bw-num">牆 ②</div>
+            <div class="learn-bw-name">功耗爆炸（SerDes 問題）</div>
+            <p>為了把訊號「推」過電路板上那段銅線，ASIC 邊緣的 SerDes 驅動電路吃掉整機近 50% 電力——交換機變成烤箱。CPO 把傳輸距離縮短至幾毫米，SerDes 幾乎可以廢除，節省 30-40% 系統功耗。</p>
+          </div>
+          <div class="learn-bw-level">
+            <div class="learn-bw-num">牆 ③</div>
+            <div class="learn-bw-name">電磁干擾（Crosstalk）</div>
+            <p>多條電線在高速下互相產生磁場干擾，密集排線時訊號混成雜訊，根本分不清 0 和 1。光子不帶電荷，兩道光束交叉穿過完全不干擾，可在極小空間塞入海量通道。</p>
+          </div>
+        </div>
+
+        <div class="learn-insight">
+          <div class="learn-insight-icon">🚄</div>
+          <div><strong>最直觀比喻：</strong>晶片內部像封閉工廠，用腳踏車（電）短距搬運資料最靈活；但 AI 時代工廠間要「一秒傳幾億噸貨物」，派腳踏車衝上馬路會直接塞死發熱。CPO 就是把高鐵軌道（光纖）直接鋪進工廠生產線隔壁，讓電訊號不到幾毫米就換乘光速高鐵出發。</div>
+        </div>
+
+        <h3 class="learn-h3">三、Switch ASIC vs 光引擎：分工一張圖</h3>
+        <p>CPO 交換機不是一顆晶片，而是整台機箱設備（約 1U/2U）。它的核心是一個手掌大（約 80-100mm × 80-100mm）的 CPO 模組，裡面有兩個主角：</p>
+
+        <div class="learn-compare-grid">
+          <div class="learn-compare-card">
+            <div class="learn-compare-head">${T('Switch ASIC','spec')}　交換器邏輯晶片</div>
+            <div class="learn-compare-sub">「物流總部電腦」— 處理誰的資料送給誰</div>
+            <p>GPU A 算完把資料送往 GPU B，電訊號來到 Switch ASIC，晶片在微秒內查標籤、開闢通路、把資料調度到正確出口。</p>
+            <p><strong>本質：</strong>純電訊號邏輯晶片，決定資料的「方向（Destination）」，完全不管光電轉換。</p>
+            <div class="learn-tag-row">${T('調度交通','pro')} ${T('51.2T→102.4T','spec')} ${T('越熱越需要 CPO','con')}</div>
+          </div>
+          <div class="learn-compare-card">
+            <div class="learn-compare-head">${T('光引擎 / PIC','spec')}　光電轉換晶片</div>
+            <div class="learn-compare-sub">「轉運站」— 把電訊號打包成光訊號射出</div>
+            <p>Switch ASIC 調度完畢的電訊號抵達晶片邊緣，遇到光引擎上的<strong>調變器（Modulator）</strong>。調變器以每秒千億次的速度，用電訊號的 0101 去「切割」雷射源送進來的連續光束，變成有光/無光的光脈衝訊號後，沿光纖射向目標 GPU。</p>
+            <div class="learn-tag-row">${T('電轉光','pro')} ${T('花生米大（5×10mm）','spec')} ${T('調變器是最大挑戰','con')}</div>
+          </div>
+        </div>
+
+        <h3 class="learn-h3">四、調變器——真正的技術瓶頸</h3>
+        <p>雷射源本身不難做，難的是「以千億次 / 秒速度切割光束的調變器」。它面臨三重技術困境：</p>
+
+        <div class="learn-impact-list">
+          <div class="learn-impact-item">
+            <span class="learn-impact-who">${T('① 速度','spec')}</span>
+            <span class="learn-impact-arrow">→</span>
+            <div>單一通道需達 100-200 Gbps，調變器「遮光板」一秒要開關千億次，還不能出錯。</div>
+          </div>
+          <div class="learn-impact-item">
+            <span class="learn-impact-who">${T('② 矽的先天殘疾','spec')}</span>
+            <span class="learn-impact-arrow">→</span>
+            <div>矽的電光效應（電壓控制光的速度）極弱，矽調變器必須做得很長（幾毫米），在寸土寸金的 CPO 晶片上佔用大量面積，且耗電。</div>
+          </div>
+          <div class="learn-impact-item">
+            <span class="learn-impact-who">${T('③ 新材料大戰','spec')}</span>
+            <span class="learn-impact-arrow">→</span>
+            <div>${T('薄膜鈮酸鋰 TFLN','spec')} 被譽為下一代調變器聖物：速度極快、體積超小、幾乎不耗電，但難以在矽晶圓上加工。各大廠的 PIC 設計實力高下，最終決定於此。</div>
+          </div>
+        </div>
+
+        <h3 class="learn-h3">五、CoWoS 與 CPO 的共生關係</h3>
+
+        <div class="learn-compare-grid">
+          <div class="learn-compare-card">
+            <div class="learn-compare-head">${T('CoWoS','spec')} 誕生時間：2012 年</div>
+            <div class="learn-compare-sub">台積電先進封裝平台</div>
+            <p><strong>最初目的：</strong>解決 GPU 與 HBM 記憶體之間的「記憶體牆（Memory Wall）」。把 GPU 和 HBM 用矽中介層（Interposer）緊密黏在一起，傳輸距離縮到微米級。</p>
+            <p><strong>為何被 CPO 借用：</strong>CPO 同樣需要把異質晶片（ASIC 電子晶片 + PIC 光學晶片）緊密封裝在一起。工程師回頭發現 CoWoS 的「把 HBM 換成光晶片」完全相容，於是順理成章成為 CPO 的封裝地基。</p>
+          </div>
+          <div class="learn-compare-card">
+            <div class="learn-compare-head">${T('COUPE 平台','spec')} 台積電次世代</div>
+            <div class="learn-compare-sub">Compact Universal Photonic Engine</div>
+            <p><strong>終極形態：</strong>台積電在 CoWoS 的基礎上，專為矽光子量身打造的封裝平台。</p>
+            <p>利用 3D 堆疊，把電子晶片（EIC）和光學晶片（PIC）整合進同一封裝，讓未來 AI 晶片在同一模組內完成「運算 → 儲存 → 電轉光傳出」的一條龍。</p>
+            <p><strong>一句話：</strong>CoWoS 不是為 CPO 而生，但它完美適應了 CPO 的需求，並進化成專屬的 COUPE 平台。</p>
+          </div>
+        </div>
+
+        <div class="learn-insight">
+          <div class="learn-insight-icon">🔭</div>
+          <div><strong>光子電腦：終極未來</strong><br>
+          目前 AI 晶片的發熱，60-70% 來自 ASIC 內部的運算電晶體切換（無法避免）；30-40% 來自 SerDes 推訊號（CPO 已消滅）。<br>
+          科學家的終極夢想是「ASIC 內部也用光運算」——光子晶片（Photonic Computing）。目前卡在「光子不帶電荷、無法做邏輯閘」與「無法儲存光」兩大物理難題。Lightmatter 等新創正嘗試用光學矩陣加速 AI 矩陣乘法，作為折衷方案。<br>
+          <strong>CPO 現在做的是「外部用光傳」；終極目標是「內部也用光算」。</strong></div>
+        </div>
+      `
+    },
+
+    {
       id: 'supply-chain',
       icon: '🗺️',
       title: '光通訊 AI 供應鏈心智圖',
@@ -805,7 +963,12 @@
             ['CPO', 'Co-Packaged Optics 共同封裝光學', '光引擎與 ASIC 直接熔接在同一晶圓級中介層，功耗最低但難維修'],
             ['CUDA', 'Compute Unified Device Architecture', 'NVIDIA 的 GPU 軟體平台，AI 代碼生態系護城河，相當於 L1.5 層'],
             ['HBM', 'High Bandwidth Memory 高頻寬記憶體', '疊加在 GPU 旁邊的超高速記憶體，Blackwell 用 HBM3e，Rubin 升級 HBM4'],
-            ['CoWoS', 'Chip on Wafer on Substrate', '台積電的先進封裝技術，將 GPU + HBM 緊密整合於同一封裝'],
+            ['CoWoS', 'Chip on Wafer on Substrate', '台積電的先進封裝技術，將 GPU + HBM 緊密整合於同一封裝；CPO 時代延伸為 COUPE 平台，同時整合電子晶片與光學晶片'],
+            ['SerDes', 'Serializer/Deserializer 串行器/解串器', 'ASIC 邊緣用來「推送電訊號」的驅動電路；傳統交換機中吃掉整機近 50% 電力。CPO 把傳輸距離縮至幾毫米，SerDes 功耗可降低 30-40%'],
+            ['Switch ASIC', '交換器特殊應用積體電路', 'AI 資料中心的「數據調度總部」；決定資料從哪顆 GPU 送往哪顆 GPU，與光電轉換無關。CPO 交換機的核心是把 Switch ASIC 與光引擎封裝在同一個手掌大模組'],
+            ['ELS', 'External Laser Source 外置雷射源', 'CPO 架構中，雷射源獨立安裝於設備前面板冷端（遠離發熱的 ASIC），透過光纖將光送入 CPO 模組，讓「怕熱的雷射」與「極熱的晶片」隔離'],
+            ['TFLN', 'Thin Film Lithium Niobate 薄膜鈮酸鋰', '下一代調變器材料聖杯：開關速度極快、體積超小、幾乎不耗電；相比矽調變器有壓倒性優勢，但與矽晶圓製程整合難度極高'],
+            ['調變器', 'Optical Modulator', 'CPO 光引擎的核心技術瓶頸；負責以電訊號 0101「切割」雷射光束成光脈衝，一秒須開關千億次。矽調變器體積大耗電，TFLN / MRM 微環調變器是下一代解法'],
             ['NVLink', 'NVIDIA 高速晶片互聯協議', '連接同一機櫃內 GPU 的私有高速匯流排，1.8Tbps 頻寬，競爭對手難以複製'],
             ['CDU', 'Coolant Distribution Unit 冷卻液分配單元', '液冷系統核心設備，雙鴻/奇鋐主要產品，需照 NVIDIA 規格客製'],
             ['BMC', 'Baseboard Management Controller', '伺服器遠端管理晶片，新唐（4919）主要產品，一台 NVL72 機櫃需 72 顆'],
