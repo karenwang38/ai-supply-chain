@@ -3,6 +3,109 @@
 
 const INTEL_DATA = [
   {
+    id: "2026-06-30-glassbridge-scan",
+    title: "康寧 GlassBridge 產業鏈主題掃描：玻璃基板 × CPO 光連接器供應鏈完整拆解與 7 家重點公司排序",
+    date: "2026-06-30",
+    source: "主題掃描整合研究 2026-06-30",
+    category: "主題掃描",
+    tags: ["GlassBridge", "玻璃基板", "CPO", "TGV", "LPKF", "Absolics", "SKC", "Onto", "AGC", "NEG", "GFS", "Corning", "IOX波導", "AI封裝"],
+    summary: "康寧 GlassBridge 橫跨兩條平行路線：路線A（IOX 玻璃波導光學連接器 → CPO 使能技術）與路線B（玻璃芯基板取代 ABF → TGV 垂直互連）。NVIDIA $3.2B 投資康寧、Absolics AMD MI400 樣品出貨、TSMC CoPoS pilot line 裝機，市場從「只有 Corning 在玩」走向「格局成形」。最終 7 家重點公司中，LPKF（TGV 設備壟斷）與 SKC/Absolics（唯一接近量產的獨立基板商）列最高優先；Corning 本身因市值大、直接敞口小，排名反而靠後。",
+    keyNumbers: [
+      { label: "LPKF LIDE TGV 設備市佔", value: ">80%（量產主流，無直接替代）" },
+      { label: "Absolics AMD MI400 樣品", value: "2026/1 volume sample 已出貨（TrendForce）" },
+      { label: "SKC 融資規模", value: "1.17 兆韓元（其中 589.6B KRW 直注 Absolics）" },
+      { label: "Corning × NVIDIA 合作上限", value: "$3.2B（光纖製造為主，GlassBridge IOX 為輔）" },
+      { label: "TSMC CoPoS 量產時間", value: "2028-2029（pilot line 2026 Q1 裝機）" },
+      { label: "最終重點研究公司", value: "7 家（LPKF / SKC / Onto / AGC / NEG / GFS / DNP）" },
+    ],
+    sections: [
+      {
+        title: "GlassBridge 兩條技術路線",
+        bullets: [
+          "路線A（光學連接器）：利用 IOX（離子交換）玻璃波導，讓光纖以可拆卸方式邊緣耦合矽光子 PIC——是 CPO 的使能技術，GFS 是唯一明確量產合作平台（ECOC 2025 展示）",
+          "路線B（玻璃芯基板）：以低 CTE 玻璃替代 ABF 有機基板做 FC-BGA 核心，需 TGV 垂直互連；Corning IOX 技術可在同一塊玻璃同時整合 TGV 電氣通道與 IOX 光學波導——兩者融合是 GlassBridge 最完整技術想像",
+          "為什麼現在掃描：NVIDIA $3.2B 投康寧、Absolics AMD 出樣、DNP/NEG/BOE 宣布 pilot line、TSMC CoPoS 2026Q1 裝機，市場格局正在成形"
+        ]
+      },
+      {
+        title: "稀缺環節排序（Top 5）",
+        bullets: [
+          "① 低 CTE 玻璃配方+IP：Corning / AGC / SCHOTT 控制 >90%；7 層以上 RDL 的玻璃幾乎只有 Corning 能供",
+          "② TGV 雷射打孔設備：LPKF LIDE >80% 量產市佔，DISCO/fs-laser 仍在 R&D；Absolics、DNP、NEG 量產都得過 LPKF 這關",
+          "③ TGV 製程控制與量測：Onto Innovation 唯一有 TGV 全流程 100% 在線檢驗方案的上市公司（LPKF 官方整合夥伴）",
+          "④ IOX 波導+光纖邊緣耦合：Corning 獨家；GFS 是唯一公開合作量產矽光子平台",
+          "⑤ 玻璃基板整合產能：Absolics 是唯一接近 HVM 的獨立基板商，其他都是 2027-2028"
+        ]
+      },
+      {
+        title: "最高優先：① LPKF Laser & Electronics（LPKF.DE）",
+        bullets: [
+          "卡點：TGV 打孔設備（全球量產第一關）；>80% 客戶選 LPKF LIDE，競爭者複製需重研整套製程",
+          "LPKF × Onto Innovation 整合方案 2025/4 正式合作，打孔+量測一體化",
+          "Q1 2026 收入 €17.1M（YoY -32%），公司解釋為「量產前採購空窗」非需求消失；North Star 計畫（2025/9）目標 2028 雙位數 EBIT 率",
+          "主要風險：量產前收入空窗期 2026-2027 持續，股價時間軸敏感；公司規模小（年收入約 €115M），客戶延遲則估值支撐薄弱"
+        ]
+      },
+      {
+        title: "最高優先：② SKC / Absolics（011790.KS）",
+        bullets: [
+          "卡點：唯一已開始向 AMD（MI400 系列）出 volume sample 的獨立玻璃基板廠；美國 Georgia 廠設備安裝完成",
+          "SKC 1.17 兆韓元融資已完成（2026/3），TGV 供應商從單一依賴轉向雙供應，製程風險降低",
+          "若 2026 H2 順利轉量產，是整個賽道「通知彈」——下游 AI 客戶將以此作為替換 ABF 的量產信號",
+          "主要風險：良率穩定化仍進行中；AMD 樣品是否通過完整電性認證是決定性門檻；韓元匯率+地緣風險"
+        ]
+      },
+      {
+        title: "高優先：③ Onto Innovation（ONTO）+ ④ AGC（5201.T）",
+        bullets: [
+          "Onto：唯一有 TGV 全流程 100% 在線檢驗方案；玻璃比有機基板脆，對微裂紋容忍度更低，使 Onto 位置比傳統 PCB 製程控制更不可替代；風險：TGV 收入目前仍很小，KLA 可能追上",
+          "AGC：全球玻璃基板第二（Corning/AGC/SCHOTT 三家 >90%）；既供原料又有自己基板開發線；Corning IP 限制讓 AGC 在部分客戶端有「第二選擇」結構性優勢",
+          "AGC aluminosilicate 配方 2026/1 已在台灣/韓國 OSAT 認證進行中；風險：大型綜合玻璃公司，半導體佔比仍小；日幣匯率敏感；自身無 TGV 能力需依賴外部加工"
+        ]
+      },
+      {
+        title: "中高/中優先：⑤ NEG（5214.T）＋ ⑥ GFS＋ ⑦ DNP（7912.T）",
+        bullets: [
+          "NEG：嘗試把玻璃材料和 TGV 加工同時做，以 CO₂ 雷射（設備成本比 LIDE 低）做出 515×510mm 大面板，2025/5 開始出樣；若 CO₂ 雷射 TGV 被驗證可量產有稀缺定位；風險：良率未驗證、2028 時間軸",
+          "GFS：GlassBridge CPO 路線A 的製造端——PIC 晶片製造者；GFS × Corning OFC 2026 展示 CPO switch tray；GF Fotonix 300mm 矽光子 PDK 是稀缺製造平台；風險：整體業績疲弱，CPO 量產 2027+",
+          "DNP：大型財務穩健公司，Kuki Plant TGV pilot line 2025/12 啟動，2026 初出樣，FY2028 量產；現有 FC-BGA 客戶關係（Intel/CPU 封裝）；屬「慢熱型保守底倉選項」，非高 beta 短期機會"
+        ]
+      },
+      {
+        title: "Corning GLW 為何優先度偏低",
+        bullets: [
+          "市值 $45B+，NVIDIA $3.2B 合作消息已讓光纖業務充分定價；Q1 2026 Optical 收入 +36% YoY 已被預期",
+          "GlassBridge 在 GLW 整體 $4.35B 季度收入中幾乎可忽略，要等 2027-2028 才可能貢獻顯著收入",
+          "Corning 同時供材料給 Absolics、TSMC、三星，是「平台提供者」而非「單一卡點壟斷者」",
+          "摩根士丹利、美銀已有 Buy rating，alpha 空間窄",
+          "何時上移：GlassBridge IOX 波導收入出現財報獨立 segment、或 TSMC CoPoS 進入量產時"
+        ]
+      },
+      {
+        title: "主要風險地圖",
+        bullets: [
+          "玻璃基板量產延遲（2027+→2029+）：影響全鏈，嚴重性高",
+          "ABF 基板技術反擊（Ajinomoto 推高階版）：影響 Layer 5，嚴重性中",
+          "TGV 良率卡關無法規模化：影響 LPKF、Onto、NEG，嚴重性高",
+          "CPO 進展慢於光模組外置方案：影響 GlassBridge 路線A 與 GFS，嚴重性中",
+          "中國競爭者（BOE、Visionix）國產替代：影響 Layer 1、5，嚴重性中（BOE × Corning MOU 2026/5，但仍屬 IP 代工者）",
+          "地緣政治（韓國 SKC/Absolics 依賴美國廠）：SKC 美國 Georgia 廠反而是護身符，嚴重性中"
+        ]
+      },
+      {
+        title: "下一步具體核驗清單",
+        bullets: [
+          "LPKF Q2 2026（預計 2026/8）：TGV 訂單是否開始回升？North Star 里程碑？",
+          "SKC（011790.KS）Q2 2026：Absolics Georgia 廠良率與出貨量披露",
+          "Onto Innovation Q2 2026 法說：TGV 相關收入貢獻比例？LPKF 整合是否帶來可量化合約？",
+          "Corning GLW Q2 2026（2026/7/23）：Springboard 計畫進度，GlassBridge 是否出現 revenue segment",
+          "技術里程碑：TSMC CoPoS pilot line 2026 H2 是否正式接受 Corning 玻璃載板；AMD MI400 Absolics 基板電性認證結果",
+          "競爭監控：DNP vs AGC 哪家先拿到 Intel 認證；NEG CO₂ 雷射 TGV 良率數據（Via Mechanics 合作報告）"
+        ]
+      }
+    ]
+  },
+  {
     id: "2026-06-25-amd-oci-aaoi-analysis",
     title: "AMD OCI MSA 成立＋AAOI 1.6T 訂單爆發：AI 光互連產業鏈完整拆解與柏承定位修正",
     date: "2026-06-25",
