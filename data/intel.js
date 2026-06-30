@@ -3,6 +3,89 @@
 
 const INTEL_DATA = [
   {
+    id: "2026-06-30-corning-glassbridge-full",
+    title: "康寧（GLW）GlassBridge 完整分析：三層平台架構 × CPO 連接器技術 × AI 供應鏈衝擊評估",
+    date: "2026-06-30",
+    source: "GLW 深度研究 2026-06-30",
+    category: "深度研究",
+    tags: ["Corning", "GLW", "GlassBridge", "IOX", "CPO", "玻璃基板", "FAU", "前鼎", "欣興", "柏承", "GFS", "NVIDIA", "Meta", "AMD", "AAOI", "OCI"],
+    summary: "康寧於 2026/6/24 首爾峰會發布 GlassWorks AI Platform，核心是三層架構：Glass Bridge（PIC↔光纖連接器）、Glass Core Substrate（取代 ABF 載板）、傳統光纖基礎設施。Glass Bridge 以 IOX 離子交換技術做玻璃波導，耦合損耗目標 <2dB（比傳統 FAU 改善 50%+），OFC 2026 展示 515×515mm 玻璃板整合 16 PIC + 1 ASIC。財務面：Q1 2026 核心營收 $43.5 億（+18% YoY），NVIDIA 最大 $32 億 + Meta 最大 $60 億 MSA 背書。供應鏈衝擊：台灣前鼎（FAU）長期受衝擊、光模塊廠短期 1-2 年安全、欣興/臻鼎 mSAP PCB 正面受益；柏承方向正確但認證進度未改變。",
+    keyNumbers: [
+      { label: "GLW Q1 2026 核心營收", value: "$43.5 億（+18% YoY）；光通訊佔 44%（+36% YoY）" },
+      { label: "NVIDIA × Corning 合作上限", value: "最大 $32 億（建 3 座美國新廠，光纖製造 10x 擴產）" },
+      { label: "Meta × Corning MSA", value: "最大 $60 億（多年光纖基礎設施協議）" },
+      { label: "Glass Bridge 耦合損耗目標", value: "<2dB（vs 傳統 FAU 3-5dB，改善 50%+）" },
+      { label: "OFC 2026 展示規格", value: "515×515mm 玻璃板，16 PIC + 1 ASIC，電氣路徑全部 <13mm" },
+      { label: "CPO/NPO 市場規模（TrendForce）", value: ">$390 億美元（2030 年預測）" },
+    ],
+    sections: [
+      {
+        title: "GlassWorks AI Platform 三層架構",
+        bullets: [
+          "Glass Bridge（芯片層）：IOX 離子交換玻璃波導，讓光纖以可拆卸方式邊緣耦合矽光子 PIC——CPO 的使能連接器技術，2026/6/24 首爾峰會發布",
+          "Glass Core Substrate（封裝層）：以低 CTE 玻璃取代 ABF 有機載板做 FC-BGA 核心；與 Intel Clearwater Forest、TSMC CoPoS 合作，2028-2029 大規模量產",
+          "傳統光纖/光纜/連接器（資料中心層）：已是市場主導；NVIDIA $32 億投資擴產 10x，Q1 2026 光通訊 +36% YoY",
+          "三層互相強化：Glass Bridge 需要 Glass Core Substrate 做底板；兩者都依賴康寧的光纖基礎設施生態——競爭者難以複製整套平台"
+        ]
+      },
+      {
+        title: "Glass Bridge 技術解析：IOX 如何解決 CPO 的耦合難題",
+        bullets: [
+          "問題根源：PIC 光通道寬 1-3μm vs 標準光纖核心 9μm（SMF）/ 50μm（MMF），尺寸差距 5-50 倍；傳統 FAU（環氧樹脂黏合）在 CPO 環境下耦合損耗 3-5dB、不可插拔、熱穩定性差",
+          "IOX 解法：同一塊玻璃上用離子交換做波導，實現 1-3μm → 9μm 的尺寸漸變（mode transformer）；同一玻璃基板同時整合 TGV 電氣路由 + Flip-chip 組裝凹槽",
+          "技術根源是 Gorilla Glass 同源技術應用（離子交換製程），康寧擁有深厚 IP 積累",
+          "競爭路線比較：矽光子光柵耦合器（Intel/TSMC，整合度高但損耗更大）/ 聚合物波導（AIO Core/Ayar Labs，靈活但高溫穩定性差）/ 傳統 FAU（Molex/前鼎，短期主流長期被取代）"
+        ]
+      },
+      {
+        title: "財務快照：Springboard 計畫與超大規模客戶協議",
+        bullets: [
+          "Q1 2026：核心營收 $43.5 億（+18% YoY），核心 EPS $0.70（+30% YoY）；Q2 指引 ~$46 億，EPS $0.73-0.77",
+          "Springboard 計畫目標：2026 年底達成 $200 億年化營收（從 2023Q4 起 15% CAGR）",
+          "NVIDIA MSA：$500M 初始 + 最大 $32 億，在美國北卡/德州新建 3 座光纖製造廠，供應 AI 資料中心光纖需求 10x 擴產",
+          "Meta MSA：最大 $60 億，多年光纖基礎設施協議；另有 2 家未公開超大規模客戶類似規模協議",
+          "Glass Bridge 本身：2026 發布、2027-2028 量產；在當前 $43.5 億季度收入中幾乎可忽略；重大收入貢獻要等 2028-2029"
+        ]
+      },
+      {
+        title: "供應鏈衝擊：誰受衝擊、誰受益",
+        bullets: [
+          "【高衝擊・長期威脅】台灣前鼎（TFC）：FAU 主要廠商，Glass Bridge iFAU 是直接替代；Morgan Stanley 點名風險，但 Citi 認為前鼎成長引擎已轉移至光學引擎，短期受控",
+          "【衝擊有限・短期安全】光模塊廠（AAOI / Coherent / Lumentum）：Citi/Morgan Stanley 明確表示近 1-2 年衝擊有限；CPO 尚未取代可插拔光模塊；Glass Bridge 是 CPO 時代的元件，不是現在的威脅",
+          "【正面受益】欣興（3037）+ 景碩（3189）+ 南電（8046）：Glass Bridge 加速高密度 mSAP PCB 需求；欣興玻璃基板封裝 + MSAP 雙重受益路線最確定",
+          "【間接受益・認證進度未變】柏承（6141）：Glass Bridge 加速光模塊需求 → 更多 MSAP PCB 需求；但柏承直接認證進度不受影響，轉折點仍是客戶 A 公司八月驗證節點"
+        ]
+      },
+      {
+        title: "Glass Bridge × AMD/OCI/AAOI 整體脈絡定位",
+        bullets: [
+          "AMD 是 OCI MSA 創始成員（2026/3/12 OFC），與 NVIDIA/Broadcom/Meta/Microsoft/OpenAI 共同推開放光互連標準；GEN1 200Gbps→GEN2 400Gbps→路線圖 3.2Tbps",
+          "AAOI 在此生態提供 800G/1.6T 光模塊 + ELSFP（25dBm CW 雷射），是 CPO 外部雷射源主要美系供應商；2026 收入指引 >$10 億（YoY 翻倍），首批 1.6T 量產訂單 $200M+",
+          "CW 雷射三強：AAOI（美製+高功率）vs Lumentum（傳統強廠）vs Coherent（NVIDIA $20 億投資）",
+          "Glass Bridge 在此生態中的位置：CPO 模組內，ASIC 運算完畢後，電訊號走幾毫米到光引擎（PIC），Glass Bridge 負責把 PIC 與外部光纖做低損耗可拆卸連接；Glass Bridge 讓 CPO 維修性大幅提升（不黏死光纖）"
+        ]
+      },
+      {
+        title: "時間軸 2026-2030",
+        bullets: [
+          "2026：Glass Bridge 發布（6/24 首爾）、樣品出貨選定客戶；Intel Clearwater Forest 玻璃基板開始出貨；TSMC CoPoS 試產線完工（6月）；康寧光通訊 +36%，NVIDIA $32 億確認",
+          "2027：Glass Bridge 量產開始；800G/1.6T 光模塊主力期；AAOI 月產 50 萬片目標",
+          "2028：CPO 規模部署開始；TSMC CoPoS 量產提升；Glass Bridge vs FAU 開始真正替代",
+          "2029-2030：Glass Core Substrate 大規模量產；CPO/NPO 市場預計超過 $390 億（TrendForce）"
+        ]
+      },
+      {
+        title: "一句話結論：各標的定位總結",
+        bullets: [
+          "Corning GLW：Glass Bridge 是 CPO 時代連接器基礎設施，真正商業規模在 2028-2030；有 NVIDIA $32 億 + Meta $60 億背書，長期需求確定性極高；但因充分定價（市值 $45B+）且 GlassBridge 收入時程遠，優先度低於供應鏈中的設備/基板公司",
+          "前鼎（FAU）：唯一需要提前重評長期護城河的台灣標的；Morgan Stanley 已點名風險，投資邏輯需追蹤光學引擎業務的護城河深度",
+          "欣興（3037）：受益最確定——玻璃基板 + mSAP PCB 雙重受益，Intel 指定夥伴",
+          "柏承（6141）：Glass Bridge 發布是方向正確的利多背景，不改變個別認證進度風險；關鍵節點仍是 2026 年 8 月客戶 A 驗證結果"
+        ]
+      }
+    ]
+  },
+  {
     id: "2026-06-30-glassbridge-scan",
     title: "康寧 GlassBridge 產業鏈主題掃描：玻璃基板 × CPO 光連接器供應鏈完整拆解與 7 家重點公司排序",
     date: "2026-06-30",
